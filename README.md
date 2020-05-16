@@ -12,8 +12,9 @@
 2. `$ gridsome develop` to start a local dev server at `http://localhost:8080`
 3. Happy coding 🎉🙌
 
-### 3. Setup ESLint + AirBnB and Prettier
-1. To install ESLint + AirBnb you can follow the [eslint-config-airbnb Docs](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
+### 3. Setup ESLint + AirBnB
+⚠️ Installation has already been done for you. For a better developing experience you can install [ESLint as a VSCode Extension](https://github.com/Microsoft/vscode-eslint). 
+1. To install ESLint + AirBnB you can follow the [eslint-config-airbnb Docs](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 2. If you're using **npm 5+**, use this shortcut
 ```
 $ npx install-peerdeps --dev eslint-config-airbnb
@@ -37,7 +38,8 @@ $ npx install-peerdeps --dev eslint-config-airbnb
 * Sass + [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#usage)
 * CMS: [GhostCMS](https://ghost.org/marketplace/) & [Ghost + Gridsome API](https://ghost.org/docs/api/v3/gridsome/)
 
-## Styleguide 
+## Styleguide
+* [Airbnb JavaScript Style Guide() {](https://github.com/airbnb/javascript) *(You will automatically follow this guide thanks to the already installed [eslint-config-airbnb Docs](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) package)*
 * [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
 * [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
 * [Airbnb CSS-in-JavaScript Style Guide](https://github.com/airbnb/javascript/tree/master/css-in-javascript)
