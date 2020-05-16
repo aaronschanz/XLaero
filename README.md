@@ -12,6 +12,13 @@
 2. `$ gridsome develop` to start a local dev server at `http://localhost:8080`
 3. Happy coding 🎉🙌
 
+### 3. Setup ESLint + AirBnB and Prettier
+1. To install ESLint + AirBnb you can follow the [eslint-config-airbnb Docs](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
+2. If you're using **npm 5+**, use this shortcut
+```
+$ npx install-peerdeps --dev eslint-config-airbnb
+```
+
 ### Deployment
 1. Use `$ gridsome build` to generate static files in a **/dist** folder
 2. To deploy the project on Netlify read the [Deploy to Netlify Docs](https://gridsome.org/docs/deploy-to-netlify/).
@@ -24,7 +31,7 @@
 
 ## Tech Stack
 * [Vue.js](https://vuejs.org/v2/guide/installation.html) + [Gridsome](https://gridsome.org)
-* ESLint + Prettier + AirBnB
+* ESLint + AirBnB (We won't use Prettier since it doesn't play well with AirBnB's configs)
 * [Storybook](https://storybook.js.org) + [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
 * [Vue Animation](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks)
 * Sass + [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#usage)
