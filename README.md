@@ -40,6 +40,7 @@ $ npx install-peerdeps --dev eslint-config-airbnb
 ## Styleguide 
 * [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
 * [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
+* [Airbnb CSS-in-JavaScript Style Guide](https://github.com/airbnb/javascript/tree/master/css-in-javascript)
 
 ## Design
 
