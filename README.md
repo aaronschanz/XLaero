@@ -38,7 +38,8 @@ $ npx install-peerdeps --dev eslint-config-airbnb
 * CMS: [GhostCMS](https://ghost.org/marketplace/) & [Ghost + Gridsome API](https://ghost.org/docs/api/v3/gridsome/)
 
 ## Styleguide 
-* [Airbnb CSS / Sass Styleguide](Airbnb CSS / Sass Styleguide)
+* [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
+* [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
 
 ## Design
 
