@@ -4,7 +4,9 @@
 
 ### 1. Install Gridsome CLI tool if you don't have
 
-`$ npm install --global @gridsome/cli`
+```
+$ npm install --global @gridsome/cli
+```
 
 ### 2. Get the project running
 
@@ -12,9 +14,25 @@
 2. `$ gridsome develop` to start a local dev server at `http://localhost:8080`
 3. Happy coding 🎉🙌
 
-### 3. Setup ESLint + AirBnB
-⚠️ Installation has already been done for you. For a better developing experience you can install [ESLint as a VSCode Extension](https://github.com/Microsoft/vscode-eslint). 
-1. To install ESLint + AirBnB you can follow the [eslint-config-airbnb Docs](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
+## Initial Setup Guide 
+
+### 1. Install Gridsome CLI tool if you don't have
+
+```
+$ npm install --global @gridsome/cli
+```
+
+### 2. Create a Gridsome project
+
+1. `$ gridsome create my-gridsome-site` to create a new project.
+2. `$ cd my-gridsome-site` to open folder.
+
+### 3. Get the project running
+* `$ gridsome develop` to start a local dev server at `http://localhost:8080`
+
+### 4. Setup ESLint + AirBnB
+⚠️ Installation has already been done for you. For a better developing experience you can install [ESLint VSCode Extension](https://github.com/Microsoft/vscode-eslint). 
+1. To install ESLint + AirBnB you can follow the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 2. If you're using **npm 5+**, use this shortcut
 ```
 $ npx install-peerdeps --dev eslint-config-airbnb
