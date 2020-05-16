@@ -38,7 +38,7 @@ $ npm install --global @gridsome/cli
 $ npx install-peerdeps --dev eslint-config-airbnb
 ```
 
-### Deployment
+## Deployment
 1. Use `$ gridsome build` to generate static files in a **/dist** folder
 2. To deploy the project on Netlify read the [Deploy to Netlify Docs](https://gridsome.org/docs/deploy-to-netlify/).
 
