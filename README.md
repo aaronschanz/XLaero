@@ -37,6 +37,9 @@ $ npx install-peerdeps --dev eslint-config-airbnb
 * Sass + [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#usage)
 * CMS: [GhostCMS](https://ghost.org/marketplace/) & [Ghost + Gridsome API](https://ghost.org/docs/api/v3/gridsome/)
 
+## Styleguide 
+* [Airbnb CSS / Sass Styleguide](Airbnb CSS / Sass Styleguide)
+
 ## Design
 
 ### Collections
