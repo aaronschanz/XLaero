@@ -38,6 +38,9 @@ $ npm install --global @gridsome/cli
 $ npx install-peerdeps --dev eslint-config-airbnb
 ```
 
+### 5. Connect to GhostCMS
+1. Install the [@gridsome/source-ghost](https://gridsome.org/plugins/@gridsome/source-ghost) plugin via `$ npm install @gridsome/source-ghost`.
+
 ## Deployment
 1. Use `$ gridsome build` to generate static files in a **/dist** folder
 2. To deploy the project on Netlify read the [Deploy to Netlify Docs](https://gridsome.org/docs/deploy-to-netlify/).
