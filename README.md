@@ -94,3 +94,4 @@ Ghost integrates with Hubspot. See the [Hubspot + Ghost](https://ghost.org/integ
 * [Interactive columns](https://uimovement.com/design/interactive-columns/) maybe for columns instead of big header picture?
 * [Rivian](https://rivian.com) Slightly rough look
 * [Staune Haus](https://www.staune.haus/?ref=bestwebsite.gallery) Bold Fonts
+* [Before After Slider](https://zurb.com/playground/twentytwenty)
