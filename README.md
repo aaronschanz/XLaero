@@ -40,6 +40,7 @@ $ npx install-peerdeps --dev eslint-config-airbnb
 
 ### 5. Connect to GhostCMS
 1. Install the [@gridsome/source-ghost](https://gridsome.org/plugins/@gridsome/source-ghost) plugin via `$ npm install @gridsome/source-ghost`.
+2. Follow the guide: [How to install Ghost locally](https://ghost.org/docs/install/local/).
 
 #### GhostCMS & Hubspot
 Ghost integrates with Hubspot. See the [Hubspot + Ghost](https://ghost.org/integrations/hubspot/) page.
