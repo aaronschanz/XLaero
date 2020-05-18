@@ -31,7 +31,7 @@ $ npm install --global @gridsome/cli
 * `$ gridsome develop` to start a local dev server at `http://localhost:8080`
 
 ### 4. Setup ESLint + AirBnB
-⚠️ Installation has already been done for you. For a better developing experience you can install [ESLint VSCode Extension](https://github.com/Microsoft/vscode-eslint). 
+⚠️ For a better developing experience you can install [ESLint VSCode Extension](https://github.com/Microsoft/vscode-eslint). 
 1. To install ESLint + AirBnB you can follow the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 2. If you're using **npm 5+**, use this shortcut
 ```
