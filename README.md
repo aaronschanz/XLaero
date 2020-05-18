@@ -1,17 +1,46 @@
-# Default starter for Gridsome
+# xlaero
 
-This is the project you get when you run `gridsome create new-project`.
+## 🚀 Setup Guide
 
 ### 1. Install Gridsome CLI tool if you don't have
 
-`npm install --global @gridsome/cli`
+```
+$ npm install --global @gridsome/cli
+```
+
+### 2. Get the project running
+
+1. `$ npm install` to install **/node_modules** folder with all npm packages.
+2. `$ gridsome develop` to start a local dev server at `http://localhost:8080`
+3. Happy coding 🎉🙌
+
+## ✨ Initial Setup Guide 
+
+### 1. Install Gridsome CLI tool if you don't have
+
+```
+$ npm install --global @gridsome/cli
+```
 
 ### 2. Create a Gridsome project
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+1. `$ gridsome create my-gridsome-site` to create a new project.
+2. `$ cd my-gridsome-site` to open folder.
+
+### 3. Get the project running
+* `$ gridsome develop` to start a local dev server at `http://localhost:8080`
+
+### 4. Setup ESLint + AirBnB
+⚠️ Installation has already been done for you. For a better developing experience you can install [ESLint VSCode Extension](https://github.com/Microsoft/vscode-eslint). 
+1. To install ESLint + AirBnB you can follow the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
+2. If you're using **npm 5+**, use this shortcut
+```
+$ npx install-peerdeps --dev eslint-config-airbnb
+```
+
+## Deployment
+1. Use `$ gridsome build` to generate static files in a **/dist** folder
+2. To deploy the project on Netlify read the [Deploy to Netlify Docs](https://gridsome.org/docs/deploy-to-netlify/).
 
 ## Roadmap
 1. Inspiration (websites that Tim really likes)
@@ -21,11 +50,17 @@ This is the project you get when you run `gridsome create new-project`.
 
 ## Tech Stack
 * [Vue.js](https://vuejs.org/v2/guide/installation.html) + [Gridsome](https://gridsome.org)
-* ESLint + Prettier + AirBnB
+* ESLint + AirBnB (We won't use Prettier since it doesn't play well with AirBnB's configs)
 * [Storybook](https://storybook.js.org) + [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
 * [Vue Animation](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks)
 * Sass + [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#usage)
 * CMS: [GhostCMS](https://ghost.org/marketplace/) & [Ghost + Gridsome API](https://ghost.org/docs/api/v3/gridsome/)
+
+## Styleguide
+* [Airbnb JavaScript Style Guide() {](https://github.com/airbnb/javascript) *(You will automatically follow this guide thanks to the already installed [eslint-config-airbnb Docs](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) package)*
+* [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
+* [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
+* [Airbnb CSS-in-JavaScript Style Guide](https://github.com/airbnb/javascript/tree/master/css-in-javascript)
 
 ## Design
 
