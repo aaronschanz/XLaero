@@ -45,6 +45,28 @@ $ npx install-peerdeps --dev eslint-config-airbnb
 4. Install Ghost: In your terminal, `cd` into an empty directory and run the install command `ghost install local`
 5. Start & Stop: `ghost start`, `ghost stop`, `ghost log` views logs and `ghost ls` to list all running Ghost blogs.
 
+### 6. Connect to GhostCMS
+1. To get started fetching the content from Ghost, install the official [Ghost source plugin](https://gridsome.org/plugins/@gridsome/source-ghost): `npm install @gridsome/source-ghost --save`.
+2. Once installed, you'll need to add the plugin to the `gridsome.config.js` file:
+```
+plugins: [
+    {
+      use: '@gridsome/source-ghost',
+      options: {
+        baseUrl: 'http://localhost:2368',
+        contentKey: process.env.GHOST_CONTENT_KEY,
+        routes: {
+          post: '/:slug',
+          page: '/:slug'
+        }
+      }
+    }
+  ]
+```
+3. The `baseUrl` references to the Ghost admin interface (that you run with `ghost start`).
+4. A key (`contentKey`) can be provided by creating an integration within the Ghost Admin. Navigate to Integrations and click "Add new integration". Name the integration, something related like "Gridsome", click create.
+5. Copy the key and save it into the `.env`.
+
 #### GhostCMS & Hubspot
 Ghost integrates with Hubspot. See the [Hubspot + Ghost](https://ghost.org/integrations/hubspot/) page.
 
