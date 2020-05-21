@@ -6,5 +6,17 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-ghost',
+      options: {
+        baseUrl: 'http://localhost:2368',
+        contentKey: '59fa8c775bbee3f1cb348b7416',
+        routes: {
+          post: '/:slug',
+          page: '/:slug'
+        }
+      }
+    }
+  ]
 }
