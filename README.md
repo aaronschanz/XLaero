@@ -5,73 +5,109 @@
 ### 1. Install Gridsome CLI tool if you don't have
 
 ```
-$ npm install --global @gridsome/cli
+npm install --global @gridsome/cli
 ```
 
 ### 2. Get the project running
 
-1. `$ npm install` to install **/node_modules** folder with all npm packages.
-2. `$ gridsome develop` to start a local dev server at `http://localhost:8080`
+1. `npm install` to install **/node_modules** folder with all npm packages.
+2. `gridsome develop` to start a local dev server at `http://localhost:8080`
 3. Happy coding 🎉🙌
+
+### 3. Get Strapi running
+1. Navigate to `xlaero-cms` (or different project name) root directory via the Terminal.
+2. Start Strapi Admin Tool: `npm run develop`.
+
+### 4. Quering data from Strapi in Gridsome
+* Use the GraphQL Explorer by opening [http://localhost:8080/___graphql](http://localhost:8080/___graphql).
+* To query data from Strapi using GraphQL, use the prefixes `strapi` (single entry) and `allStrapi` (multiple entries). After that, add the API ID of the content type (e.g. `service` becomes `strapiService`).
+* Given, you want query the single entry with the `"id": 1` of the content type `service`: 
+```
+query {
+  strapiService(id: 1) {
+      name
+      id
+      description
+      image {
+        url
+      }
+  }
+}
+```
+* Given, you want to query multiple/all entries of the content type `service`:
+```
+query {
+  allStrapiService {
+    edges {
+      node {
+          name
+          id
+          description
+          image {
+            url
+          }
+      }
+    }
+  }
+}
+```
+
 
 ## ✨ Initial Setup Guide 
 
 ### 1. Install Gridsome CLI tool if you don't have
 
 ```
-$ npm install --global @gridsome/cli
+npm install --global @gridsome/cli
 ```
 
 ### 2. Create a Gridsome project
 
-1. `$ gridsome create my-gridsome-site` to create a new project.
-2. `$ cd my-gridsome-site` to open folder.
+1. `gridsome create my-gridsome-site` to create a new project.
+2. `cd my-gridsome-site` to open folder.
 
 ### 3. Get the project running
-* `$ gridsome develop` to start a local dev server at `http://localhost:8080`
+* `gridsome develop` to start a local dev server at `http://localhost:8080`
 
 ### 4. Setup ESLint + AirBnB
 ⚠️ For a better developing experience you can install [ESLint VSCode Extension](https://github.com/Microsoft/vscode-eslint). 
 1. To install ESLint + AirBnB you can follow the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 2. If you're using **npm 5+**, use this shortcut
 ```
-$ npx install-peerdeps --dev eslint-config-airbnb
+npx install-peerdeps --dev eslint-config-airbnb
 ```
 
-### 5. Setup GhostCMS
-1. Install the [@gridsome/source-ghost](https://gridsome.org/plugins/@gridsome/source-ghost) plugin via `$ npm install @gridsome/source-ghost`.
-2. Follow the guide: [How to install Ghost locally](https://ghost.org/docs/install/local/).
-3. Install Ghost-CLI `$ npm install ghost-cli@latest -g`.
-4. Install Ghost: In your terminal, `cd` into an empty directory and run the install command `ghost install local`
-5. Start & Stop: `ghost start`, `ghost stop`, `ghost log` views logs and `ghost ls` to list all running Ghost blogs.
-
-### 6. Connect to GhostCMS
-1. To get started fetching the content from Ghost, install the official [Ghost source plugin](https://gridsome.org/plugins/@gridsome/source-ghost): `npm install @gridsome/source-ghost --save`.
-2. Once installed, you'll need to add the plugin to the `gridsome.config.js` file:
+### 5. Setup Strapi CMS
+1. Install the [@gridsome/source-strapi](https://gridsome.org/plugins/@gridsome/source-strapi) Plugin: `npm install @gridsome/source-strapi --save`
+2. Add it to the config file:
 ```
-plugins: [
+export default {
+  plugins: [
     {
-      use: '@gridsome/source-ghost',
+      use: '@gridsome/source-strapi',
       options: {
-        baseUrl: 'http://localhost:2368',
-        contentKey: process.env.GHOST_CONTENT_KEY,
-        routes: {
-          post: '/:slug',
-          page: '/:slug'
+        apiURL: 'http://localhost:1337',
+        queryLimit: 1000, // Defaults to 100
+        contentTypes: ['article', 'user'],
+        // Possibility to login with a Strapi user,
+        // when content types are not publicly available (optional).
+        loginData: {
+          identifier: '',
+          password: ''
         }
       }
     }
   ]
+}
 ```
-3. The `baseUrl` references to the Ghost admin interface (that you run with `ghost start`).
-4. A key (`contentKey`) can be provided by creating an integration within the Ghost Admin. Navigate to Integrations and click "Add new integration". Name the integration, something related like "Gridsome", click create.
-5. Copy the key and save it into the `.env`.
-
-#### GhostCMS & Hubspot
-Ghost integrates with Hubspot. See the [Hubspot + Ghost](https://ghost.org/integrations/hubspot/) page.
+3. Install Strapi by following the [Get Started Guide](https://strapi.io/documentation/v3.x/getting-started/quick-start.html).
+4. Install Strapi and Create a new project: `npx create-strapi-app my-project --quickstart`.
+5. Complete the form to create the first Administrator user.
+6. If you use GraphQL instead of REST (default), install the GraphQL plugin: `npm run strapi install graphql`. To test, use the GraphQL Playground under [http://localhost:1337/graphql](http://localhost:1337/graphql).
+7. Restart your server: `npm run develop`.
 
 ## Deployment
-1. Use `$ gridsome build` to generate static files in a **/dist** folder
+1. Use `gridsome build` to generate static files in a **/dist** folder
 2. To deploy the project on Netlify read the [Deploy to Netlify Docs](https://gridsome.org/docs/deploy-to-netlify/).
 
 ## Roadmap
