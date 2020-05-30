@@ -51,6 +51,7 @@ query {
   }
 }
 ```
+* ⚠️ Be aware that changing data in the Strapi admin requires to rerun gridsome (`ctrl + c` (Mac) and `gridsome develop`).
 
 
 ## ✨ Initial Setup Guide 
