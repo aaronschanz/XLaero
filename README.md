@@ -51,7 +51,7 @@ query {
   }
 }
 ```
-* ⚠️ Be aware that changing data in the Strapi admin requires to rerun gridsome (`ctrl + c` (Mac) and `gridsome develop`).
+* ⚠️ Be aware that changing data in the Strapi admin requires to re-run gridsome (`ctrl + c` (Mac) and `gridsome develop`).
 
 
 ## ✨ Initial Setup Guide 
@@ -102,7 +102,7 @@ export default {
 }
 ```
 3. Install Strapi by following the [Get Started Guide](https://strapi.io/documentation/v3.x/getting-started/quick-start.html).
-4. Install Strapi and Create a new project: `npx create-strapi-app my-project --quickstart`.
+4. Install Strapi and create a new project: `npx create-strapi-app my-project --quickstart`.
 5. Complete the form to create the first Administrator user.
 6. If you use GraphQL instead of REST (default), install the GraphQL plugin: `npm run strapi install graphql`. To test, use the GraphQL Playground under [http://localhost:1337/graphql](http://localhost:1337/graphql).
 7. Restart your server: `npm run develop`.
