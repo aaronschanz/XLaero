@@ -19,7 +19,7 @@ npm install --global @gridsome/cli
 2. Start Strapi Admin Tool: `npm run develop`.
 
 ### 4. Quering data from Strapi in Gridsome
-* Use the GraphQL Explorer by opening [http://localhost:8080/___graphql](http://localhost:8080/___graphql).
+* Use the GraphQL Explorer by opening [http://localhost:8080/___graphql](http://localhost:8080/___graphql). It is helpful to test the output of queries or mutations you want to make.
 * To query data from Strapi using GraphQL, use the prefixes `strapi` (single entry) and `allStrapi` (multiple entries). After that, add the API ID of the content type (e.g. `service` becomes `strapiService`).
 * Given, you want query the single entry with the `"id": 1` of the content type `service`: 
 ```
