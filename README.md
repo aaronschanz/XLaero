@@ -21,7 +21,7 @@ npm install --global @gridsome/cli
 ### 4. Quering data from Strapi in Gridsome
 * Use the GraphQL Explorer by opening [http://localhost:8080/___graphql](http://localhost:8080/___graphql). It is helpful to test the output of queries or mutations you want to make.
 * To query data from Strapi using GraphQL, use the prefixes `strapi` (single entry) and `allStrapi` (multiple entries). After that, add the API ID of the content type (e.g. `service` becomes `strapiService`).
-* Given, you want query the single entry with the `"id": 1` of the content type `service`: 
+* Given, you want to query the single entry with the `"id": 1` of the content type `service`, use: 
 ```
 query {
   strapiService(id: 1) {
@@ -34,7 +34,7 @@ query {
   }
 }
 ```
-* Given, you want to query multiple/all entries of the content type `service`:
+* Given, you want to query multiple/all entries of the content type `service`, use:
 ```
 query {
   allStrapiService {
