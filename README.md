@@ -137,6 +137,7 @@ export default {
 * [squarefoot](https://www.squarefoot.com/) For bordered boxes & Font Family.
 * [Rivian](https://rivian.com) For structure of the website & page transition.
 * [Interactive columns](https://uimovement.com/design/interactive-columns/) For 4 column hero section.
+* [Google Fonts](https://fonts.google.com/specimen/Montserrat?query=mon#pairings) Montserrat Font
 
 
 
