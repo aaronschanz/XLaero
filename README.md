@@ -133,6 +133,13 @@ export default {
 
 ## Design
 
+### Lead Design
+* [squarefoot](https://www.squarefoot.com/) For bordered boxes & Font Family.
+* [Rivian](https://rivian.com) For structure of the website & page transition.
+* * [Interactive columns](https://uimovement.com/design/interactive-columns/) For 4 column hero section.
+
+
+
 ### Collections
 * [Best Website Gallery](https://bestwebsite.gallery)
 * [Marketing Inspo](https://www.marketinginspo.com/)
@@ -140,6 +147,7 @@ export default {
 * [Daily Inspo](https://theinspirationgrid.com)
 * [UI Movement](https://uimovement.com/tag/landing-page/)
 * [App Screenshots](https://www.uisources.com/screenshots)
+
 #### Customers and Vendors
 * [Talon Copters](http://www.taloncopters.com/)
 * [meeker](https://meekeraviation.com/)
