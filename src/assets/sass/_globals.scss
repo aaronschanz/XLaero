@@ -1,0 +1,82 @@
+// See https://github.com/thoughtbot/bitters/blob/master/core/_variables.scss
+// Figma xlaero-ui https://www.figma.com/file/dguv204AYWZ4blSaBIGPfE/xlaero-ui?node-id=4%3A556
+
+:root {
+    // Colors
+    --primary-color: hsl(158, 77%, 39%);
+    --primary-color-lighten-1: hsl(158, 77%, 49%);
+    --primary-color-lighten-2: hsl(158, 77%, 59%);
+    --primary-color-lighten-3: hsl(158, 77%, 69%);
+    --primary-color-lighten-4: hsl(158, 77%, 79%);
+    --primary-color-lighten-5: hsl(158, 77%, 89%);
+    --primary-color-lighten-6: hsl(158, 77%, 96%);
+
+    --secondary-color: hsl(220, 65%, 10%);
+    --secondary-color-lighten-1: hsl(220, 65%, 10%);
+    --secondary-color-lighten-2: hsl(220, 65%, 20%);
+    --secondary-color-lighten-3: hsl(220, 65%, 30%);
+    --secondary-color-lighten-4: hsl(220, 65%, 40%);
+    --secondary-color-lighten-5: hsl(220, 65%, 50%);
+    --secondary-color-lighten-6: hsl(220, 65%, 60%);
+
+    --white-color: hsl(0, 0%, 100%);
+    
+    --basic-color: hsl(158, 4%, 39%);
+    --basic-color-lighten-1: hsl(158, 4%, 49%);
+    --basic-color-lighten-2: hsl(158, 4%, 59%);
+    --basic-color-lighten-3: hsl(158, 4%, 69%);
+    --basic-color-lighten-4: hsl(158, 4%, 79%);
+    --basic-color-lighten-5: hsl(158, 4%, 89%);
+    --basic-color-lighten-6: hsl(158, 4%, 96%);
+    --basic-color-lighten-7: hsl(158, 4%, 98%);
+
+
+
+    // Typography
+    --font-family: 'Montserrat', system-ui, sans-serif;
+    --font-family--heading: var(--font-family);
+    --font-size: 100%; // or 16px
+
+    // --font-weight--thin: 100;
+    // --font-weight--extra-light: 200;
+    // --font-weight--light: 300;
+    --font-weight--normal: 400;
+    // --font-weight--medium: 500;
+    // --font-weight--semi-bold: 600;
+    --font-weight--bold: 700;
+    // --font-weight--extra-bold: 800;
+    // --font-weight--black: 900;
+
+    // Line heights
+    --line-height: 1.5;
+    --line-height--heading: 1.2;
+
+    // Other Sizes
+    --border-radius: 0.1875rem;
+    --spacing--small: 2px;
+    --spacing: 4px;
+    --spacing-2: var(--spacing) * 2;
+    --spacing-3: var(--spacing) * 3;
+    --spacing-4: var(--spacing) * 4;
+    --spacing-5: var(--spacing) * 5;
+    --spacing-6: var(--spacing) * 6;
+    --spacing-7: var(--spacing) * 7;
+    --spacing-8: var(--spacing) * 8;
+    --spacing-9: var(--spacing) * 9;
+    --spacing-10: var(--spacing) * 10;
+    --spacing-11: var(--spacing) * 11;
+    --spacing-12: var(--spacing) * 12;
+    --spacing-13: var(--spacing) * 13;
+    --spacing-14: var(--spacing) * 14;
+    --spacing-15: var(--spacing) * 15;
+    --spacing-20: var(--spacing) * 20;
+    --spacing-30: var(--spacing) * 30;
+
+    // Borders
+    --border-width: 3px;
+    --border: var(--border-width) solid currentColor;
+
+    // Animations
+    --duration: 250ms;
+    --timing: ease;
+}
