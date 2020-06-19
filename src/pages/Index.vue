@@ -12,7 +12,7 @@
     <DefaultButton>Contact us</DefaultButton>
 
     <section>
-      <div class="post" v-for="post in $page.allStrapiPost.edges" :key="post.node.id">
+      <div class="post" v-for="post in $page.posts.edges" :key="post.node.id">
         <g-image class="post__img" :src="`http://localhost:1337${post.node.image.url}`" :title="post.node.image.caption" />
         <g-link :to="`/blog/${post.node.id}`" class="post__info">
           <h2 class="post__title">{{ post.node.title }}</h2>
@@ -31,7 +31,7 @@
 
 <page-query>
 query {
-  allStrapiPost {
+  posts: allStrapiPost {
     edges {
       node {
           id
