@@ -10,9 +10,9 @@ module.exports = {
     {
       use: '@gridsome/source-strapi',
       options: {
-        apiURL: 'https://xlaero-strapi.herokuapp.com/',
+        apiURL: 'http://localhost:1337/',
         queryLimit: 1000, // Defaults to 100
-        contentTypes: ['service'],
+        contentTypes: ['post'],
         // Possibility to login with a Strapi user,
         // when content types are not publicly available (optional).
         loginData: {
