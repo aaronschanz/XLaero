@@ -21,9 +21,10 @@ query {
 }
 </static-query>
 
-<style>
+<style lang="scss">
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: var(--font-family);
+  background-color: var(--white-color);
   margin:0;
   padding:0;
   line-height: 1.5;

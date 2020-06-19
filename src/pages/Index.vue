@@ -9,6 +9,7 @@
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
     </p>
+    <DefaultButton>Contact us</DefaultButton>
 
     <section>
       <div class="post" v-for="post in $page.allStrapiPost.edges" :key="post.node.id">
@@ -48,9 +49,14 @@ query {
 </page-query>
 
 <script>
+import DefaultButton from '~/components/DefaultButton.vue'
+
 export default {
   metaInfo: {
     title: 'Hello, world!'
+  },
+  components: {
+    DefaultButton
   }
 }
 </script>
