@@ -10,17 +10,15 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
     </p>
 
-    <div v-for="entry in $page.allStrapiService.edges" :key="entry.id">
-      <h2>{{ entry.node.name }}</h2>
-      <p>{{ entry.node.description }}</p>
-      <figure>
-        <img 
-          :src="`http://localhost:1337${entry.node.image.url}`" 
-          :alt="entry.node.image.caption" 
-          :title="entry.node.image.caption">
-        <figcaption>{{ entry.node.image.caption }}</figcaption>
-      </figure>
-    </div>
+    <section>
+      <div class="post" v-for="post in $page.allStrapiPost.edges" :key="post.node.id">
+        <g-image class="post__img" :src="`http://localhost:1337${post.node.image.url}`" :title="post.node.image.caption" />
+        <g-link :to="`/blog/${post.node.id}`" class="post__info">
+          <h2 class="post__title">{{ post.node.title }}</h2>
+          <h4 class="post__subtitle">{{ post.node.subtitle }}</h4>
+        </g-link>
+      </div>
+    </section>
 
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
@@ -32,12 +30,13 @@
 
 <page-query>
 query {
-  allStrapiService {
+  allStrapiPost {
     edges {
       node {
-          name
           id
-          description
+          title
+          subtitle
+          article
           image {
             url
             caption
