@@ -16,7 +16,7 @@
         <g-image class="post__img" :src="`http://localhost:1337${post.node.image.url}`" :title="post.node.image.caption" />
         <g-link :to="`/blog/${post.node.id}`" class="post__info">
           <h2 class="post__title">{{ post.node.title }}</h2>
-          <h4 class="post__subtitle">{{ post.node.subtitle }}</h4>
+          <h1 class="post__subtitle">{{ post.node.subtitle }}</h1>
           <div>{{ post.node.article }}</div>
         </g-link>
       </div>
