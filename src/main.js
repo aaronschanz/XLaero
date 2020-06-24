@@ -12,6 +12,6 @@ export default function (Vue, { head }) {
   // Using CDN Fonts (Typekit, Google Fonts, etc). See https://gridsome.org/docs/assets-fonts/
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Roboto',
+    href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap',
   });
 }
