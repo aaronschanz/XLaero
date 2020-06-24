@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 // This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
-// eslint-disable-next-line linebreak-style
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 

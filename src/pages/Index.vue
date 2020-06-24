@@ -17,6 +17,7 @@
         <g-link :to="`/blog/${post.node.id}`" class="post__info">
           <h2 class="post__title">{{ post.node.title }}</h2>
           <h4 class="post__subtitle">{{ post.node.subtitle }}</h4>
+          <div>{{ post.node.article }}</div>
         </g-link>
       </div>
     </section>
