@@ -2,28 +2,19 @@
   <Layout>
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
 
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-    <Card>
-      <img width="600" src="https://images.unsplash.com/photo-1593004543863-3899599aec9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1974&q=80" alt="">
-      <h5>Hallo</h5>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-      </p>
-      <Button>Contact us</Button>
-    </Card>
-    <h1>the brown fox jumps over the whatever h1</h1>
-    <h2>title big 2</h2>
-    <h3>title big 2</h3>
-    <h4>title big 2</h4>
-    <h5>title big 2</h5>
-    <h6>title big 2</h6>
-
+    <ModuleHeadline2Cards 
+      headline="Every part makes a system work well. That’s us." 
+      subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      :cards="cardsContent"
+    />
+    <ModuleHeadline3Cards 
+      headline="Showing 3 cards here" 
+      subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      :cards="cards3Content"
+    />
+    
 
     <!-- potential strapi data
       <section>
@@ -34,11 +25,6 @@
         </g-link>
       </div>
     </section> -->
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
 
   </Layout>
 </template>
@@ -66,14 +52,93 @@
 
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
+import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
+import ModuleHeadline3Cards from '~/components/ModuleHeadline3Cards.vue'
 
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'XLaero'
   },
   components: {
     Button,
-    Card
+    Card,
+    ModuleHeadline2Cards,
+    ModuleHeadline3Cards
+  },
+  data() {
+    return {
+      cardsContent: [
+        {
+          headline: "ASd asd 1.",
+          img: {
+            src: "https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+            caption: "Some image caption"
+          },
+          text: "lorem ipsum dolor site amet.",
+          button: {
+            label: "Learn More",
+            url: "http://xlaero.ca"
+          } 
+        },
+        {
+          headline: "ASd asd 2.",
+          img: {
+            src: "https://images.unsplash.com/photo-1504814532849-cff240bbc503?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80",
+            caption: "Some image caption"
+          },
+          text: "green leaves.",
+          button: {
+            label: "Learn More"
+          } 
+        },
+        {
+          headline: "ASd asd 2.",
+          img: {
+            src: "https://images.unsplash.com/photo-1552140498-f448ffb1301f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=761&q=80",
+            caption: "Some image caption"
+          },
+          text: "green leaves.",
+          button: {
+            label: "Learn More"
+          } 
+        },
+        {
+          headline: "ASd asd 2.",
+          img: {
+            src: "https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+            caption: "Some image caption"
+          },
+          text: "green leaves.",
+          button: {
+            label: "Learn More"
+          } 
+        }
+      ],
+      cards3Content: [
+        {
+          headline: "ASd asd 3.",
+          text: "lorem ipsum dolor site amet.",
+          button: {
+            label: "Learn More",
+            url: "http://xlaero.ca"
+          } 
+        },
+        {
+          headline: "ASd asd 4.",
+          text: "green leaves.",
+          button: {
+            label: "Learn More"
+          } 
+        },
+        {
+          headline: "ASd asd 5.",
+          text: "green leaves.",
+          button: {
+            label: "Learn More"
+          } 
+        }
+      ]
+    }
   }
 }
 </script>
