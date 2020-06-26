@@ -19,7 +19,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'XLAero Inc.',
   plugins: [
     // {
     //   use: '@gridsome/source-strapi',
