@@ -32,6 +32,10 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: inherit;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
