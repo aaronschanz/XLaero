@@ -54,7 +54,6 @@ import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadline3Cards from '~/components/ModuleHeadline3Cards.vue'
-import Container2c from '~/components/Container2c.vue'
 import Module2ImageText from '~/components/Module2ImageText.vue'
 
 export default {
@@ -65,7 +64,6 @@ export default {
     Hero,
     Button,
     Card,
-    Container2c,
     ModuleHeadline2Cards,
     ModuleHeadline3Cards,
     Module2ImageText
