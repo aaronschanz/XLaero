@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .button {
-    display: inline-block;
+    width: max-content;
     border: var(--border);
     padding: var(--spacing-2) var(--spacing-3);
     
@@ -25,6 +25,10 @@ export default {
     color: var(--secondary-color-darken-1);
     letter-spacing: 0.5px;
     text-decoration: none;
+
+    margin-top: var(--spacing-5);
+    margin-left: auto;
+    margin-right: 0;
 
     cursor: pointer;
 
