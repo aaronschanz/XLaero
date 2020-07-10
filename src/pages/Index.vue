@@ -1,20 +1,19 @@
 <template>
   <Layout>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
-
+    <Hero/>
     <ModuleHeadline2Cards 
-      headline="Every part makes a system work well. That’s us." 
-      subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-      :cards="cardsContent"
+      :headline="card2Module.headline" 
+      :subheading="card2Module.subheading"
+      :cards="card2Module.cardsContent"
     />
     <ModuleHeadline3Cards 
-      headline="Showing 3 cards here" 
-      subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-      :cards="cards3Content"
+      :headline="card3Module.headline" 
+      :subheading="card3Module.subheading"
+      :cards="card3Module.cardsContent"
     />
-    
+    <Module2ImageText 
+      :cards="container2cModule.containerContent"
+    />
 
     <!-- potential strapi data
       <section>
@@ -50,94 +49,137 @@
 // }
 // </page-query>
 
+import Hero from '~/components/Hero.vue'
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadline3Cards from '~/components/ModuleHeadline3Cards.vue'
+import Container2c from '~/components/Container2c.vue'
+import Module2ImageText from '~/components/Module2ImageText.vue'
 
 export default {
   metaInfo: {
     title: 'XLaero'
   },
   components: {
+    Hero,
     Button,
     Card,
+    Container2c,
     ModuleHeadline2Cards,
-    ModuleHeadline3Cards
+    ModuleHeadline3Cards,
+    Module2ImageText
   },
   data() {
     return {
-      cardsContent: [
-        {
-          headline: "ASd asd 1.",
-          img: {
-            src: "https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
-            caption: "Some image caption"
+      card2Module: {
+        headline: "Every part makes a system work well. That’s us.",
+        subheading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+        cardsContent: [
+          {
+            headline: "ASd asd 1.",
+            img: {
+              src: "https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+              caption: "Some image caption"
+            },
+            text: "lorem ipsum dolor site amet.",
+            button: {
+              label: "Learn More",
+              url: "http://xlaero.ca"
+            } 
           },
-          text: "lorem ipsum dolor site amet.",
-          button: {
-            label: "Learn More",
-            url: "http://xlaero.ca"
-          } 
-        },
-        {
-          headline: "ASd asd 2.",
-          img: {
-            src: "https://images.unsplash.com/photo-1504814532849-cff240bbc503?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80",
-            caption: "Some image caption"
+          {
+            headline: "ASd asd 2.",
+            img: {
+              src: "https://images.unsplash.com/photo-1504814532849-cff240bbc503?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80",
+              caption: "Some image caption"
+            },
+            text: "green leaves.",
+            button: {
+              label: "Learn More"
+            } 
           },
-          text: "green leaves.",
-          button: {
-            label: "Learn More"
-          } 
-        },
-        {
-          headline: "ASd asd 2.",
-          img: {
-            src: "https://images.unsplash.com/photo-1552140498-f448ffb1301f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=761&q=80",
-            caption: "Some image caption"
+          {
+            headline: "ASd asd 2.",
+            img: {
+              src: "https://images.unsplash.com/photo-1552140498-f448ffb1301f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=761&q=80",
+              caption: "Some image caption"
+            },
+            text: "green leaves.",
+            button: {
+              label: "Learn More"
+            } 
           },
-          text: "green leaves.",
-          button: {
-            label: "Learn More"
-          } 
-        },
-        {
-          headline: "ASd asd 2.",
-          img: {
-            src: "https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
-            caption: "Some image caption"
+          {
+            headline: "ASd asd 2.",
+            img: {
+              src: "https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+              caption: "Some image caption"
+            },
+            text: "green leaves.",
+            button: {
+              label: "Learn More"
+            } 
+          }
+        ],
+      },
+      card3Module: {
+        headline: "Jonathan ist ein toller Mitarbeiter",
+        subheading: "Lukas natürlich auch.",
+        cardsContent: [
+          {
+            headline: "ASd asd 3.",
+            text: "lorem ipsum dolor site amet.",
+            button: {
+              label: "Learn More",
+              url: "http://xlaero.ca"
+            } 
           },
-          text: "green leaves.",
-          button: {
-            label: "Learn More"
-          } 
-        }
-      ],
-      cards3Content: [
-        {
-          headline: "ASd asd 3.",
-          text: "lorem ipsum dolor site amet.",
-          button: {
-            label: "Learn More",
-            url: "http://xlaero.ca"
-          } 
-        },
-        {
-          headline: "ASd asd 4.",
-          text: "green leaves.",
-          button: {
-            label: "Learn More"
-          } 
-        },
-        {
-          headline: "ASd asd 5.",
-          text: "green leaves.",
-          button: {
-            label: "Learn More"
-          } 
-        }
-      ]
+          {
+            headline: "ASd asd 4.",
+            text: "green leaves.",
+            button: {
+              label: "Learn More"
+            } 
+          },
+          {
+            headline: "ASd asd 5.",
+            text: "green leaves.",
+            button: {
+              label: "Learn More"
+            } 
+          }
+        ]
+      },
+      container2cModule: {
+        containerContent: [
+          {
+            img: {
+              src: "https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+              caption: "test caption"
+            },
+            headline: "was ein Spass",
+            text: "<p>20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! </br> 20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines!</p>",
+            button: {
+              url: "",
+              label: "Learn More"
+            }
+          },
+          {
+            img: {
+              src: "https://images.unsplash.com/photo-1522548234746-ff8a206aa0b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80",
+              caption: ""
+            },
+            headline: "was ein Spass2",
+            text: "<p>20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! </br> 20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! </br> 20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines!</p>",
+            button: {
+              url: "",
+              label: "Learn Even More"
+            }
+          }
+
+        ]
+      }
     }
   }
 }
