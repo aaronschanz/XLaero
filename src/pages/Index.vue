@@ -14,7 +14,17 @@
     <Module2ImageText 
       :cards="container2cModule.containerContent"
     />
-
+    <ModuleImageText 
+      :modifiers="imageThin.modifiers"
+      :cards="imageThin.content"
+    />
+    <ModuleImageText 
+      :modifiers="imageBig.modifiers"
+      :cards="imageBig.content"
+    />
+    <ModuleHeadlineForm
+      :content="form.content"
+    />
     <!-- potential strapi data
       <section>
       <div class="post" v-for="post in $page.posts.edges" :key="post.node.id">
@@ -55,6 +65,8 @@ import Card from '~/components/Card.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadline3Cards from '~/components/ModuleHeadline3Cards.vue'
 import Module2ImageText from '~/components/Module2ImageText.vue'
+import ModuleImageText from '~/components/ModuleImageText.vue'
+import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 
 export default {
   metaInfo: {
@@ -66,10 +78,13 @@ export default {
     Card,
     ModuleHeadline2Cards,
     ModuleHeadline3Cards,
-    Module2ImageText
+    Module2ImageText,
+    ModuleImageText,
+    ModuleHeadlineForm
   },
   data() {
     return {
+    // ['card--no-border', 'card--full-size', 'card--single']
       card2Module: {
         headline: "Every part makes a system work well. That’s us.",
         subheading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -176,6 +191,50 @@ export default {
             }
           }
 
+        ]
+      },
+      imageThin: {
+        modifiers:  "card--thin-image",    
+        content: [
+          {
+            img: {
+              src: "https://images.unsplash.com/photo-1547497126-6e02a28ff877?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=680&q=80",
+              caption: "test caption"
+            },
+            headline: "imageThin",
+            text: "<p>20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! </br> 20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines!</p>",
+            button: {
+              url: "",
+              label: "Learn More"
+            }
+          },
+        ]
+      },
+      imageBig: {
+        content: [
+          {
+            img: {
+              src: "https://images.unsplash.com/photo-1547497126-6e02a28ff877?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=680&q=80",
+              caption: "test caption"
+            },
+            headline: "imageBig",
+            text: "<p>20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! </br> 20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines!</p>",
+            button: {
+              url: "",
+              label: "Learn More"
+            }
+          },
+        ]
+      },
+      form: {
+        content: [
+          {
+            headline: "Do not hesitate to get in touch with us.",
+            button: {
+              url: "",
+              label: "Send"
+            }
+          },
         ]
       }
     }
