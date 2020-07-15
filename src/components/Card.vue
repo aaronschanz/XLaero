@@ -24,6 +24,7 @@ export default {
 
     img {
         // aspect-ratio: 16 / 9;
+        display: block;
         width: 100%;
         height:  calc(32vw - var(--spacing-10) * 3);
         min-height: 360px;
@@ -31,8 +32,13 @@ export default {
     }
 
     &__content {
-        padding-left: var(--spacing-10);
-        padding-right: var(--spacing-10);
+        padding: var(--spacing-10);
+        background-position: right;
+        background-repeat: no-repeat;
+        
+        h3 {
+            margin-top: 0;
+        }
     }
 
     // equals .card--no-border
@@ -42,9 +48,33 @@ export default {
     }
 
     // equals .card--full-size
-    &--full-size {
-        width: 50%;
-        height: 100%;
+    // TODO: Probably replaced by grid-template-columns property in .card-container 
+    // &--full-size {
+    //     width: 50%;
+    //     height: 100%;
+    // }
+
+    // equals .card--single-big-image
+    &--single {
+        display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(unquote("min(480px, 100%)"), 1fr));
+        grid-template-columns: 1fr 2fr;
+        //width: 100%;
+        min-height: 100vh;
+    }
+    &--thin-image {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(unquote("min(480px, 100%)"), 1fr));
+    }
+
+    .card__image {
+        max-height: unquote("min(100vh, 100%)");
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 </style>
