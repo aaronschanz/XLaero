@@ -30,7 +30,8 @@ export default {
 <style lang="scss" scoped>
     .card-container {
         width: 100%;
-        height: 100vh;
-        display: flex;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(unquote("min(480px, 100%)"), 1fr));
     }
 </style>

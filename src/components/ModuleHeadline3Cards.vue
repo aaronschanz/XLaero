@@ -35,7 +35,7 @@ export default {
         width: 100%;
         margin-top: var(--spacing-25);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(unquote("min(400px, 100%)"), 1fr));
         grid-gap: var(--spacing-10); 
     }
 </style>
