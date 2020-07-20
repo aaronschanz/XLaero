@@ -57,18 +57,18 @@ export default {
     // equals .card--single-big-image
     &--single {
         display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(unquote("min(480px, 100%)"), 1fr));
-        grid-template-columns: 1fr 2fr;
-        //width: 100%;
+        grid-template-columns: 1fr 1fr;
         min-height: 100vh;
+
     }
+
     &--thin-image {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(unquote("min(480px, 100%)"), 1fr));
     }
 
     .card__image {
-        max-height: unquote("min(100vh, 100%)");
+        max-height: 100vh;
 
         img {
             object-fit: cover;
