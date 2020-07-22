@@ -25,6 +25,7 @@ export default {
     img {
         // aspect-ratio: 16 / 9;
         display: block;
+        aspect-ratio: 16 / 9;
         width: 100%;
         height:  calc(32vw - var(--spacing-10) * 3);
         min-height: 360px;
@@ -35,6 +36,7 @@ export default {
         padding: var(--spacing-10);
         background-position: right;
         background-repeat: no-repeat;
+        background-size: contain;
         
         h3 {
             margin-top: 0;
@@ -57,18 +59,28 @@ export default {
     // equals .card--single-big-image
     &--single {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(unquote("min(300px, 100%)"), 1fr));
         min-height: 100vh;
 
     }
 
     &--thin-image {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(unquote("min(480px, 100%)"), 1fr));
+        grid-template-columns: minmax(280px, 1fr) 2fr;
+    }
+
+    &--image-right {
+        .card__image{
+            order: 2;
+        }
+        .card__content{
+            order: 1;
+        }
     }
 
     .card__image {
         max-height: 100vh;
+        overflow: hidden;
 
         img {
             object-fit: cover;

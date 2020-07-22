@@ -25,6 +25,9 @@
     <ModuleHeadlineForm
       :content="form.content"
     />
+    <ModuleHeadlineImage
+      :content="headline.content"
+    />
     <!-- potential strapi data
       <section>
       <div class="post" v-for="post in $page.posts.edges" :key="post.node.id">
@@ -67,6 +70,7 @@ import ModuleHeadline3Cards from '~/components/ModuleHeadline3Cards.vue'
 import Module2ImageText from '~/components/Module2ImageText.vue'
 import ModuleImageText from '~/components/ModuleImageText.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
+import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 
 export default {
   metaInfo: {
@@ -80,7 +84,8 @@ export default {
     ModuleHeadline3Cards,
     Module2ImageText,
     ModuleImageText,
-    ModuleHeadlineForm
+    ModuleHeadlineForm,
+    ModuleHeadlineImage
   },
   data() {
     return {
@@ -194,7 +199,7 @@ export default {
         ]
       },
       imageThin: {
-        modifiers:  "card--thin-image",    
+        modifiers: "card--thin-image",    
         content: [
           {
             img: {
@@ -211,6 +216,7 @@ export default {
         ]
       },
       imageBig: {
+        modifiers: "card--image-right",
         content: [
           {
             img: {
@@ -236,6 +242,15 @@ export default {
             }
           },
         ]
+      },
+      headline: {
+        content: {
+            headline: "Specialized Tool & Test Equipment to keep your aircraft running.",
+            img: {
+              src: "FNTS.png",
+              caption: "test caption"
+            }
+          }
       }
     }
   }

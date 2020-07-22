@@ -6,7 +6,7 @@
         <Card v-for="(card, i) in cards" :key="i">
             <img :src="card.img.src" :alt="card.img.caption">
             <h5>{{ card.headline }}</h5>
-            <p>{{ card.text }}</p>
+            <div v-html="card.text"></div>
             <Button :src="card.button.url">{{ card.button.label }}</Button>
         </Card>
       </div>

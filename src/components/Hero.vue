@@ -4,7 +4,8 @@
             <div v-for="i in 4" :key="i" class="column"></div>
         </div>
         <div class="bg">
-            <g-image src="~/assets/images/hero-xlaero-logo.png"/>
+            <g-image class="logo-rotate" src="~/assets/images/xlaero-logo-flat.svg"/>
+            <g-image src="~/assets/images/hero-xlaero-logo.png" style="transform: translate(-870px, 10px) scale(0.7); display: none;"/>
         </div>
         <nav class="nav">
             <div v-for="(item, i) in navigation" :key="i" class="nav__item">
@@ -47,6 +48,7 @@ export default {
     position: relative;
     width: 100%;
     min-height: 100vh; 
+    overflow: hidden;
 }
 
 .columns {
@@ -70,11 +72,15 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+}
 
-    > img {
-        transform: scale(0.8);
-        transform-origin: left bottom;
-    }
+.logo-rotate {
+    animation: rotate 3s ease infinite alternate;
+}
+
+@keyframes rotate {
+    from { transform: scale(1.4) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(0deg) }
+    to { transform: scale(2) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(200deg) }
 }
 
 .nav {

@@ -29,6 +29,7 @@ export default {
     margin-top: var(--spacing-5);
     margin-left: auto;
     margin-right: 0;
+    display: inherit;
 
     cursor: pointer;
 

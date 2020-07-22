@@ -1,8 +1,8 @@
 <template>
     <section class="container">
-        <div v-for="(content, i) in content" :key="i" class="form-container" :style="{ backgroundImage: `url(${require('~/assets/images/background-dots2.svg')})`}">
+        <div v-for="(content, i) in content" :key="i" class="form-container" :style="{ backgroundImage: `url(${require('~/assets/images/background-circle.svg')})`}">
             <h1>{{ content.headline }}</h1>
-            <div class="contact-form">
+            <div class="contact-form" id="contact-form">
                 <form>
                     <input type="text" placeholder="First Name" class="firstName">
                     <input type="text" placeholder="Last Name" class="lastName">

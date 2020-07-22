@@ -29,6 +29,7 @@ export default {
 body {
   position: relative;
   font-family: var(--font-family);
+  font-size: var(--font-size);
   background-color: var(--white-color);
   margin: 0;
   padding: 0;
@@ -37,5 +38,9 @@ body {
 
 * {
   box-sizing: inherit;
+}
+
+p {
+  line-height: 1.5;
 }
 </style>
