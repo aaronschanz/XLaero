@@ -247,7 +247,7 @@ export default {
         content: {
             headline: "Specialized Tool & Test Equipment to keep your aircraft running.",
             img: {
-              src: "FNTS.png",
+              src: "http://xlaero.ca/new/images/FNTS.png",
               caption: "test caption"
             }
           }

@@ -19,7 +19,7 @@ import Card from '~/components/Card.vue'
 
 export default {
     name: "ModuleHeadline2Cards",
-    props: ['headline', 'subheading', 'card1headline', 'cards'],
+    props: ['headline', 'subheading', 'cards'],
     components: {
         Button,
         Card

@@ -4,6 +4,8 @@
       :content="header.content"
     />
     <ModuleHeadline2Cards
+      :headline="card2Module.headline"
+      :subheading="card2Module.subheading"
       :cards="card2Module.cardsContent"
     />   
     <ModuleHeadlineForm
@@ -22,7 +24,7 @@ import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 
 export default {
   metaInfo: {
-    title: 'XLaero - Tool & Test Equipment'
+    title: 'XLaero - Cost Reduction'
   },
   components: {
     Button,
@@ -36,7 +38,7 @@ export default {
       header: {
         content:
           {
-            headline: "Specialized Tool & Test Equipment to keep your aircraft running.",
+            headline: "Cost Reduction",
             img: {
               src: "http://xlaero.ca/new/images/FNTS.png",
               caption: "test caption"
@@ -44,30 +46,30 @@ export default {
           }
       },
       card2Module: {
-        headline: "Every part makes a system work well. That’s us.",
-        subheading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+        headline: "We have a vast collection of developed part repairs",
+        subheading: "These are repairs we have developed and executed on many different parts. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develope and certify the a repair on your part.",
         cardsContent: [
           {
-            headline: "Portable Fuel Nozzel Test Stand",
+            headline: "S-61 Rotor Brake Housing",
             img: {
-              src: "http://xlaero.ca/new/images/FNTS2.jpg",
+              src: "http://xlaero.ca/new/images/S-61-Rotor-Brake-Housing.JPG",
               caption: "Fuel Nozzel Test Stand"
             },
-            text: "<p>•Temperature Control <br/>•2 Fuel + 1 Air Circuits<br/>•Digital Camera – Spray Angle</p>",
+            text: "<p>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun.</p>",
             button: {
               label: "Request a Quote",
               url: "#contact-form"
             } 
           },
           {
-            headline: "Custom Tool & Test Equipment",
+            headline: "PT6T AGB Housing",
             img: {
-              src: "http://xlaero.ca/new/images/tools.png",
+              src: "http://xlaero.ca/new/images/PT6T-housing.png",
               caption: "Custom Tool & Test Equipment"
             },
-            text: "We’d love to hear about your needs and develope your specialized Tool & Test Equipment.",
+            text: "Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun.",
             button: {
-              label: "Contact us",
+              label: "Request a Quote",
               url: "#contact-form"
             } 
           }
