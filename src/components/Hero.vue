@@ -75,12 +75,12 @@ export default {
 }
 
 .logo-rotate {
-    animation: rotate 3s ease infinite alternate;
+    animation: rotate 13s ease infinite alternate;
 }
 
 @keyframes rotate {
-    from { transform: scale(1.4) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(0deg) }
-    to { transform: scale(2) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(200deg) }
+    from { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(0deg) }
+    to { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(200deg) }
 }
 
 .nav {
