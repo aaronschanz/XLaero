@@ -1,17 +1,32 @@
 <template>
     <section class="hero">
-        <div class="columns">
-            <div v-for="i in 4" :key="i" class="column"></div>
-        </div>
         <div class="bg">
-            <g-image class="logo-rotate" src="~/assets/images/xlaero-logo-flat.svg"/>
+            <g-image 
+                class="logo-rotate" 
+                src="~/assets/images/xlaero-logo-flat.svg"
+                :style="{ 
+                    transform: `
+                        scale(1) 
+                        matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) 
+                        rotateX(32deg) 
+                        rotateY(20deg) 
+                        rotateZ(${rotateItem * 60}deg)
+                    ` 
+                }"
+            />
             <g-image src="~/assets/images/hero-xlaero-logo.png" style="transform: translate(-870px, 10px) scale(0.7); display: none;"/>
         </div>
         <nav class="nav">
             <div v-for="(item, i) in navigation" :key="i" class="nav__item">
-                <g-link :to="item.url" class="nav__link">{{ item.label }}</g-link>
+                <div @mouseover="activeItem = i + 1; rotateItem = i + 1" @mouseleave="activeItem = null">
+                    <g-link :to="item.url" class="nav__link">{{ item.label }}</g-link>
+                </div>
             </div>
         </nav>
+        <div class="columns">
+            <div v-for="i in navigation.length" :key="i" class="column" :class="activeItem === i ? 'active' : ''" :ref="`column-${i}`"></div>
+            <!-- :style="{ backgroundImage: `url(${require(`~/assets/images/hero-image-0${i}.jpg`)})` }" -->
+        </div>
     </section>
 </template>
 
@@ -20,6 +35,8 @@ export default {
     name: "Hero",
     data() {
         return {
+            activeItem: null,
+            rotateItem: 0,
             navigation: [
                 {
                     url: "/engineering-and-certificate-capabilities",
@@ -61,11 +78,18 @@ export default {
     flex-grow: 1;
     flex-basis: 0;
     height: 100%;
-    background: linear-gradient(90deg, var(--basic-color-lighten-6) 0%, var(--white-color) 100%);
+    background: linear-gradient(90deg, var(--basic-color-lighten-6) 0%, var(--basic-color-lighten-5) 100%);
+    background-size: cover;
+    transition: calc(var(--duration) * 2) var(--timing);
+
+    &.active {
+        opacity: 0.2;
+    }
 }
 
 .bg {
     position: absolute;
+    z-index: 1;
     width: 100%;
     height: 100vh;
     top: 0;
@@ -75,13 +99,19 @@ export default {
 }
 
 .logo-rotate {
-    animation: rotate 13s ease infinite alternate;
+    position: relative;
+    //animation: rotate 13s ease infinite alternate;
+    bottom: -30%;
+    left: -10%;
+    transform-origin: center;
+    transition: calc(var(--duration) * 4) var(--timing);
+    opacity: 0.75;
 }
 
-@keyframes rotate {
-    from { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(0deg) }
-    to { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(200deg) }
-}
+// @keyframes rotate {
+//     from { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(0deg) }
+//     to { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(200deg) }
+// }
 
 .nav {
     position: absolute;
@@ -91,6 +121,8 @@ export default {
     height: 100vh;
 
     &__item {
+        position: relative;
+        z-index: 2;
         display: flex;
         align-items: flex-end;
         padding-top: var(--spacing-30);
@@ -98,22 +130,26 @@ export default {
         flex-grow: 1;
         flex-basis: 0;
         height: 100%;
-        transition: var(--duration) var(--timing);
-
-        // &:hover {
-        //     background: var(--basic-color-lighten-5);
-        // }
     }
 
     &__link {
         display: block;
-        background-color: var(--primary-color-lighten-2);
+        z-index: 3;
         padding: var(--spacing-4) var(--spacing-6);
-        color: var(--secondary-color);
         width: calc(100% - var(--spacing-4));
         min-height: calc(2.875rem + 2rem);
         text-decoration: none;
         font-size: 1.2rem;
+
+        background-color: var(--secondary-color);
+        color: var(--primary-color-lighten-2);
+
+        transition: var(--duration) var(--timing);
+
+        &:hover {
+            background-color: var(--primary-color-lighten-2);
+            color: var(--secondary-color);
+        }
     }
 }
 </style>
