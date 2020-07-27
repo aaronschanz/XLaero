@@ -1,10 +1,10 @@
 <template>
     <div>
         <header class="header">
-            <g-link to="/" class="logo">
+            <g-link to="/" class="logo" @click="$root.$emit('openMenu');">
                 <g-image src="~/../static/images/xlaero-logo.svg" alt="XLaero aerospace engineering" />
             </g-link>
-            <div class="menu">Menu</div>
+            <div class="menu" @click="$root.$emit('openMenu');">Menu</div>
         </header>
     </div>
 </template>

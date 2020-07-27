@@ -16,15 +16,15 @@
             />
             <g-image src="~/../static/images/hero-xlaero-logo.png" style="transform: translate(-870px, 10px) scale(0.7); display: none;"/>
         </div>
-        <nav class="nav">
-            <div v-for="(item, i) in navigation" :key="i" class="nav__item" :class="{'expand' : openItem}" @click="openItem">
+        <nav class="nav" :class="openItem != null ? 'expand' : ''">
+            <div v-for="(item, i) in navigation" :key="i" class="nav__item" :class="openItem === i ? 'expand' : ''" @click="openItem = i">
                 <div @mouseover="activeItem = i + 1; rotateItem = i + 1" @mouseleave="activeItem = null">
                     <g-link :to="item.url" class="nav__link">{{ item.label }}</g-link>
                 </div>
             </div>
         </nav>
-        <div class="columns">
-            <div v-for="i in navigation.length" :key="i" class="column" :class="activeItem === i ? 'active' : ''" :ref="`column-${i}`"></div>
+        <div class="columns" :class="openItem != null ? 'expand' : ''">
+            <div v-for="i in navigation.length" :key="i" class="column" :class="[activeItem === i ? 'active' : '', openItem === i ? 'expand' : '']" :ref="`column-${i}`"></div>
             <!-- :style="{ backgroundImage: `url(${require(`~/../static/images/hero-image-0${i}.jpg`)})` }" -->
         </div>
     </section>
@@ -33,10 +33,15 @@
 <script>
 export default {
     name: "Hero",
+    mounted() {
+        this.$root.$on('openMenu', data => {
+            this.openItem = null;
+        });
+    },
     data() {
         return {
             activeItem: null,
-            openItem: false,
+            openItem: null,
             rotateItem: 0,
             navigation: [
                 {
@@ -114,6 +119,23 @@ export default {
 //     to { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(200deg) }
 // }
 
+.nav, .columns {
+    &.expand {
+        .nav__item, .column {
+            width: 0;
+            opacity: 0;
+            overflow: hidden;
+            flex-grow: 0;
+
+            &.expand {
+                width: 100vw;
+                flex-grow: 1;
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .nav {
     position: absolute;
     top: 0;
@@ -131,9 +153,12 @@ export default {
         flex-grow: 1;
         flex-basis: 0;
         height: 100%;
+
+        transition: calc(var(--duration) * 2) var(--timing);
     }
 
     &__link {
+        position: relative;
         display: block;
         z-index: 3;
         padding: var(--spacing-4) var(--spacing-6);
