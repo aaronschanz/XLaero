@@ -1,6 +1,6 @@
 <template>
     <section class="container">
-        <div v-for="(content, i) in content" :key="i" class="form-container" :style="{ backgroundImage: `url(${require('~/assets/images/background-circle.svg')})`}">
+        <div v-for="(content, i) in content" :key="i" class="form-container" :style="{ backgroundImage: `url(${require('~/../static/images/background-circle.svg')})`}">
             <h1>{{ content.headline }}</h1>
             <div class="contact-form" id="contact-form">
                 <form>

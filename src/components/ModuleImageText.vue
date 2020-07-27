@@ -5,7 +5,7 @@
                 <div class="card__image">
                     <img :src="container.img.src" :alt="container.img.caption">
                 </div>
-                <div class="card__content" :style="{ backgroundImage: `url(${require('~/assets/images/background-dots.svg')})` }">
+                <div class="card__content" :style="{ backgroundImage: `url(${require('~/../static/images/background-dots.svg')})` }">
                     <h3>{{ container.headline }}</h3>
                     <div v-html="container.text"></div>
                     <Button :src="container.button.url">{{ container.button.label }}</Button>

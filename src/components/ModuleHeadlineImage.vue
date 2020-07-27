@@ -1,6 +1,6 @@
 <template>
     <section class="container">
-        <div class="center-container" :style="{ backgroundImage: `url(${require('~/assets/images/background-heli.svg')})`}">
+        <div class="center-container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
             <h1>{{ content.headline }}</h1>
             <g-image :src="content.img.src" :alt="content.img.caption"/>
         </div>

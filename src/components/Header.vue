@@ -2,7 +2,7 @@
     <div>
         <header class="header">
             <g-link to="/" class="logo">
-                <g-image src="~/assets/images/xlaero-logo.svg" alt="XLaero aerospace engineering" />
+                <g-image src="~/../static/images/xlaero-logo.svg" alt="XLaero aerospace engineering" />
             </g-link>
             <div class="menu">Menu</div>
         </header>

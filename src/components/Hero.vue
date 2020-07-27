@@ -3,10 +3,10 @@
         <div class="bg">
             <g-image 
                 class="logo-rotate" 
-                src="~/assets/images/xlaero-logo-flat.svg"
+                src="~/../static/images/xlaero-logo-flat.svg"
                 :style="{ 
                     transform: `
-                        scale(1) 
+                        scale(1.4) 
                         matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) 
                         rotateX(32deg) 
                         rotateY(20deg) 
@@ -14,10 +14,10 @@
                     ` 
                 }"
             />
-            <g-image src="~/assets/images/hero-xlaero-logo.png" style="transform: translate(-870px, 10px) scale(0.7); display: none;"/>
+            <g-image src="~/../static/images/hero-xlaero-logo.png" style="transform: translate(-870px, 10px) scale(0.7); display: none;"/>
         </div>
         <nav class="nav">
-            <div v-for="(item, i) in navigation" :key="i" class="nav__item">
+            <div v-for="(item, i) in navigation" :key="i" class="nav__item" :class="{'expand' : openItem}" @click="openItem">
                 <div @mouseover="activeItem = i + 1; rotateItem = i + 1" @mouseleave="activeItem = null">
                     <g-link :to="item.url" class="nav__link">{{ item.label }}</g-link>
                 </div>
@@ -25,7 +25,7 @@
         </nav>
         <div class="columns">
             <div v-for="i in navigation.length" :key="i" class="column" :class="activeItem === i ? 'active' : ''" :ref="`column-${i}`"></div>
-            <!-- :style="{ backgroundImage: `url(${require(`~/assets/images/hero-image-0${i}.jpg`)})` }" -->
+            <!-- :style="{ backgroundImage: `url(${require(`~/../static/images/hero-image-0${i}.jpg`)})` }" -->
         </div>
     </section>
 </template>
@@ -36,6 +36,7 @@ export default {
     data() {
         return {
             activeItem: null,
+            openItem: false,
             rotateItem: 0,
             navigation: [
                 {
@@ -101,8 +102,8 @@ export default {
 .logo-rotate {
     position: relative;
     //animation: rotate 13s ease infinite alternate;
-    bottom: -30%;
-    left: -10%;
+    bottom: -15%;
+    left: -5%;
     transform-origin: center;
     transition: calc(var(--duration) * 4) var(--timing);
     opacity: 0.75;

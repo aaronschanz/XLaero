@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <div>
     <ModuleHeadlineImage
       :content="header.content"
     />
@@ -11,7 +11,7 @@
     <ModuleHeadlineForm
       :content="form.content"
     />
-  </Layout>
+  </div>
 </template>
 
 <script>

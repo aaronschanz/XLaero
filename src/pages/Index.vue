@@ -1,6 +1,5 @@
 <template>
-  <Layout>
-    <Hero/>
+  <div>
     <ModuleHeadline2Cards 
       :headline="card2Module.headline" 
       :subheading="card2Module.subheading"
@@ -37,8 +36,7 @@
         </g-link>
       </div>
     </section> -->
-
-  </Layout>
+  </div>
 </template>
 
 <script>
@@ -62,7 +60,6 @@
 // }
 // </page-query>
 
-import Hero from '~/components/Hero.vue'
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
@@ -77,7 +74,6 @@ export default {
     title: 'XLaero'
   },
   components: {
-    Hero,
     Button,
     Card,
     ModuleHeadline2Cards,
