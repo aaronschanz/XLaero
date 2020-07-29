@@ -22,7 +22,7 @@ export default {
     border: var(--border-width) solid var(--basic-color-lighten-4);
     padding: var(--spacing-10);
 
-    img {
+    img, iframe {
         // aspect-ratio: 16 / 9;
         display: block;
         aspect-ratio: 16 / 9;

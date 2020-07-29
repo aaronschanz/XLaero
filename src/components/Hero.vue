@@ -17,14 +17,15 @@
             <g-image src="~/../static/images/hero-xlaero-logo.png" style="transform: translate(-870px, 10px) scale(0.7); display: none;"/>
         </div>
         <nav class="nav" :class="openItem != null ? 'expand' : ''">
-            <div v-for="(item, i) in navigation" :key="i" class="nav__item" :class="openItem === i ? 'expand' : ''" @click="openItem = i">
+            <div v-for="(item, i) in navigation" :key="i" class="nav__item" :class="openItem === i ? 'expand' : ''" :style="openItem === i ? { transform: `scaleX(1) translateX(-${i}00%)` } : null" @click="openItem = i">
+                <!-- :style="{ backgroundImage: `url(${require(`~/../static/images/hero-image-0${i+1}.jpg`)})` }" -->
                 <div @mouseover="activeItem = i + 1; rotateItem = i + 1" @mouseleave="activeItem = null">
                     <g-link :to="item.url" class="nav__link">{{ item.label }}</g-link>
                 </div>
             </div>
         </nav>
         <div class="columns" :class="openItem != null ? 'expand' : ''">
-            <div v-for="i in navigation.length" :key="i" class="column" :class="[activeItem === i ? 'active' : '', openItem === i ? 'expand' : '']" :ref="`column-${i}`"></div>
+            <div v-for="i in navigation.length" :key="i" class="column" :class="[activeItem === i ? 'active' : '', openItem + 1 === i ? 'expand' : '']"></div>
             <!-- :style="{ backgroundImage: `url(${require(`~/../static/images/hero-image-0${i}.jpg`)})` }" -->
         </div>
     </section>
@@ -57,7 +58,7 @@ export default {
                     label: "Cost Reduction"
                 },
                 {
-                    url: "/tool-and-test-equipement",
+                    url: "/tool-and-test-equipment",
                     label: "Tool & Test Equipment"
                 },
             ]
@@ -70,13 +71,13 @@ export default {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 100vh; 
+    height: 70vh; 
     overflow: hidden;
 }
 
 .columns {
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-position: bottom left;
 }
 
@@ -122,16 +123,22 @@ export default {
 .nav, .columns {
     &.expand {
         .nav__item, .column {
-            width: 0;
+            //width: 0;
+            transform: translateX(-100%);
             opacity: 0;
             overflow: hidden;
-            flex-grow: 0;
+            //flex-grow: 0;
 
             &.expand {
                 width: 100vw;
                 flex-grow: 1;
                 opacity: 1;
             }
+        }
+
+        .column.expand {
+            transform: scaleX(5);
+            transform-origin: top left;
         }
     }
 }
@@ -141,7 +148,7 @@ export default {
     top: 0;
     width: 100%;
     display: flex;
-    height: 100vh;
+    height: 100%;
 
     &__item {
         position: relative;
@@ -153,6 +160,10 @@ export default {
         flex-grow: 1;
         flex-basis: 0;
         height: 100%;
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
 
         transition: calc(var(--duration) * 2) var(--timing);
     }

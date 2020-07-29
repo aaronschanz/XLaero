@@ -31,6 +31,7 @@ export default {
     .form-container {
         background-position: top left;
         background-repeat: no-repeat;
+        background-color: var(--secondary-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -61,9 +62,11 @@ export default {
         input, textarea{
             padding: var(--spacing-2);
             border: none;
-            border-bottom: var(--border-width) solid var(--secondary-color);;
+            border-bottom: var(--border-width) solid white;
+            //border-bottom: var(--border-width) solid var(--secondary-color);
             font-family: var(--font-family);
             font-size: 1rem;
+            background-color: var(--secondary-color);
         }
 
         .firstName {
@@ -80,28 +83,31 @@ export default {
 
         .button {
             grid-area: button;
+            color: var(--primary-color);
         }
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: var(--secondary-color);
+            color: white;
+            //color: var(--secondary-color);
             font-weight: bold;
             opacity: 1; /* Firefox */
             }
 
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: var(--secondary-color);
+            color: white;
+            //color: var(--secondary-color);
             font-weight: bold;
         }
 
         ::-ms-input-placeholder { /* Microsoft Edge */
-            color: var(--secondary-color);
+            color: white;
+            //color: var(--secondary-color);
             font-weight: bold;
         }
         textarea {
             grid-area: message;
             height: 200px;
             box-sizing: border-box;
-            background-color: var(--basic-color-lighten-7);
             resize: none;
         }
     }

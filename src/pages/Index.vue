@@ -1,31 +1,37 @@
 <template>
   <div>
-    <ModuleHeadline2Cards 
-      :headline="card2Module.headline" 
-      :subheading="card2Module.subheading"
-      :cards="card2Module.cardsContent"
-    />
-    <ModuleHeadline3Cards 
-      :headline="card3Module.headline" 
-      :subheading="card3Module.subheading"
-      :cards="card3Module.cardsContent"
-    />
-    <Module2ImageText 
-      :cards="container2cModule.containerContent"
-    />
-    <ModuleImageText 
-      :modifiers="imageThin.modifiers"
-      :cards="imageThin.content"
-    />
-    <ModuleImageText 
-      :modifiers="imageBig.modifiers"
-      :cards="imageBig.content"
-    />
+    <div class="container-arrow">
+      <a data-scroll href="#contact">
+        <div class="arrow"></div>
+      </a>
+    </div>
+    <section class="container" id="contact">
+      <h1>Here is all the contact info you'll need.</h1>
+      <!-- <h6>{{ subheading }}</h6> -->
+      <div class="card-container">
+        <Card>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.849840017946!2d-122.80306818414189!3d49.032462896387955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485c348f0fe3629%3A0x5042a143e698710c!2sXL%20Aero!5e0!3m2!1sen!2sca!4v1596052554539!5m2!1sen!2sca" frameborder="1" style="border: 1px solid #18C386;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <h5 class="contact-info">Shipping & Mailing Address</h5>
+            <div class="contact-info">
+              <h1>XLaero Inc.</h1>
+              <p>17289 2 Ave<br>
+              Surrey, BC<br>
+              V3Z9P9, Canada</p>
+            </div>
+        </Card>
+        <Card>
+            <img src="http://xlaero.ca/new/images/contact.jpeg">
+            <h5 class="contact-info">Contact Info</h5>
+            <div class="contact-info">
+                <p>Email: tim@xlaero.ca</p>
+                <p>Tel.: 778-988-1545</p>
+            </div>
+            <Button src="#contact-form">Contact Form</Button>
+        </Card>
+      </div>
+    </section>  
     <ModuleHeadlineForm
       :content="form.content"
-    />
-    <ModuleHeadlineImage
-      :content="headline.content"
     />
     <!-- potential strapi data
       <section>
@@ -59,6 +65,33 @@
 //   }
 // }
 // </page-query>
+// <ModuleHeadline2Cards 
+//       :headline="card2Module.headline" 
+//       :subheading="card2Module.subheading"
+//       :cards="card2Module.cardsContent"
+//     />
+//     <ModuleHeadline3Cards 
+//       :headline="card3Module.headline" 
+//       :subheading="card3Module.subheading"
+//       :cards="card3Module.cardsContent"
+//     />
+//     <Module2ImageText 
+//       :cards="container2cModule.containerContent"
+//     />
+//     <ModuleImageText 
+//       :modifiers="imageThin.modifiers"
+//       :cards="imageThin.content"
+//     />
+//     <ModuleImageText 
+//       :modifiers="imageBig.modifiers"
+//       :cards="imageBig.content"
+//     />
+//     <ModuleHeadlineForm
+//       :content="form.content"
+//     />
+//     <ModuleHeadlineImage
+//       :content="headline.content"
+//     />
 
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
@@ -251,9 +284,10 @@ export default {
     }
   }
 }
+//smoothScroll.init();
 </script>
 
-<style>
+<style lang="scss" scoped>
 .home-links a {
   margin-right: 1rem;
 }
@@ -261,8 +295,46 @@ export default {
 figure {
   margin: 0;
 }
+.container {
+    padding: var(--spacing-25);
+}
 
-img {
-  max-width: 100%;
+.card-container {
+    width: 100%;
+    margin-top: var(--spacing-25);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(unquote("min(600px, 100%)"),1fr));
+    grid-gap: var(--spacing-10); 
+}
+.contact-info {
+    text-align: center;
+    h1 {
+      font-size: 2rem;
+    }
+}
+
+//arrow test stuff
+.arrow {
+  box-sizing: border-box;
+  height: 2.5vw;
+  width: 2.5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.container-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  min-height: 100px;
 }
 </style>
