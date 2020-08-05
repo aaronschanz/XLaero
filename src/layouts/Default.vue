@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header/>
     <Hero/>
     <main>
       <slot/>
@@ -17,12 +16,10 @@ query {
 </static-query>
 
 <script>
-import Header from '~/components/Header.vue'
 import Hero from '~/components/Hero.vue'
 
 export default {
   components: {
-    Header,
     Hero
   }
 }

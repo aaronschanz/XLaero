@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="container-arrow">
+    <!--<div class="container-arrow">
       <a data-scroll href="#contact">
         <div class="arrow"></div>
       </a>
-    </div>
+    </div>-->
     <section class="container" id="contact">
       <h1>Here is all the contact info you'll need.</h1>
       <!-- <h6>{{ subheading }}</h6> -->

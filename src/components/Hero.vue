@@ -1,12 +1,29 @@
 <template>
     <section class="hero">
+        <div class="hero__body">
+            <Header />
+            <div class="hero__content">
+                <div class="hero-headline">
+                    <h1>XLaero - Rotating exellence</h1>
+                    <p>Beginnen Sie noch heute damit, Ihre Vision mit der Echtzeit-3D-Entwicklungsplattform Unity zum Leben zu erwecken.</p>
+                </div>
+                <nav class="nav" :class="activeItem != null ? 'active' : ''">
+                    <div class="nav__item" v-for="(navItem, i) in navigation" :class="activeItem === i ? 'active' : ''" :style="activeItem === i ? { transform: `translateX(-${i * 60}%)` } : null" :key="i" @click="activeItem = i" @mouseover="rotateItem = i">
+                        <g-link :to="navItem.url" class="nav__link">
+                            <h5 class="nav__heading">{{ navItem.label }}</h5>
+                            <p>We will get your Repair Development & Certificates as well as Reverse Engineering & PMAs over the finish line. No Aircraft Modification is to complex for us.</p>
+                            <Button>More Info</Button>
+                        </g-link>
+                    </div>
+                </nav>
+            </div>
+        </div>
         <div class="bg">
             <g-image 
                 class="logo-rotate" 
                 src="~/../static/images/xlaero-logo-flat.svg"
                 :style="{ 
                     transform: `
-                        scale(1.4) 
                         matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) 
                         rotateX(32deg) 
                         rotateY(20deg) 
@@ -14,29 +31,23 @@
                     ` 
                 }"
             />
-            <g-image src="~/../static/images/hero-xlaero-logo.png" style="transform: translate(-870px, 10px) scale(0.7); display: none;"/>
-        </div>
-        <nav class="nav" :class="openItem != null ? 'expand' : ''">
-            <div v-for="(item, i) in navigation" :key="i" class="nav__item" :class="openItem === i ? 'expand' : ''" :style="openItem === i ? { transform: `scaleX(1) translateX(-${i}00%)` } : null" @click="openItem = i">
-                <!-- :style="{ backgroundImage: `url(${require(`~/../static/images/hero-image-0${i+1}.jpg`)})` }" -->
-                <div @mouseover="activeItem = i + 1; rotateItem = i + 1" @mouseleave="activeItem = null">
-                    <g-link :to="item.url" class="nav__link">{{ item.label }}</g-link>
-                </div>
-            </div>
-        </nav>
-        <div class="columns" :class="openItem != null ? 'expand' : ''">
-            <div v-for="i in navigation.length" :key="i" class="column" :class="[activeItem === i ? 'active' : '', openItem + 1 === i ? 'expand' : '']"></div>
-            <!-- :style="{ backgroundImage: `url(${require(`~/../static/images/hero-image-0${i}.jpg`)})` }" -->
         </div>
     </section>
 </template>
 
 <script>
+import Header from '~/components/Header.vue'
+import Button from '~/components/Button.vue'
+
 export default {
     name: "Hero",
+    components: {
+        Header,
+        Button
+    },
     mounted() {
         this.$root.$on('openMenu', data => {
-            this.openItem = null;
+            this.activeItem = null;
         });
     },
     data() {
@@ -70,46 +81,54 @@ export default {
 <style lang="scss" scoped>
 .hero {
     position: relative;
-    width: 100%;
-    height: 70vh; 
+    width: 100%; 
     overflow: hidden;
+    background: radial-gradient(circle at bottom, var(--secondary-color-lighten-2) 0%, var(--secondary-color) 70%);
+
+    &__body {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        padding: var(--spacing-15);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
 
-.columns {
-    display: flex;
-    height: 100%;
-    background-position: bottom left;
-}
-
-.column {
-    flex-grow: 1;
-    flex-basis: 0;
-    height: 100%;
-    background: linear-gradient(90deg, var(--basic-color-lighten-6) 0%, var(--basic-color-lighten-5) 100%);
-    background-size: cover;
-    transition: calc(var(--duration) * 2) var(--timing);
-
-    &.active {
-        opacity: 0.2;
+.hero-headline {
+    width: 50%;
+    
+    p {
+        color: var(--white-color);
     }
 }
 
 .bg {
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     width: 100%;
     height: 100vh;
     top: 0;
+    left: 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 }
 
 .logo-rotate {
-    position: relative;
+    width: 56vw;
+    position: absolute;
     //animation: rotate 13s ease infinite alternate;
     bottom: -15%;
-    left: -5%;
+    right: 0%;
     transform-origin: center;
     transition: calc(var(--duration) * 4) var(--timing);
     opacity: 0.75;
@@ -120,73 +139,65 @@ export default {
 //     to { transform: scale(1) matrix3d(1,0,0.00,0.000,0.00,1.0,0.64,-0.001,0,-0.64,0.77,0,0,0,0,1) rotateX(32deg) rotateY(20deg) rotateZ(200deg) }
 // }
 
-.nav, .columns {
-    &.expand {
-        .nav__item, .column {
-            //width: 0;
-            transform: translateX(-100%);
-            opacity: 0;
-            overflow: hidden;
-            //flex-grow: 0;
+.nav {
+    min-height: 320px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    transition: var(--duration) var(--timing);
 
-            &.expand {
-                width: 100vw;
-                flex-grow: 1;
+    &.active {
+        .nav__item {
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+                flex-grow: 2;
+
+                p, .button {
+                    height: auto;
+                }
+            }
+        }
+    }
+    
+    &__item {
+        transition: var(--duration) var(--timing);
+        padding-right: var(--spacing-5);
+        flex: 1;
+
+        p, .button {
+            opacity: 0;
+            height: 0;
+            transition: var(--duration) var(--timing);
+        }
+
+        &.active {
+            
+            .nav__link {
+                background-color: var(--basic-color-lighten-7);
+            }
+
+            p, .button {
                 opacity: 1;
             }
         }
-
-        .column.expand {
-            transform: scaleX(5);
-            transform-origin: top left;
-        }
-    }
-}
-
-.nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    height: 100%;
-
-    &__item {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        align-items: flex-end;
-        padding-top: var(--spacing-30);
-        padding-bottom: var(--spacing-20);
-        flex-grow: 1;
-        flex-basis: 0;
-        height: 100%;
-
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-
-        transition: calc(var(--duration) * 2) var(--timing);
     }
 
     &__link {
         position: relative;
         display: block;
-        z-index: 3;
-        padding: var(--spacing-4) var(--spacing-6);
-        width: calc(100% - var(--spacing-4));
-        min-height: calc(2.875rem + 2rem);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: var(--spacing-10);
+        color: var(--secondary-color);
         text-decoration: none;
-        font-size: 1.2rem;
-
-        background-color: var(--secondary-color);
-        color: var(--primary-color-lighten-2);
-
-        transition: var(--duration) var(--timing);
-
-        &:hover {
-            background-color: var(--primary-color-lighten-2);
-            color: var(--secondary-color);
-        }
     }
+
+    &__heading {
+        margin: 0;
+    }
+
 }
 </style>
