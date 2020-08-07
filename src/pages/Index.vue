@@ -5,7 +5,7 @@
         <div class="arrow"></div>
       </a>
     </div>-->
-    <section class="container" id="contact">
+    <section class="container" id="contact" style="display: none">
       <h1>Here is all the contact info you'll need.</h1>
       <!-- <h6>{{ subheading }}</h6> -->
       <div class="card-container">
@@ -29,10 +29,7 @@
             <Button src="#contact-form">Contact Form</Button>
         </Card>
       </div>
-    </section>  
-    <ModuleHeadlineForm
-      :content="form.content"
-    />
+    </section>
     <!-- potential strapi data
       <section>
       <div class="post" v-for="post in $page.posts.edges" :key="post.node.id">
