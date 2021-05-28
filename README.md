@@ -1,6 +1,6 @@
 # xlaero
 
-## 🚀 Setup Guide
+## 🚀 Setup Guide :)
 
 ### 1. Install Gridsome CLI tool if you don't have
 
