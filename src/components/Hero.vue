@@ -102,6 +102,10 @@ export default {
     width: 100%;
     overflow: hidden;
     background: radial-gradient(circle at bottom, var(--secondary-color-lighten-2) 0%, var(--secondary-color) 70%);
+    
+    .nav__item:hover {
+        background-color: rgba(255, 255, 255, 0.096);
+    }
 
     &.active {
 
@@ -195,7 +199,7 @@ export default {
 
         transition: calc(var(--duration)) var(--timing);
 
-        &:after {
+        &__after {
             position: sticky; 
             bottom: 0;
             width: 100%; 
@@ -236,9 +240,10 @@ export default {
     }
 
     &__heading {
-        margin: 0;
+        margin: 0px;
         color: var(--white-color);
     }
 
 }
+
 </style>
