@@ -71,9 +71,9 @@ export default {
             introText: "",
             navigation: [
                 {
-                    url: "/engineering-and-certificate-capabilities",
-                    label: "Engineering & Certificate Capabilities",
-                    subheading: "We devolpe your RDAs and STCs and offer full Legacy Aircraft Support. <br>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun."
+                    url: "/engineering-services",
+                    label: "Engineering Services",
+                    subheading: "We develop your RDAs and STCs and offer full Legacy Aircraft Support. <br>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun."
                 },
                 {
                     url: "/repair-capabilities",
@@ -81,8 +81,8 @@ export default {
                     subheading: "These are repairs we have developed and executed on many different parts. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develope and certify the a repair on your part."
                 },
                 {
-                    url: "/cost-reduction",
-                    label: "Cost Reduction",
+                    url: "/manufacturing-capabilites",
+                    label: "Manufacturing Capabilites",
                     subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 },
                 {

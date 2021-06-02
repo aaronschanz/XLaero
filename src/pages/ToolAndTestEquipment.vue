@@ -45,7 +45,7 @@ export default {
       },
       card2Module: {
         headline: "Every part makes a system work well. That’s us.",
-        subheading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+        subheading: "Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
         cardsContent: [
           {
             headline: "Portable Fuel Nozzel Test Stand",
