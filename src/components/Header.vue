@@ -5,7 +5,7 @@
                 <g-image src="~/../static/images/xlaero-logo-green.svg" alt="XLaero aerospace engineering" />
             </g-link>
             <div class="home" @click="$root.$emit('openMenu');">Home</div>
-            <div class="news" @click="$root.$emit('openMenu');">News</div> 
+            <div class="news" @click="$root.$emit('openNews');">News</div> 
             <div class="aboutus" @click="$root.$emit('openMenu');">About Us</div>
             <div class="resources" @click="$root.$emit('openMenu');">Resources</div>
             <div class="contactus" @click="$root.$emit('openMenu');">Contact Us</div>
@@ -24,8 +24,8 @@ export default {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         align-items: center;
+        justify-content: flex-end;
         //padding: var(--spacing-7) var(--spacing-10); Already set on .hero
 
         // position: absolute;
@@ -37,6 +37,7 @@ export default {
     .logo {
         display: block;
         width: 180px;
+        margin-right: auto;
 
         img {
             width: 100%;
@@ -48,7 +49,6 @@ export default {
     }
     
     .home {
-        margin-left: 550px;
         display: inline-block;
         padding: var(--spacing-4) var(--spacing-6);
         background-color: rgba(255, 255, 255, 0.199);

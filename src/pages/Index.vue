@@ -6,6 +6,11 @@
         <div class="arrow"></div>
       </a>
     </div>-->
+    <div class ="HeadlineImage">
+        <ModuleHeadlineImage
+        :content="header.content"
+    />
+    </div>
     <section class="container" id="contact" style="display: none">
       <h1>Here is all the contact info you'll need.</h1>
       <!-- <h6>{{ subheading }}</h6> -->

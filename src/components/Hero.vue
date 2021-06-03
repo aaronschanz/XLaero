@@ -34,7 +34,6 @@
             <div class="intro__inner">
                 <h2 class="intro__headline">{{ introHeadline }}</h2>
                 <p>{{ introText }}</p>
-                <Button>Tell Me More</Button>
             </div>
         </div>
     </section>
@@ -67,8 +66,8 @@ export default {
             activeItem: null,
             openItem: null,
             rotateItem: 0,
-            introHeadline: "",
-            introText: "",
+            introHeadline: "hi",
+            introText: "good morning",
             navigation: [
                 {
                     url: "/engineering-services",
@@ -104,7 +103,13 @@ export default {
     background: radial-gradient(circle at bottom, var(--secondary-color-lighten-2) 0%, var(--secondary-color) 70%);
     
     .nav__item:hover {
+        transition-duration: 0.2s;
         background-color: rgba(255, 255, 255, 0.096);
+        background-clip: content-box;
+        filter: Alpha(opacity=50);
+        margin-bottom: 20px;
+        margin-top: -20px;
+        object-fit: none;    
     }
 
     &.active {
@@ -174,7 +179,7 @@ export default {
 .logo-rotate {
     width: 56vw;
     position: absolute;
-    //animation: rotate 13s ease infinite alternate;
+    // animation: rotate 13s ease infinite alternate;
     bottom: -15%;
     right: 0%;
     transform-origin: center;
