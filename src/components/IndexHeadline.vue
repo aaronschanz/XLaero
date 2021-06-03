@@ -15,27 +15,22 @@ export default {
 
 <style lang="scss" scoped>
     .center-container {
-        
-        width: 1400px;
-        height: 1000px;
+        margin-top: -100px;
+        margin-left: -100px;
+        margin-right: -100px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         display: flex;
-
+        float: center;
         h1 {
-            align-items: center;
-            text-align: center;
-            line-height: 2000%; 
+            position: relative; 
             color: white;
-            text-shadow: 2px 2px black;
             font-weight: bold;
-            // width: auto;
-            // max-width: 600px;
-            // margin-left: var(--spacing-25);
-        }
-        img {        
-            margin-top: 0px; 
+            height: 1000px;
+            left: 100px;
+            right: 0px;
+            top: 800px;
         }
     }
 </style>
