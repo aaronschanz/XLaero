@@ -34,7 +34,8 @@ export default {
             display: block;
             width: 50%;
             height: calc(32vw - var(--spacing-10) * 3);
-            min-height: 400px
+            min-height: 400px;
+            margin-top: 0px;
         }
     }
 </style>

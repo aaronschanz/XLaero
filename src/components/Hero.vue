@@ -66,8 +66,8 @@ export default {
             activeItem: null,
             openItem: null,
             rotateItem: 0,
-            introHeadline: "hi",
-            introText: "good morning",
+            introHeadline: "",
+            introText: "",
             navigation: [
                 {
                     url: "/engineering-services",
