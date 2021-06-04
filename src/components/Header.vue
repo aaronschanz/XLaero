@@ -4,7 +4,7 @@
             <g-link to="/" class="logo" @click.native="$root.$emit('openMenu');">
                 <g-image src="~/../static/images/xlaero-logo-green.svg" alt="XLaero aerospace engineering" />
             </g-link>
-            <div class="home" @click="$root.$emit('openMenu');">Home</div>
+            <div class="home">Home</div>
             <div class="news" @click="$root.$emit('openMenu');">News</div> 
             <div class="aboutus" @click="$root.$emit('openMenu');">About Us</div>
             <div class="resources" @click="$root.$emit('openMenu');">Resources</div>

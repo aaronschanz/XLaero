@@ -32,7 +32,8 @@ export default {
     Card,
     ModuleHeadlineCta,
     ModuleHeadlineForm,
-    ModuleHeadline2Cards
+    ModuleHeadline2Cards,
+    ModuleHeadlineImage
   },
   data() {
     return {

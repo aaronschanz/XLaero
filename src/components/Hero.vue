@@ -188,7 +188,7 @@ export default {
 }
 
 .intro {
-    position: relative;
+    position: absolute;
     width: 100%;
     background-color: var(--white-color);
     height: calc(50vh - 320px / 2 - var(--spacing-15) * 0);
@@ -208,7 +208,7 @@ export default {
             position: sticky; 
             bottom: 0;
             width: 100%; 
-            height: 60px; 
+            height: 10px; 
             background: linear-gradient(transparent, hsl(158, 4%, 98%));
         }
     }
