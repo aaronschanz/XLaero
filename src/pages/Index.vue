@@ -4,6 +4,9 @@
     <IndexHeadline
       :content="header.content"
     />  
+    <IndexSummary
+      :content="header2.content"
+    />
   </div>
 </template>
 
@@ -20,6 +23,7 @@ import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 import IndexHeadline from '~/components/IndexHeadline.vue'
 import Hero from '~/components/Hero.vue'
+import IndexSummary from '~/components/IndexSummary.vue'
 
 export default {
   metaInfo: {
@@ -27,14 +31,21 @@ export default {
   },
   components: {
     IndexHeadline,
-    Hero
+    Hero,
+    IndexSummary
   },
   data() {
     return {
       header: {
         content:
           {
-            headline: "Every part makes a system work well. That's us.",
+            headline: "Every part makes a system" +"\n" + "work well. That's us.",
+          }
+      },
+      header2: {
+        content:
+          {
+            headline: "",
           }
       }
     }

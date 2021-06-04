@@ -1,14 +1,14 @@
 <template>
     <div>
         <header class="header">
-            <g-link to="/" class="logo" @click.native="$root.$emit('openMenu');">
+            <g-link to="/" class="logo" @click.native="$root.$emit('openHome');">
                 <g-image src="~/../static/images/xlaero-logo-green.svg" alt="XLaero aerospace engineering" />
             </g-link>
-            <div class="home">Home</div>
-            <div class="news" @click="$root.$emit('openMenu');">News</div> 
-            <div class="aboutus" @click="$root.$emit('openMenu');">About Us</div>
-            <div class="resources" @click="$root.$emit('openMenu');">Resources</div>
-            <div class="contactus" @click="$root.$emit('openMenu');">Contact Us</div>
+            <g-link to="/" style="text-decoration:none" class="home" @click.native="$root.$emit('openHome');">Home</g-link>
+            <div class="news" @click="$root.$emit('openHome');">News</div> 
+            <div class="aboutus" @click="$root.$emit('openHome');">About Us</div>
+            <div class="resources" @click="$root.$emit('openHome');">Resources</div>
+            <div class="contactus" @click="$root.$emit('openHome');">Contact Us</div>
         </header>
     </div>
 </template>
@@ -52,7 +52,7 @@ export default {
         display: inline-block;
         padding: var(--spacing-4) var(--spacing-6);
         background-color: rgba(255, 255, 255, 0.199);
-        color: var(--white-color);
+        color: white;
         cursor: pointer;
         // border-radius: var(--border-radius);
     }

@@ -50,7 +50,7 @@ export default {
         Button
     },
     mounted() {
-        this.$root.$on('openMenu', data => {
+        this.$root.$on('openHome', data => {
             this.activeItem = null;
         });
     },

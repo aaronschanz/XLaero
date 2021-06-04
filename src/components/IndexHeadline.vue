@@ -1,7 +1,11 @@
+<!-- ADD ABOUT US BUTTON -->
+
+
+
 <template>
     <section class="container">
         <div class="center-container" :style="{ backgroundImage: `url(${require('~/../static/images/indexbackground.png')})`}">
-            <h1>{{ content.headline }}</h1>
+            <h1><pre><span class="h1" style="font-family: var(--font-family)">{{ content.headline }}</span></pre></h1>
         </div>
     </section>
 </template>
@@ -27,7 +31,7 @@ export default {
             position: relative; 
             color: white;
             font-weight: bold;
-            height: 1000px;
+            height: 1100px;
             left: 100px;
             right: 0px;
             top: 800px;
