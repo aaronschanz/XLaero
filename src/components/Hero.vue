@@ -4,7 +4,7 @@
             <Header />
             <div class="hero__content">
                 <div class="hero-headline">
-                    <h1>XLaero - Rotating exellence</h1>
+                    <h1>XLaero - XL problem solving</h1>
                     <p>20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines!</p>
                 </div>
                 <nav class="nav">

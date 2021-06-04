@@ -1,19 +1,24 @@
-<!-- ADD ABOUT US BUTTON -->
-
-
-
 <template>
     <section class="container">
         <div class="center-container" :style="{ backgroundImage: `url(${require('~/../static/images/indexbackground.png')})`}">
             <h1><pre><span class="h1" style="font-family: var(--font-family)">{{ content.headline }}</span></pre></h1>
         </div>
+        <div class="buttoncontainer">
+            <Button>Learn More</Button> <!-- Add src to about us section -->
+        </div>
     </section>
 </template>
 
 <script>
+
+import Button from '~/components/Button.vue'
+
 export default {
     name: "ModuleHeadlineForm",
     props: ['content'],
+    components: {
+        Button
+    }
 }
 </script>
 
@@ -36,5 +41,12 @@ export default {
             right: 0px;
             top: 800px;
         }
+    }
+    .buttoncontainer {
+        margin-top: -80px;
+        width: max-content;
+        color: white;
+        position: relative;
+        top: -80px;
     }
 </style>

@@ -32,7 +32,8 @@ export default {
   components: {
     IndexHeadline,
     Hero,
-    IndexSummary
+    IndexSummary,
+    Button
   },
   data() {
     return {
@@ -45,7 +46,11 @@ export default {
       header2: {
         content:
           {
-            headline: "",
+            headline: "XLaero - No problem too large",
+            text: "New Capabilites",
+            text1: "Research & Development",
+            text2: "Products",
+            text3: "Training"
           }
       }
     }
