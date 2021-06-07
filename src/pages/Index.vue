@@ -47,14 +47,14 @@ export default {
         content:
           {
             headline: "XLaero - No problem too large",
-            header1: "New Capabilites",
-            header2: "Research & Development",
-            header3: "Products",
-            header4: "Training",
-            body1: "capabilites",
-            body2: "research",
-            body3: "products ",
-            body4: "training"
+            header1: "Engineering Services",
+            header2: "Repair Capabilites",
+            header3: "Manufacturing Capabilites",
+            header4: "Tool & Test Equipment",
+            body1: "XL Aero develops your RDAs, STCs and general engineering projects" + "\n" + "with unrivaled levels of details and over 20 years of bottom line" + "\n" + "improvement expertise. We provide full Legacy Aircraft" + "\n" + "support for all your engineering needs and are TCCA certified. ",
+            body2: "XL Aero has extensive professional experience in developing and" + "\n" + "executing repairs for all sorts of different parts. Visit our Repair" + "\n" + "Capabilities index to find out more about the some of the projects" + "\n" + "we have undertaken.",
+            body3: "CAR 561 certified, XL Aero is capable and prepared to undertake" + "\n" + "all your manufacturing needs. We follow a rigorous production" + "\n" + "control system in order to provide you with service that exceed" + "\n" + "expectations according to the AS9100.",
+            body4: "XL Aero offers an impressive history of specialized tool & test" + "\n" + "equipment development for aviation and customers’ engineering" + "\n" + "needs. Please visit our Tool & Test Equipment index to discover" + "\n" + "more on the subject."
           }
       }
     }

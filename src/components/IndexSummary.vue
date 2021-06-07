@@ -7,19 +7,19 @@
             <!-- <h1>{{ content.headline }}</h1> -->
         </div>
         <div class ="summaries">
-            <div id ="capabilites">
+            <div id ="engineering">
                 <h3>{{ content.header1 }}</h3>
                 <p><pre><span id="body1" style="font-family: var(--font-family)">{{ content.body1 }}</span></pre></p>
             </div>
-            <div id="research">
+            <div id="repair">
                 <h3>{{ content.header2 }}</h3>
                 <p><pre><span id="body2" style="font-family: var(--font-family)">{{ content.body2 }}</span></pre></p>
             </div>
-            <div id="products">
+            <div id="manufacturing">
                 <h3>{{ content.header3 }}</h3>
                 <p><pre><span id="body3" style="font-family: var(--font-family)">{{ content.body3 }}</span></pre></p>
             </div>
-            <div id="training">
+            <div id="tool">
                 <h3>{{ content.header4 }}</h3>
                 <p><pre><span id="body4" style="font-family: var(--font-family)">{{ content.body4 }}</span></pre></p>
             </div>
@@ -68,60 +68,59 @@ export default {
         display: grid;
         position: relative;
         grid-template-areas:
-        "item1 item1 item1   item2 item2 item2 "
-        "item1 item1 item1   item2 item2 item2
-         "
-        "item3 item3 item3   item4 item4 item4 "
-        "item3 item3 item3   item4 item4 item4 ";
-        margin-bottom: 300px;
-        margin-top: -780px;
+        "item1 item1 item1 item1   item2 item2 "
+        "item1 item1 item1 item1   item2 item2"
+        "item1 item1 item1 item1   item2 item2"
+        "item3 item3 item3 item3   item4 item4 "
+        "item3 item3 item3 item3   item4 item4 ";
+        margin-bottom: 00px;
+        margin-top: -800px;
         
-        #capabilites {
+        #engineering {
             grid-area: item1;
-            background-color: red;
+            //background-color: red;
             display: grid;
             h3 {
                 color: white;
             }   
             p {
-                display: flex;
+                display: grid;
                 color: white;
-                align-self: center;
             }  
         }
-        #research {
+        #repair {
             grid-area: item2;
-            background-color: blue;
-            display: flex;
+            //background-color: blue;
+            display: grid;
             h3 {
                 color: white;
             }   
             p {
-                display: flex;
+                display: grid;
                 color: white;
             }
         }
-        #products {
+        #manufacturing {
             grid-area: item3;
-            background-color: yellow;
-            display: flex;
+            //background-color: yellow;
+            display: grid;
             h3 {
                 color: white;
             }   
             p {
-                display: flex;
+                display: grid;
                 color: white;
             }
         }
-        #training {
+        #tool {
             grid-area: item4;
-            background-color: green;
-            display: flex;
+            //background-color: green;
+            display: grid;
             h3 {
                 color: white;
             }   
             p {
-                display: flex;
+                display: grid;
                 color: white;
             }
         }
