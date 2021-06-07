@@ -47,10 +47,14 @@ export default {
         content:
           {
             headline: "XLaero - No problem too large",
-            text: "New Capabilites",
-            text1: "Research & Development",
-            text2: "Products",
-            text3: "Training"
+            header1: "New Capabilites",
+            header2: "Research & Development",
+            header3: "Products",
+            header4: "Training",
+            body1: "capabilites",
+            body2: "research",
+            body3: "products ",
+            body4: "training"
           }
       }
     }

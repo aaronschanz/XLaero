@@ -7,10 +7,22 @@
             <!-- <h1>{{ content.headline }}</h1> -->
         </div>
         <div class ="summaries">
-            <h3 id="capabilites">{{ content.text }}</h3>
-            <h3 id="research">{{ content.text1 }}</h3>
-            <h3 id="products">{{ content.text2 }}</h3>
-            <h3 id="training">{{ content.text3 }}</h3>
+            <div id ="capabilites">
+                <h3>{{ content.header1 }}</h3>
+                <p><pre><span id="body1" style="font-family: var(--font-family)">{{ content.body1 }}</span></pre></p>
+            </div>
+            <div id="research">
+                <h3>{{ content.header2 }}</h3>
+                <p><pre><span id="body2" style="font-family: var(--font-family)">{{ content.body2 }}</span></pre></p>
+            </div>
+            <div id="products">
+                <h3>{{ content.header3 }}</h3>
+                <p><pre><span id="body3" style="font-family: var(--font-family)">{{ content.body3 }}</span></pre></p>
+            </div>
+            <div id="training">
+                <h3>{{ content.header4 }}</h3>
+                <p><pre><span id="body4" style="font-family: var(--font-family)">{{ content.body4 }}</span></pre></p>
+            </div>
         </div>
         <div class="buttoncontainer">
             <Button>Get in Touch</Button> <!-- Add src to contact us section -->
@@ -53,35 +65,65 @@ export default {
         }
     }
     .summaries {
-        margin-bottom: -120px;
-        margin-top: -400px;
+        display: grid;
+        position: relative;
+        grid-template-areas:
+        "item1 item1 item1   item2 item2 item2 "
+        "item1 item1 item1   item2 item2 item2
+         "
+        "item3 item3 item3   item4 item4 item4 "
+        "item3 item3 item3   item4 item4 item4 ";
+        margin-bottom: 300px;
+        margin-top: -780px;
+        
         #capabilites {
-            position: relative;
-            top: -350px;
-            color: white;
-            text-align: left;
-            //TODO
+            grid-area: item1;
+            background-color: red;
+            display: grid;
+            h3 {
+                color: white;
+            }   
+            p {
+                display: flex;
+                color: white;
+                align-self: center;
+            }  
         }
         #research {
-            position: relative;
-            color: white;
-            top: -420px;
-            text-align: right;
-            //TODO    
+            grid-area: item2;
+            background-color: blue;
+            display: flex;
+            h3 {
+                color: white;
+            }   
+            p {
+                display: flex;
+                color: white;
+            }
         }
         #products {
-            position: relative;
-            color: white;
-            top: -180px;
-            text-align: left;
-            //TODO
+            grid-area: item3;
+            background-color: yellow;
+            display: flex;
+            h3 {
+                color: white;
+            }   
+            p {
+                display: flex;
+                color: white;
+            }
         }
         #training {
-            position: relative;
-            color: white;
-            top: -250px;
-            text-align: right;
-            //TODO
+            grid-area: item4;
+            background-color: green;
+            display: flex;
+            h3 {
+                color: white;
+            }   
+            p {
+                display: flex;
+                color: white;
+            }
         }
     }
     .logo {
@@ -92,7 +134,6 @@ export default {
         margin-bottom: 780px;
     }
     .buttoncontainer {
-        //margin-top: -100px;
         width: max-content;
         color: white;
         position: relative;
