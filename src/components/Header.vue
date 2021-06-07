@@ -8,12 +8,16 @@
             <div class="news" @click="$root.$emit('openHome');">News</div> 
             <div class="aboutus" @click="$root.$emit('openHome');">About Us</div>
             <div class="resources" @click="$root.$emit('openHome');">Resources</div>
-            <div class="contactus" @click="$root.$emit('openHome');">Contact Us</div>
+            <!-- <div class="contactus" @click="$root.$emit('openHome');">Contact Us</div> -->
+            <g-link to="/contact#info" style="text-decoration:none" class="contactus" @click.native="$root.$emit('');">Contact Us</g-link>
         </header>
     </div>
 </template>
 
 <script>
+
+import Contact from "~/pages/Contact.vue"
+
 export default {
     name: 'Header'
 }

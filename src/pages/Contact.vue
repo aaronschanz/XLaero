@@ -1,7 +1,7 @@
 <template>
   <div>    
     <section class="container">
-      <h1>Here is all the contact info you'll need.</h1>
+      <h1><a id="info">Here is all the contact info you'll need.</a></h1>
       <!-- <h6>{{ subheading }}</h6> -->
       <div class="card-container">
         <Card>
