@@ -9,9 +9,7 @@
                     <input type="email" placeholder="Email-Address" required>
                     <input type="text" placeholder="Subject" class="subject" required>
                     <textarea placeholder="Message"></textarea>
-                    <button type="submit">Send Email</button>
-
-                    <!-- <Button :src="content.button.url">{{ content.button.label }}</Button> -->
+                    <Button :src="content.button.url">{{ content.button.label }}</Button> <!-- Figure out way to send email form -->
                 </form>
             </div>
         </div>

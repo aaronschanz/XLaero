@@ -52,6 +52,7 @@ export default {
           {
             headline: "Do not hesitate to get in touch with us.",
             button: {
+              url: "",
               label: "Send"
             }
           }
