@@ -3,12 +3,15 @@
         <div v-for="(content, i) in content" :key="i" class="form-container" :style="{ backgroundImage: `url(${require('~/../static/images/background-circle.svg')})`}">
             <h1>{{ content.headline }}</h1>
             <div class="contact-form" id="contact-form">
-                <form>
-                    <input type="text" placeholder="First Name" class="firstName">
-                    <input type="text" placeholder="Last Name" class="lastName">
-                    <input type="email" placeholder="Email-Address">
+                <form method="post" action="contact.php">
+                    <input type="text" placeholder="First Name" class="firstName" required>
+                    <input type="text" placeholder="Last Name" class="lastName" required>
+                    <input type="email" placeholder="Email-Address" required>
+                    <input type="text" placeholder="Subject" class="subject" required>
                     <textarea placeholder="Message"></textarea>
-                    <Button :src="content.button.url">{{ content.button.label }}</Button>
+                    <button type="submit">Send Email</button>
+
+                    <!-- <Button :src="content.button.url">{{ content.button.label }}</Button> -->
                 </form>
             </div>
         </div>
@@ -29,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
     .form-container {
+        margin: -100px;
         background-position: top left;
         background-repeat: no-repeat;
         background-color: var(--secondary-color);
@@ -53,13 +57,14 @@ export default {
             display: grid;
             grid-template-areas:
             "firstName lastName"
-            "email email"
+            "email subject"
             "message message"
             "button button";
             grid-gap: var(--spacing-5);
         }
         
         input, textarea{
+            color: white;
             padding: var(--spacing-2);
             border: none;
             border-bottom: var(--border-width) solid white;

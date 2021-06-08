@@ -1,17 +1,17 @@
 <template>
   <div>    
-    <section class="container">
+    <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <h1><a id="info">Here is all the contact info you'll need.</a></h1>
       <!-- <h6>{{ subheading }}</h6> -->
       <div class="card-container">
         <Card>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.849840017946!2d-122.80306818414189!3d49.032462896387955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485c348f0fe3629%3A0x5042a143e698710c!2sXL%20Aero!5e0!3m2!1sen!2sca!4v1596052554539!5m2!1sen!2sca" frameborder="1" style="border: 1px solid #18C386;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d578.0629415341444!2d-122.79823519668675!3d49.06340659677623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485c4b601e6b86f%3A0x9c5dc0da2f8c3a8b!2s221-3388%20Rosemary%20Heights%20Crescent%2C%20Surrey%2C%20BC%20V3S%200K7!5e0!3m2!1sen!2sca!4v1623169130172!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <h5 class="contact-info">Shipping & Mailing Address</h5>
             <div class="contact-info">
-              <h1>XLaero Inc.</h1>
-              <p>17289 2 Ave<br>
+              <h1>XL Aero Inc.</h1>
+              <p> #221 - 3388 Rosemary Heights Crescent<br>
               Surrey, BC<br>
-              V3Z9P9, Canada</p>
+              V3S 0K7, Canada</p>
             </div>
         </Card>
         <Card>
@@ -52,7 +52,6 @@ export default {
           {
             headline: "Do not hesitate to get in touch with us.",
             button: {
-              url: "",
               label: "Send"
             }
           }

@@ -24,9 +24,9 @@
                 <p><pre><span id="body4" style="font-family: var(--font-family)">{{ content.body4 }}</span></pre></p>
             </div>
         </div>
-        <div class="buttoncontainer">
+        <g-link class="buttoncontainer" to="/contact#contact-form">
             <Button>Get in Touch</Button> <!-- Add src to contact us section -->
-        </div>
+        </g-link>
     </section>
 </template>
 
@@ -133,6 +133,7 @@ export default {
         margin-bottom: 780px;
     }
     .buttoncontainer {
+        text-decoration: none;
         width: max-content;
         color: white;
         position: relative;
