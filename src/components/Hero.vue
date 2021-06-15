@@ -81,7 +81,7 @@ export default {
                 },
                 {
                     url: "/manufacturing-capabilites",
-                    label: "Manufacturing Capabilites",
+                    label: "Spare Part Support",
                     subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 },
                 {
@@ -90,8 +90,8 @@ export default {
                     subheading: ""
                 },
                 {
-                    url: "/tool-and-test-equipment",
-                    label: "Spare Part Support",
+                    url: "/manufacturing-capabilites",
+                    label: "Manufacturing Capabilities",
                     subheading: ""
                 },
             ],
