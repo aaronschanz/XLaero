@@ -77,7 +77,7 @@ export default {
                 {
                     url: "/repair-capabilities",
                     label: "Repair Capabilities",
-                    subheading: "These are repairs we have developed and executed on many different parts. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develope and certify the a repair on your part."
+                    subheading: "These are repairs we have developed and executed on many different parts. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develope and certify the a repair on your part. **TO BE EDITED**"
                 },
                 {
                     url: "/manufacturing-capabilites",
@@ -87,7 +87,12 @@ export default {
                 {
                     url: "/tool-and-test-equipment",
                     label: "Tool & Test Equipment",
-                    subheading: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna."
+                    subheading: ""
+                },
+                {
+                    url: "/tool-and-test-equipment",
+                    label: "Spare Part Support",
+                    subheading: ""
                 },
             ],
         }
@@ -104,7 +109,9 @@ export default {
     
     .nav__item:hover {
         transition-duration: 0.2s;
-        background-color: rgba(255, 255, 255, 0.096);
+        //background-color: rgba(255, 255, 255, 0.096);
+        background-image: url(../../static/images/indexbackground.png);
+        opacity: 0.2;
         background-clip: content-box;
         filter: Alpha(opacity=50);
         margin-bottom: 20px;

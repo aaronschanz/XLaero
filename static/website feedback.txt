@@ -1,0 +1,7 @@
+About Us: Team picture needs to be bigger and go underneath "Why Choose Us?"
+	  Picture of Tim replaced with his LinkedIn profile picture 
+
+Repair Capabilities: part number, name of part, make, model, TCCA RDA#, pictures 
+
+add description
+	  
