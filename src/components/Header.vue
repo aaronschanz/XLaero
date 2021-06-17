@@ -30,6 +30,7 @@ export default {
         flex-wrap: wrap;
         align-items: center;
         justify-content: flex-end;
+        
         //padding: var(--spacing-7) var(--spacing-10); Already set on .hero
 
         // position: absolute;

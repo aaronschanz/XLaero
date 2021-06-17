@@ -31,18 +31,18 @@ budget, while providing the best customer experience possible. We comply with al
       <div class="middle">
         <h1><a id=team>Our Team</a></h1>
         <p id='ourteam'><pre style="font-family: var(--font-family)">
-Tim Blaskovich - President
-    tim@xlaero.ca
-Dane Wassell - Mechanical Design Engineer
-    dane@xlaero.ca
-Corbin Meier - Mechanical Design Engineer
-    corbin@xlaero.ca
-Ana Santos Pérez - Mechanical Design Engineer
-    ana@xlaero.ca
-Jonathan Schiffner - Finance & IT
-    finance@xlaero.ca
-Brenda Cichon - Administrative Assistant
-    brenda@xlaero.ca
+  Tim Blaskovich - President
+      tim@xlaero.ca
+  Dane Wassell - Mechanical Design Engineer
+      dane@xlaero.ca
+  Corbin Meier - Mechanical Design Engineer
+      corbin@xlaero.ca
+  Ana Santos Pérez - Mechanical Design Engineer
+      ana@xlaero.ca
+  Jonathan Schiffner - Finance & IT
+      finance@xlaero.ca
+  Brenda Cichon - Administrative Assistant
+      brenda@xlaero.ca
         </pre></p>
         <img src="../../static/images/teampic.jpg" alt="The team!" id="teampic">
       </div>
@@ -178,7 +178,7 @@ export default {
       grid-area: boss;
       width: 300px;
       height: auto;
-      padding: 10% 0% 0% 10%;
+      padding: 10% 0% 0% 15%;
     }
     .container {
         padding: var(--spacing-25);

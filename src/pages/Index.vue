@@ -1,12 +1,14 @@
 <!-- test> -->
 <template>
   <div>
-    <IndexHeadline
-      :content="header.content"
-    />  
+    <div id='home'>
+      <IndexHeadline
+        :content="header.content"
+      /> </div>  
+    
     <IndexSummary
-      :content="header2.content"
-    />
+      :content="header2.content" 
+    />                            
   </div>
 </template>
 

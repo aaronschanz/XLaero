@@ -4,7 +4,7 @@
             <h1><pre><span class="h1" style="font-family: var(--font-family)">{{ content.headline }}</span></pre></h1>
         </div>
         <div class="buttoncontainer">
-            <Button>Learn More</Button> <!-- Add src to about us section -->
+            <Button src="about-us#info">Learn More</Button> 
         </div>
     </section>
 </template>

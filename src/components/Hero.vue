@@ -101,11 +101,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .hero {
     position: relative;
     width: 100%;
     overflow: hidden;
     background: radial-gradient(circle at bottom, var(--secondary-color-lighten-2) 0%, var(--secondary-color) 70%);
+    
     
     .nav__item:hover {
         transition-duration: 0.2s;
@@ -122,6 +124,7 @@ export default {
     &.active {
 
         .nav__item {
+            position: absolute;
             opacity: 0;
             //transform: translateY(20%);
 
