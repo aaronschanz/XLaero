@@ -58,46 +58,30 @@ worked for over 26 years in key positions in companies such as Pratt & Whitney
 and CHC Helicopter in the turbine and aviation sectors.</pre></p>
         <figure>
           <img src="../../static/images/tim.jpg" alt="The Boss" id="boss">
-          <figcaption>Tim Blaskovich, President & Founder</figcaption>
+          <figcaption style="text-align: center">Tim Blaskovich, President & Founder</figcaption>
         </figure>
         <img src="../../static/images/DAR.png" alt="DAR" id="DAR">
         <img src="../../static/images/CAR.jpg" alt="CAR" id="CAR">
       </div>
     </section>  
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Button from '~/components/Button.vue'
-import Card from '~/components/Card.vue'
-import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   metaInfo: {
     title: 'XLaero - Contact'
   },
   components: {
-    Button,
-    Card,
-    ModuleHeadlineForm
-  },
-  data() {
-    return {
-      form: {
-        content: [
-          {
-            headline: "Do not hesitate to get in touch with us.",
-            button: {
-              url: "",
-              label: "Send"
-            }
-          }
-        ]
-      }
-    }
+    Footer
   }
-}
+
+  }
 </script>
+
 <style lang="scss" scoped>
     .top {
       margin-top: -5%;
@@ -127,7 +111,6 @@ export default {
           "timeline boss tim tim tim"
           "timeline dar dar car car"
           "timeline dar dar car car"
-
     }
     
     #info {
@@ -174,8 +157,8 @@ export default {
     #tim {
       grid-area: tim;
       text-align: center;
-      margin-top: 5%;
-      padding-left: 5%;
+      margin-top: 10%;
+      font-size: 90%;
     }
     #DAR {
       grid-area: dar;
@@ -193,7 +176,7 @@ export default {
     }
     #boss {
       grid-area: boss;
-      width: 350px;
+      width: 300px;
       height: auto;
       padding: 10% 0% 0% 10%;
     }
