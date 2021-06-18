@@ -22,8 +22,11 @@
       </div>
       <div class="middle">
         <h1><a id="h1">XL Aero Repair Capabilities</a></h1>
-        <RepairCard
+        <RepairCard 
           :cards="repairCard1.cardsContent"
+        />
+        <RepairCard
+          :cards="repairCard2.cardsContent"
         />
       </div>
     </section>
@@ -61,7 +64,7 @@ export default {
             headline: "P&WC PT6T",
             name: "HOUSING, ACCESSORY GEARBOX",
             TCCA: "TCCA RDA#: P-RE16-016",
-            Numbers: "3016115, 3024437, 3019744, 3024431",
+            Numbers: "Applicable Part Numbers: 3016115, 3024437, 3019744, 3024431",
             img: {
               src: "http://xlaero.ca/new/images/S-61-Rotor-Brake-Housing.JPG",
               caption: "Fuel Nozzel Test Stand"
@@ -69,7 +72,26 @@ export default {
             text: "<p><em>Cold Spray repair removes corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#contact-form"
+              url: "../contact#"
+            } 
+          },
+        ],
+      },
+      repairCard2: {
+        cardsContent: [
+          {
+            headline: "P&WC PT6T",
+            name: "HOUSING, ACCESSORY GEARBOX",
+            TCCA: "TCCA RDA#: P-RE16-016",
+            Numbers: "Applicable Part Numbers: 3016115, 3024437, 3019744, 3024431",
+            img: {
+              src: "http://xlaero.ca/new/images/S-61-Rotor-Brake-Housing.JPG",
+              caption: "Fuel Nozzel Test Stand"
+            },
+            text: "<p><em>Cold Spray repair removes corrosion</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#"
             } 
           },
         ],
@@ -80,6 +102,10 @@ export default {
 </script>
 
 <style>
+.middle {
+  white-space: pre-wrap;
+}
+
 .home-links a {
   margin-right: 1rem;
 }
