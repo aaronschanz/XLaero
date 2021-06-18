@@ -77,7 +77,7 @@ export default {
                 {
                     url: "/repair-capabilities",
                     label: "Repair Capabilities",
-                    subheading: "These are repairs we have developed and executed on many different parts. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develope and certify the a repair on your part. **TO BE EDITED**"
+                    subheading: "These are various repairs we have developed into capabilities and executed. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develop and certify a repair you desire."
                 },
                 {
                     url: "/manufacturing-capabilites",

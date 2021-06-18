@@ -1,16 +1,32 @@
 <template>
   <div>
-    <ModuleHeadlineCta
-      :content="headline.content"
-    />
-    <ModuleHeadline2Cards
+    <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
+    <!-- <ModuleHeadline2Cards
       :headline="card2Module.headline"
       :subheading="card2Module.subheading"
       :cards="card2Module.cardsContent"
-    />   
-    <ModuleHeadlineForm
-      :content="form.content"
-    />
+    />   -->
+      <div class="top">
+        <p id='intro'><pre style="font-family: var(--font-family)">
+            Introductory paragraph that explains the section to be 
+            drafted by Tim. Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+            et dolore magna aliqua. Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+            commodo consequat. Duis aute irure dolor in reprehenderit 
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in 
+            culpa qui officia deserunt mollit anim id est laborum.
+        </pre></p>
+        <img src="../../static/images/repairintro.jpg" alt="Unsplash" id="intropic">
+      </div>
+      <div class="middle">
+        <h1><a id="h1">XL Aero Repair Capabilities</a></h1>
+        <RepairCard
+          :cards="repairCard1.cardsContent"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -22,6 +38,7 @@ import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 import ModuleHeadlineCta from '~/components/ModuleHeadlineCta.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
+import RepairCard from '~/components/RepairCard.vue'
 
 export default {
   metaInfo: {
@@ -33,70 +50,29 @@ export default {
     ModuleHeadlineCta,
     ModuleHeadlineForm,
     ModuleHeadline2Cards,
-    ModuleHeadlineImage
+    ModuleHeadlineImage,
+    RepairCard
   },
   data() {
     return {
-      header: {
-        content:
-          {
-            headline: "Specialized Tool & Test Equipment to keep your aircraft running.",
-            img: {
-              src: "http://xlaero.ca/new/images/FNTS.png",
-              caption: "test caption"
-            }
-          }
-      },
-      headline: {
-        content:
-          {
-            headline: "Jinn amidala antilles wookiee sidious darth hutt hutt lars.",
-            button: {
-              label: "Get in touch",
-              url: "#contact-form"
-            } 
-          }
-      },
-      card2Module: {
-        headline: "We have a vast collection of developed part repairs",
-        subheading: "These are repairs we have developed and executed on many different parts. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develope and certify the a repair on your part.",
+      repairCard1: {
         cardsContent: [
           {
-            headline: "S-61 Rotor Brake Housing",
+            headline: "P&WC PT6T",
+            name: "HOUSING, ACCESSORY GEARBOX",
+            TCCA: "TCCA RDA#: P-RE16-016",
+            Numbers: "3016115, 3024437, 3019744, 3024431",
             img: {
               src: "http://xlaero.ca/new/images/S-61-Rotor-Brake-Housing.JPG",
               caption: "Fuel Nozzel Test Stand"
             },
-            text: "<p>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun.</p>",
+            text: "<p><em>Cold Spray repair removes corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "#contact-form"
+              url: "../contact#info"
             } 
           },
-          {
-            headline: "PT6T AGB Housing",
-            img: {
-              src: "http://xlaero.ca/new/images/PT6T-housing.png",
-              caption: "Custom Tool & Test Equipment"
-            },
-            text: "Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun.",
-            button: {
-              label: "Request a Quote",
-              url: "#contact-form"
-            } 
-          }
         ],
-      },
-      form: {
-        content: [
-          {
-            headline: "Do not hesitate to get in touch with us.",
-            button: {
-              url: "",
-              label: "Send"
-            }
-          },
-        ]
       }
     }
   }
@@ -110,5 +86,32 @@ export default {
 
 figure {
   margin: 0;
+}
+
+.top {
+  display: grid;
+  grid-template-areas: 
+    "para . pic"
+    "para . pic"
+}
+
+#intro {
+  padding-top: 10%;
+  padding-left: 10%;
+  grid-area: para;
+}
+
+#intropic {
+  grid-area: pic;
+  height: auto;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3%;
+  object-fit: cover;
+}
+
+#h1 {
+  margin-top: 10%;
+  padding-left: 5%;
 }
 </style>
