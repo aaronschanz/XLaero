@@ -32,13 +32,20 @@ export default {
     .container {
         padding: var(--spacing-20);
         margin-top: -var(--spacing-20);
+        display: grid;
+        //grid-template-columns: 33% 33% 33%;
+        //grid-template-rows: 25% 25% 25% 25%;
+        //grid-template-areas:
+        //    "pic headline ."
+        //    "pic name ."
+        //    "pic description numbers"
+        //    "pic TCCA button"
+        
     }
 
     .card-container {
         display: grid;
-        grid-template-columns: auto;
-        grid-template-areas: 
-        ""
+        
     }
 
     #pic {
@@ -47,7 +54,6 @@ export default {
     }
     #headline {
         grid-area: headline;
-        float: right;
     }
     #name {
         grid-area: item;

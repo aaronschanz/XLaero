@@ -118,7 +118,7 @@ export default {
         filter: Alpha(opacity=50);
         margin-bottom: 20px;
         margin-top: -20px;
-        object-fit: none;    
+        object-fit: none;  
     }
 
     &.active {

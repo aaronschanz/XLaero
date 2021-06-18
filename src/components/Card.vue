@@ -18,11 +18,18 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-    display: inline-block;
+    display: grid;
     border: var(--border-width) solid var(--basic-color-lighten-4);
     padding: var(--spacing-10);
+    //grid-template-columns: 33% 33% 33%;
+    //grid-template-rows: 25% 25% 25% 25%;
 
-    img, iframe {
+
+    
+    
+    
+    
+    /* img, iframe {
         // aspect-ratio: 16 / 9;
         display: block;
         aspect-ratio: 16 / 9;
@@ -37,7 +44,7 @@ export default {
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
-        
+
         h3 {
             margin-top: 0;
         }
@@ -61,7 +68,6 @@ export default {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(unquote("min(300px, 100%)"), 1fr));
         min-height: 100vh;
-
     }
 
     &--thin-image {
@@ -87,6 +93,6 @@ export default {
             width: 100%;
             height: 100%;
         }
-    }
+    } */
 }
 </style>
