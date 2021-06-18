@@ -69,7 +69,7 @@ export default {
             text: "<p><em>Cold Spray repair removes corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#contact-form"
             } 
           },
         ],

@@ -5,10 +5,10 @@
             <img id="pic" :src="card.img.src" :alt="card.img.caption">
             <h5 id="headline">{{ card.headline }}</h5>
             <p id="name">{{ card.name }}</p>
-            <p id="TCCA"{{ card.TCCA }}</p>
+            <p id="TCCA">{{ card.TCCA }}</p>
             <p id="numbers">{{ card.Numbers}}</p>
             <div id ="description" v-html="card.text"></div>
-            <Button :src="card.button.url">{{ card.button.label }}</Button>
+            <Button id ="button" :src="card.button.url">{{ card.button.label }}</Button>
         </Card>
       </div>
     </section>
@@ -36,29 +36,38 @@ export default {
 
     .card-container {
         display: grid;
+        grid-template-columns: auto;
         grid-template-areas: 
-            "pic headline "
-            "pic name"
-            "pic description"
-            'pic TCCA'
+        ""
     }
 
     #pic {
         grid-area: pic;
+        width: 40%;
     }
     #headline {
         grid-area: headline;
+        float: right;
     }
     #name {
-        grid-area: name;
+        grid-area: item;
+
+
     }
     #TCCA {
         grid-area: TCCA;
+
     }
     #numbers {
         grid-area: nums;
+
     }
     #description {
         grid-area: description;
+
     } 
+    #button {
+        grid-area: button;
+
+    }
 </style>
