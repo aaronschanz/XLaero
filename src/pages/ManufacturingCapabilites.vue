@@ -1,16 +1,32 @@
 <template>
   <div>
-    <ModuleHeadlineImage
-      :content="header.content"
-    />
-    <ModuleHeadline2Cards
-      :headline="card2Module.headline"
-      :subheading="card2Module.subheading"
-      :cards="card2Module.cardsContent"
-    />   
-    <ModuleHeadlineForm
-      :content="form.content"
-    />
+    <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
+      <div class="topmanu">
+          <p id='intromanu'><pre style="font-family: var(--font-family)">
+            Just a paragraph to be written by Tim that 
+            highlights that we have this capability and 
+            are open for business.  We don't have a 
+            portfolio but I'll mention we have approval 
+            for Turbine Blades under license.  Lorem 
+            ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad 
+            minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo 
+            consequat. 
+          </pre></p>
+        <img src="../../static/images/CAR.jpg" alt="Unsplash" id="intropicmanu">
+      </div>
+      <div class="middlemanu">
+        <h1><a id="h1">Manufacturing Gallery</a></h1>
+        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+      </div>
+    </section>
   </div>
 </template>
 
@@ -24,7 +40,7 @@ import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 
 export default {
   metaInfo: {
-    title: 'XLaero - Cost Reduction'
+    title: 'XLaero - Manufacturing Capabilities'
   },
   components: {
     Button,
@@ -35,46 +51,6 @@ export default {
   },
   data() {
     return {
-      header: {
-        content:
-          {
-            headline: "Cost Reduction",
-            img: {
-              src: "http://xlaero.ca/new/images/FNTS.png",
-              caption: "test caption"
-            }
-          }
-      },
-      card2Module: {
-        headline: "We have a vast collection of developed part repairs",
-        subheading: "These are repairs we have developed and executed on many different parts. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develope and certify the a repair on your part.",
-        cardsContent: [
-          {
-            headline: "S-61 Rotor Brake Housing",
-            img: {
-              src: "http://xlaero.ca/new/images/S-61-Rotor-Brake-Housing.JPG",
-              caption: "Fuel Nozzel Test Stand"
-            },
-            text: "<p>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun.</p>",
-            button: {
-              label: "Request a Quote",
-              url: "#contact-form"
-            } 
-          },
-          {
-            headline: "PT6T AGB Housing",
-            img: {
-              src: "http://xlaero.ca/new/images/PT6T-housing.png",
-              caption: "Custom Tool & Test Equipment"
-            },
-            text: "Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun.",
-            button: {
-              label: "Request a Quote",
-              url: "#contact-form"
-            } 
-          }
-        ],
-      },
       form: {
         content: [
           {
@@ -92,6 +68,28 @@ export default {
 </script>
 
 <style>
+
+#project1 {
+  margin: 2% 2% 2% 14%
+}
+
+.topmanu {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#intromanu {
+  width: 45%;
+  float: left;
+}
+
+#intropicmanu {
+  border: 2px solid black;
+  width: 45%;
+  height: auto;
+  float: right;
+}
+
 .home-links a {
   margin-right: 1rem;
 }

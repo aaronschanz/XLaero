@@ -30,7 +30,6 @@ export default {
 
 <style lang="scss" scoped>
     .form-container {
-        margin: -100px;
         background-position: top left;
         background-repeat: no-repeat;
         background-color: var(--secondary-color);

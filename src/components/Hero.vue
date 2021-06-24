@@ -12,7 +12,7 @@
                         <g-link :to="navItem.url" class="nav__link">
                             <h5 class="nav__heading">{{ navItem.label }}</h5>
                             <span id="boxtext">{{ navItem.subheading }}</span>
-                        </g-link> 
+                        </g-link>
                     </div>
                 </nav>
             </div>
@@ -76,24 +76,24 @@ export default {
                     subheading: "We develop your RDAs and STCs and offer full Legacy Aircraft Support. <br>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun."
                 },
                 {
-                    url: "/repair-capabilities#intro",
+                    url: "/repair-capabilities#introrepair",
                     label: "Repair Capabilities",
                     subheading: "These are various repairs we have developed into capabilities and executed. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develop and certify a repair you desire."
                 },
                 {
-                    url: "/manufacturing-capabilites",
+                    url: "/manufacturing-capabilities#intromanu",
                     label: "Spare Part Support",
                     subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 },
                 {
-                    url: "/tool-and-test-equipment",
+                    url: "/tool-and-test-equipment#introtool",
                     label: "Tool & Test Equipment",
-                    subheading: ""
+                    subheading: "TEST TEST ETESTESTES SET SET SET "
                 },
                 {
-                    url: "/manufacturing-capabilites",
+                    url: "/manufacturing-capabilites#intromanu",
                     label: "Manufacturing Capabilities",
-                    subheading: ""
+                    subheading: "TEST TEST STE STE EST EST SE TSET "
                 },
             ],
         }

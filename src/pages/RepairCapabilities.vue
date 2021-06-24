@@ -1,13 +1,8 @@
 <template>
   <div>
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
-    <!-- <ModuleHeadline2Cards
-      :headline="card2Module.headline"
-      :subheading="card2Module.subheading"
-      :cards="card2Module.cardsContent"
-    />   -->
-      <div class="top">
-        <p id='intro'><pre style="font-family: var(--font-family)">
+      <div class="toprepair">
+        <p id='introrepair'><pre style="font-family: var(--font-family)">
             Introductory paragraph that explains the section to be 
             drafted by Tim. Lorem ipsum dolor sit amet, consectetur 
             adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -18,9 +13,9 @@
             Excepteur sint occaecat cupidatat non proident, sunt in 
             culpa qui officia deserunt mollit anim id est laborum.
         </pre></p>
-        <img src="../../static/images/repairintro.jpg" alt="Unsplash" id="intropic">
+        <img src="../../static/images/repairintro.jpg" alt="Unsplash" id="intropicrepair">
       </div>
-      <div class="middle">
+      <div class="middlerepair">
         <h1><a id="h1">XL Aero Repair Capabilities</a></h1>
         <RepairCard 
           :cards="repairCard1.cardsContent"
@@ -73,8 +68,9 @@
         <RepairCard
           :cards="repairCard17.cardsContent"
         />
+
       </div>
-      <Footer/>
+      <!-- <Footer/> -->
     </section>
   </div>
 </template>
@@ -429,6 +425,17 @@ export default {
           },
         ],
       },
+      form: {
+        content: [
+          {
+            headline: "Do not hesitate to get in touch with us.",
+            button: {
+              url: "",
+              label: "Send"
+            }
+          },
+        ]
+      }
     }
   }
 }
@@ -439,7 +446,8 @@ export default {
   margin-bottom: -90%;
 }
 
-.middle {
+.middlerepair {
+  margin-top: 10%;
   white-space: pre-wrap;
 }
 
@@ -451,26 +459,21 @@ figure {
   margin: 0;
 }
 
-.top {
-  display: grid;
-  grid-template-areas: 
-    "para . pic"
-    "para . pic"
+.toprepair {
+  display: inline;
 }
 
-#intro {
-  padding-top: 10%;
-  padding-left: 10%;
-  grid-area: para;
+#introrepair {
+  margin-left: 5%;
+  padding-top: 5%;
 }
 
-#intropic {
-  grid-area: pic;
+#intropicrepair {
+  width: 40%;
   height: auto;
-  width: 60%;
-  margin-left: 20%;
-  margin-top: 3%;
-  object-fit: cover;
+  float: right;
+  margin-top: -20%;
+  margin-right: 5%;
 }
 
 #h1 {

@@ -63,20 +63,38 @@ and CHC Helicopter in the turbine and aviation sectors.</pre></p>
         <img src="../../static/images/DAR.png" alt="DAR" id="DAR">
         <img src="../../static/images/CAR.jpg" alt="CAR" id="CAR">
       </div>
+
     </section>  
-    <Footer id="footer"/>
+    <!-- <Footer id="footer"/> -->
   </div>
 </template>
 
 <script>
 import Footer from '~/components/Footer.vue'
+import ModuleHeadlineForm from "~/components/ModuleHeadlineForm.vue"
 
 export default {
   metaInfo: {
     title: 'XLaero - Contact'
   },
   components: {
-    Footer
+    Footer,
+    ModuleHeadlineForm
+  },
+  data() {
+    return{
+      form: {
+        content: [
+          {
+            headline: "Do not hesitate to get in touch with us.",
+            button: {
+              url: "",
+              label: "Send"
+            }
+          },
+        ]
+      }
+    }
   }
 
   }
