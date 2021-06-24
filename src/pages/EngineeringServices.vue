@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <ModuleHeadlineImage
       :content="header.content"
     />

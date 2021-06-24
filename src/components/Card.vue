@@ -29,7 +29,7 @@ export default {
     
     
     
-    /* img, iframe {
+     img, iframe {
         // aspect-ratio: 16 / 9;
         display: block;
         aspect-ratio: 16 / 9;
@@ -93,6 +93,6 @@ export default {
             width: 100%;
             height: 100%;
         }
-    } */
+    } 
 }
 </style>

@@ -64,7 +64,7 @@ and CHC Helicopter in the turbine and aviation sectors.</pre></p>
         <img src="../../static/images/CAR.jpg" alt="CAR" id="CAR">
       </div>
     </section>  
-    <Footer/>
+    <Footer id="footer"/>
   </div>
 </template>
 

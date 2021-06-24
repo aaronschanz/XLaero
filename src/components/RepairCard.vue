@@ -45,7 +45,6 @@ export default {
 
     .card-container {
         display: grid;
-        
     }
 
     #pic {
@@ -81,6 +80,6 @@ export default {
     #button {
         grid-area: button;
         height: 15%;
-        margin-top: 20%;
+        margin-top: 25%;
     }
 </style>

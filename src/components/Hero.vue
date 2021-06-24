@@ -11,7 +11,8 @@
                     <div class="nav__item" v-for="(navItem, i) in navigation" :class="activeItem === i ? 'active' : ''" :style="activeItem === i ? { transform: `translateY(0%)` } : null" :key="i" @click="activeItem = i; changeText(i)" @mouseover="rotateItem = i">
                         <g-link :to="navItem.url" class="nav__link">
                             <h5 class="nav__heading">{{ navItem.label }}</h5>
-                        </g-link>
+                            <span id="boxtext">{{ navItem.subheading }}</span>
+                        </g-link> 
                     </div>
                 </nav>
             </div>
@@ -75,7 +76,7 @@ export default {
                     subheading: "We develop your RDAs and STCs and offer full Legacy Aircraft Support. <br>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun."
                 },
                 {
-                    url: "/repair-capabilities",
+                    url: "/repair-capabilities#intro",
                     label: "Repair Capabilities",
                     subheading: "These are various repairs we have developed into capabilities and executed. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develop and certify a repair you desire."
                 },
@@ -108,44 +109,51 @@ export default {
     overflow: hidden;
     background: radial-gradient(circle at bottom, var(--secondary-color-lighten-2) 0%, var(--secondary-color) 70%);
     
-    
+    #boxtext {
+        display: none;
+    }
+
     .nav__item:hover {
         transition-duration: 0.2s;
-        //background-color: rgba(255, 255, 255, 0.096);
-        background-image: url(../../static/images/indexbackground.png);
+        background-color: rgba(255, 255, 255, 0.096);
         opacity: 0.2;
         background-clip: content-box;
         filter: Alpha(opacity=50);
         margin-bottom: 20px;
         margin-top: -20px;
         object-fit: none;  
+        #boxtext {
+            display: block;
+            color: white;
+            font-size: 90%;
+        }
     }
 
-    &.active {
+   // &.active {
 
-        .nav__item {
-            position: absolute;
-            opacity: 0;
+      //  .nav__item {
+      //      position: absolute;
+     //       opacity: 0;
             //transform: translateY(20%);
 
-            &.active {
+      //      &.active {
                 //opacity: 1;
                 //flex-grow: 2;
             
-                .nav__link {    
-                    background-color: var(--basic-color-lighten-7);
+     //           .nav__link {    
+      //              background-color: var(--basic-color-lighten-7);
 
-                    h5 {
-                        color: var(--secondary-color);
-                    }
-                }
-            }
-        }
+     //               h5 {
+   //                     color: var(--secondary-color);
+     //               }
+    //            }
+    //        }
+     //   }
 
-        .intro__inner {
-            transform: translateY(calc((320px + var(--spacing-15) * 0) * -1));
-        }
-    }
+     //   .intro__inner {
+    //        transform: translateY(calc((320px + var(--spacing-15) * 0) * -1));
+   //     }
+    //}
 
     &__body {
         position: relative;

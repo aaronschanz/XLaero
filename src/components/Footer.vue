@@ -24,20 +24,19 @@ export default {
         position: absolute;
         background: var(--secondary-color-lighten-2);
         width: 100%;
-        height: 8%;
-        background-size: cover;
+        height: 300px;
     }
 
     .button {
         color: white;
         cursor: pointer;
         float: right;
+        //margin-right: 20px;
     }
 
     #text {
         color: white;
-        vertical-align: middle;
-        text-align: center;
+        //text-align: center;
     }
 
 </style>
