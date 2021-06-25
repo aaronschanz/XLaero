@@ -50,6 +50,7 @@
           :cards="stcCard10.cardsContent"
         />
       </div>
+      <TopArrow/>
     </section>
   </div>
 </template>
@@ -63,6 +64,7 @@ import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 import EngCardPicsRight from '../components/EngCardPicsRight.vue'
 import EngCardPicsLeft from '../components/EngCardPicsLeft.vue'
+import TopArrow from '~/components/TopArrow.vue'
 
 
 export default {
@@ -77,7 +79,8 @@ export default {
     ModuleHeadlineForm,
     ModuleHeadlineImage,
     EngCardPicsRight,
-    EngCardPicsLeft
+    EngCardPicsLeft,
+    TopArrow
   },
   data() {
     return {

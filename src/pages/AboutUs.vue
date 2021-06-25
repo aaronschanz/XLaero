@@ -63,15 +63,15 @@ and CHC Helicopter in the turbine and aviation sectors.</pre></p>
         <img src="../../static/images/DAR.png" alt="DAR" id="DAR">
         <img src="../../static/images/CAR.jpg" alt="CAR" id="CAR">
       </div>
-
+      <TopArrow/>
     </section>  
-    <!-- <Footer id="footer"/> -->
   </div>
 </template>
 
 <script>
 import Footer from '~/components/Footer.vue'
 import ModuleHeadlineForm from "~/components/ModuleHeadlineForm.vue"
+import TopArrow from "~/components/TopArrow.vue"
 
 export default {
   metaInfo: {
@@ -79,7 +79,8 @@ export default {
   },
   components: {
     Footer,
-    ModuleHeadlineForm
+    ModuleHeadlineForm,
+    TopArrow
   },
   data() {
     return{

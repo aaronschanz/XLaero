@@ -40,6 +40,7 @@
         <img src="../../static/images/FNTS2.jpg" alt="Unsplash" id="FNTS2">
         <img src="../../static/images/FNTSmarketing2.jpg" alt="Unsplash" id="FNTSmarketing2">
       </div>
+      <TopArrow/>
     </section>
   </div>
 </template>
@@ -51,6 +52,7 @@ import Card from '~/components/Card.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
+import TopArrow from '~/components/TopArrow.vue'
 
 export default {
   metaInfo: {
@@ -61,7 +63,8 @@ export default {
     Card,
     ModuleHeadlineImage,
     ModuleHeadlineForm,
-    ModuleHeadline2Cards
+    ModuleHeadline2Cards,
+    TopArrow
   },
 }
 </script>

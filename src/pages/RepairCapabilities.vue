@@ -70,7 +70,7 @@
         />
 
       </div>
-      <!-- <Footer/> -->
+      <TopArrow/>
     </section>
   </div>
 </template>
@@ -85,6 +85,7 @@ import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 import RepairCard from '~/components/RepairCard.vue'
 import Footer from '~/components/Footer.vue'
+import TopArrow from '~/components/TopArrow.vue'
 
 export default {
   metaInfo: {
@@ -98,7 +99,8 @@ export default {
     ModuleHeadline2Cards,
     ModuleHeadlineImage,
     RepairCard,
-    Footer
+    Footer,
+    TopArrow
   },
   data() {
     return {

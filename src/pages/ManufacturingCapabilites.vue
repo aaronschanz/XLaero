@@ -27,6 +27,7 @@
         <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
         <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
       </div>
+      <TopArrow/>
     </section>
   </div>
 </template>
@@ -39,6 +40,7 @@ import Card from '~/components/Card.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
+import TopArrow from '~/components/TopArrow.vue'
 
 export default {
   metaInfo: {
@@ -49,7 +51,8 @@ export default {
     Card,
     ModuleHeadlineImage,
     ModuleHeadlineForm,
-    ModuleHeadline2Cards
+    ModuleHeadline2Cards,
+    TopArrow
   },
   data() {
     return {

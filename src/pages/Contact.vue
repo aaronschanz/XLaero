@@ -24,6 +24,7 @@
             </div>
         </Card>
       </div>
+      <TopArrow/>
     </section>  
     <ModuleHeadlineForm
       :content="form.content"
@@ -35,6 +36,7 @@
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
+import TopArrow from "~/components/TopArrow.vue"
 
 export default {
   metaInfo: {
@@ -43,7 +45,8 @@ export default {
   components: {
     Button,
     Card,
-    ModuleHeadlineForm
+    ModuleHeadlineForm,
+    TopArrow
   },
   data() {
     return {
