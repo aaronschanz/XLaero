@@ -8,7 +8,12 @@
                 <div class="card__content" :style="{ backgroundImage: `url(${require('~/../static/images/background-dots.svg')})` }">
                     <h3>{{ container.headline }}</h3>
                     <div v-html="container.text"></div>
-                    <Button :src="container.button.url">{{ container.button.label }}</Button>
+                    <div class="button1">
+                        <Button :src="container.button.url">{{ container.button.label }}</Button>
+                    </div>
+                    <div class="button2" @click = changeLocation(container.button2.url);>
+                        <Button :src="container.button2.url" >{{ container.button2.label }}</Button>
+                    </div>
                 </div>
             </Card>
         </div>
@@ -25,7 +30,13 @@ export default {
     components: {
         Button,
         Card
-    }
+    },
+    methods: {
+        changeLocation(url) {
+            window.location = url;
+            window.location.reload(true)
+        }
+    },
 }
 </script>
 
@@ -33,4 +44,5 @@ export default {
     .card-container {
         width: 100%;
     }
+
 </style>

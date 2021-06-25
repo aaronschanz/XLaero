@@ -20,7 +20,7 @@ export default {
 .card {
     display: grid;
     border: var(--border-width) solid var(--basic-color-lighten-4);
-    padding: var(--spacing-10);
+    padding: var(--spacing-5);
     //grid-template-columns: 33% 33% 33%;
     //grid-template-rows: 25% 25% 25% 25%;
 

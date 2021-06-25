@@ -18,10 +18,10 @@
             <img src="http://xlaero.ca/new/images/contact.jpeg">
             <h5 class="contact-info">Contact Info</h5>
             <div class="contact-info">
+                <h1>Tim Blaskovich</h1>
                 <p>Email: tim@xlaero.ca</p>
                 <p>Tel.: 778-988-1545</p>
             </div>
-            <Button src="#contact-form">Contact Form</Button>
         </Card>
       </div>
     </section>  

@@ -5,11 +5,18 @@
                 <g-image src="~/../static/images/xlaero-logo-green.svg" alt="XLaero aerospace engineering" />
             </g-link>
             <g-link to="/" style="text-decoration:none" class="home" @click.native="$root.$emit('openHome');">Home</g-link>
+            
             <div class="news" @click="$root.$emit('openHome');">News</div> 
-            <g-link to="/about-us#info" style="text-decoration:none" class="home" @click.native="$root.$emit('');">About Us</g-link>
+            
+            <div class="aboutusnav" @click = "navAboutUs()">
+                <g-link to="/about-us#info" style="text-decoration:none" class="home" @click.native="$root.$emit('');">About Us</g-link>
+            </div>
+
             <div class="resources" @click="$root.$emit('openHome');">Resources</div>
-            <!-- <div class="contactus" @click="$root.$emit('openHome');">Contact Us</div> -->
-            <g-link to="/contact#info" style="text-decoration:none" class="contactus" @click.native="$root.$emit('');">Contact Us</g-link>
+            
+            <div class="contactusnav" @click = "navContactUs()">            
+                <g-link to="/contact#info" style="text-decoration:none" class="contactus" @click.native="$root.$emit('');">Contact Us</g-link>
+            </div>
         </header>
     </div>
 </template>
@@ -22,8 +29,11 @@ export default {
     name: 'Header',
 
     methods: {
-        changeLocation(url) {
-            window.location = url;
+        navAboutUs() {
+            window.location = "/about-us#info";
+        },
+        navContactUs() {
+            window.location = "/contact#info";
         }
     }
 }
