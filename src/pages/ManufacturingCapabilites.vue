@@ -2,6 +2,7 @@
   <div>
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <div class="topmanu">
+        <p id="navmanu"></p>
           <p id='intromanu'><pre style="font-family: var(--font-family)">
             Just a paragraph to be written by Tim that 
             highlights that we have this capability and 
@@ -31,10 +32,8 @@
 </template>
 
 <script>
-window.addEventListener("scroll", () => {
-    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search)
-  });
-  
+
+
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'

@@ -25,7 +25,7 @@
             </div>
         </div>
         <g-link class="buttoncontainer" to="/contact#contact-form">
-            <Button>Get in Touch</Button> <!-- Add src to contact us section -->
+            <Button>Get in Touch</Button> 
         </g-link>
     </section>
 </template>

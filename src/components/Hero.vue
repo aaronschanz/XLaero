@@ -74,7 +74,7 @@ export default {
             introText: "",
             navigation: [
                 {
-                    url: "/engineering-services",
+                    url: "/engineering-services#introeng",
                     label: "Engineering Services",
                     subheading: "We develop your RDAs and STCs and offer full Legacy Aircraft Support. <br>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun."
                 },
@@ -83,18 +83,18 @@ export default {
                     label: "Repair Capabilities",
                     subheading: "These are various repairs we have developed into capabilities and executed. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develop and certify a repair you desire."
                 },
-                {
-                    url: "/manufacturing-capabilities#intromanu",
-                    label: "Spare Part Support",
-                    subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                },
+                //{
+                    //url: "/manufacturing-capabilities#intromanu",
+                    //label: "Spare Part Support",
+                    //subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                //},
                 {
                     url: "/tool-and-test-equipment#introtool",
                     label: "Tool & Test Equipment",
                     subheading: "TEST TEST ETESTESTES SET SET SET "
                 },
                 {
-                    url: "/manufacturing-capabilites#intropicmanu",
+                    url: "/manufacturing-capabilites#navmanu",
                     label: "Manufacturing Capabilities",
                     subheading: "TEST TEST STE STE EST EST SE TSET "
                 },

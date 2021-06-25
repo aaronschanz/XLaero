@@ -76,10 +76,7 @@
 </template>
 
 <script>
-window.addEventListener("scroll", () => {
-    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search)
-  });
-  
+
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'

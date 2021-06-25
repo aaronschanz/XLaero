@@ -1,36 +1,37 @@
 <template>
   <div> 
-    <ModuleHeadlineImage
-      :content="header.content"
-    />
-    <ModuleImageText 
-      :modifiers="repair.modifiers"
-      :cards="repair.content"
-    />
-    <ModuleImageText 
-      :modifiers="reverse.modifiers"
-      :cards="reverse.content"
-    />    
-    <ModuleImageText 
-      :modifiers="mods.modifiers"
-      :cards="mods.content"
-    />    
-    <ModuleHeadlineForm
-      :content="form.content"
-    />
+    <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
+      <div class="topeng">
+        <ModuleHeadlineImage id="introeng"
+          :content="header.content"
+        />
+        <ModuleImageText 
+          :modifiers="repair.modifiers"
+          :cards="repair.content"
+        />
+        <ModuleImageText 
+          :modifiers="reverse.modifiers"
+          :cards="reverse.content"
+        />    
+      </div>
+      <div class="middleeng">
+        <h1><a id="h1eng">Modifications (STCs) and Replacement Parts (PDA/PMA)</a></h1>
+        <stcCard 
+          :cards="stcCard1.cardsContent"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-window.addEventListener("scroll", () => {
-    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search)
-  });
-  
+
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleImageText from '~/components/ModuleImageText.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
+import stcCard from '~/components/stcCard.vue'
 
 export default {
   metaInfo: {
@@ -41,10 +42,31 @@ export default {
     Card,
     ModuleImageText,
     ModuleHeadlineForm,
-    ModuleHeadlineImage
+    ModuleHeadlineImage,
+    stcCard
   },
   data() {
     return {
+      stcCard1: {
+        cardsContent: [
+          {
+            headline: "XL Aero’s Micro CHP Unit (Perhaps other project)",
+            img: {
+              src: "http://xlaero.ca/new/images/CHP.JPG",
+              caption: "S61 Housing, Accessory Gearbox"
+            },
+            img2: {
+              src: "http://xlaero.ca/new/images/CHP2.jpg",
+              caption: "S61 Housing, Accessory Gearbox"
+            },
+            text: "<p>The North  American market lacks an off-the-shelf  (OTS)  micro-CHP system  that is  easily integrated  into  a home and  intelligently controls energy management. XL  Aero  is developing a micro-CHP system with  smart  controller  management. The  micro-CHP  system is  aimed  to be based on an in-house designed microturbine as the prime mover. The benefits of this microturbine system include fuel flexibility, reduced noise, and cleaner emissions.</p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#info"
+            } 
+          },
+        ],
+      },
       repair: {
         modifiers:  "card--thin-image",
         content: [
@@ -54,10 +76,10 @@ export default {
               caption: "test caption"
             },
             headline: "Repair Development & Certificates",
-            text: "<p>We devolpe your RDAs and STCs and offer full Legacy Aircraft Support. <br/> Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun. Nas barriss felth hssis. Coruscant choka tython brak vulptereen. Danni rom hutt tarpals lumiya sunrider gran selkath lars. Billaba chagrian jek nomi geonosian md-5 talortai arkanian kenobi. Tof su kit windu. Ortolan gev gizka ackbar. Trianii snootles ssi-ruuk kowakian iridonian rhen iblis rune. Solo epicanthix onimi yoda winter nass skywalker cabasshite.</p>",
+            text: "<p>Paragraph to be drafted by Tim regarding the engineering services we offer in regards to Repairs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, su culpa qui officia deserunt mollit anim id est laborum.</p>",
             button: {
-              url: "",
-              label: "Contact Us"
+              url: "/repair-capabilities#introrepair",
+              label: "Repair Capabilities"
             }
           },
         ]
@@ -70,50 +92,11 @@ export default {
               src: "https://images.unsplash.com/photo-1547497126-6e02a28ff877?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=680&q=80",
               caption: "test caption"
             },
-            headline: "Reverse Engineering & PMAs",
-            text: `<p>
-                      20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! </br> 
-                      We offer 
-                      <ul>
-                        <li>RDAs</li>
-                        <li>STCs</li>
-                        <li>Legacy Aircraft Support</li>
-                      </ul>
-                    </p>`,
+            headline: "Modifications (STCs) and Replacement Parts (PDA/PMA)",
+            text: "<p>Paragraph to be drafted by Tim regarding the engineering services we offer in regards to STCs and general engineering. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
             button: {
-              url: "",
+              url: "/contact#contact-form",
               label: "Contact Us"
-            }
-          },
-        ]
-      },
-      mods: {
-        modifiers:  "",
-        content: [
-          {
-            img: {
-              src: "https://images.unsplash.com/photo-1552140498-f448ffb1301f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=761&q=80",
-              caption: "test caption"
-            },
-            headline: "Modifications",
-            text: `<p>
-                      20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! </br> 
-                      Mission Enhancement Support
-                    </p>`,
-            button: {
-              url: "",
-              label: "Contact Us"
-            }
-          },
-        ]
-      },
-      form: {
-        content: [
-          {
-            headline: "Do not hesitate to get in touch with us.",
-            button: {
-              url: "",
-              label: "Send"
             }
           },
         ]
@@ -121,9 +104,9 @@ export default {
       header: {
         content:
           {
-            headline: "Specialized Tool & Test Equipment to keep your aircraft running.",
+            headline: "We develop your RDAs and STCs and offer full Legacy Aircraft support",
             img: {
-              src: "http://xlaero.ca/new/images/FNTS.png",
+              src: "http://xlaero.ca/new/images/bubblewindows.png",
               caption: "test caption"
             }
           }
@@ -140,5 +123,9 @@ export default {
 
 figure {
   margin: 0;
+}
+
+#h1eng {
+  margin-left: 5%;
 }
 </style>
