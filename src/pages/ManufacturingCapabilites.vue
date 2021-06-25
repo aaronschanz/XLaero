@@ -18,7 +18,7 @@
         <img src="../../static/images/CAR.jpg" alt="Unsplash" id="intropicmanu">
       </div>
       <div class="middlemanu">
-        <h1><a id="h1">Manufacturing Gallery</a></h1>
+        <h1><a id="h1manu">Manufacturing Gallery</a></h1>
         <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
         <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
         <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
@@ -31,7 +31,10 @@
 </template>
 
 <script>
-
+window.addEventListener("scroll", () => {
+    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search)
+  });
+  
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
@@ -68,6 +71,9 @@ export default {
 </script>
 
 <style>
+#h1manu {
+  margin-left: 5%;
+}
 
 #project1 {
   margin: 2% 2% 2% 14%

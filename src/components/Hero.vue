@@ -8,7 +8,7 @@
                     <p>20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! **TO EDIT**</p>
                 </div>
                 <nav class="nav">
-                    <div class="nav__item" v-for="(navItem, i) in navigation" :class="activeItem === i ? 'active' : ''" :style="activeItem === i ? { transform: `translateY(0%)` } : null" :key="i" @click="activeItem = i; changeText(i)" @mouseover="rotateItem = i">
+                    <div class="nav__item" v-for="(navItem, i) in navigation" :class="activeItem === i ? 'active' : ''" :style="activeItem === i ? { transform: `translateY(0%)` } : null" :key="i" @click="activeItem = i; changeText(i); changeLocation(navItem.url);" @mouseover="rotateItem = i">
                         <g-link :to="navItem.url" class="nav__link">
                             <h5 class="nav__heading">{{ navItem.label }}</h5>
                             <span id="boxtext">{{ navItem.subheading }}</span>
@@ -60,6 +60,9 @@ export default {
             console.log(`Change text of ${i}`);
             this.introHeadline = this.navigation[i].label;
             this.introText = this.navigation[i].subheading;
+        },
+        changeLocation(url) {
+            window.location = url;
         }
     },
     data() {
@@ -91,7 +94,7 @@ export default {
                     subheading: "TEST TEST ETESTESTES SET SET SET "
                 },
                 {
-                    url: "/manufacturing-capabilites#intromanu",
+                    url: "/manufacturing-capabilites#intropicmanu",
                     label: "Manufacturing Capabilities",
                     subheading: "TEST TEST STE STE EST EST SE TSET "
                 },

@@ -19,8 +19,16 @@
 import Contact from "~/pages/Contact.vue"
 
 export default {
-    name: 'Header'
+    name: 'Header',
+
+    methods: {
+        changeLocation(url) {
+            window.location = url;
+        }
+    }
 }
+
+
 </script>
 
 <style lang="scss" scoped>
