@@ -27,7 +27,9 @@
         <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
         <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
       </div>
-      <TopArrow/>
+      <div id="scrollTop">    
+        <TopArrow/>
+      </div>
     </section>
   </div>
 </template>
@@ -54,6 +56,15 @@ export default {
     ModuleHeadline2Cards,
     TopArrow
   },
+  
+  methods: {
+    getHeight() {
+      var x = document.getElementById("intromanu");
+      console.log(x);
+      return x.scrollHeight;
+    }
+  },
+
   data() {
     return {
       form: {
