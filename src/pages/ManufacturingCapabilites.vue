@@ -2,7 +2,7 @@
   <div>
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <div class="topmanu">
-        <p id="navmanu"></p>
+        <p id="manu"></p>
           <p id='intromanu'><pre style="font-family: var(--font-family)">
             Just a paragraph to be written by Tim that 
             highlights that we have this capability and 

@@ -2,7 +2,7 @@
   <div>
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <div class="toptool">
-          <p id='introtool'><pre style="font-family: var(--font-family)">
+          <p id='tool'><pre style="font-family: var(--font-family)">
               This will be a small introductory paragraph talking 
               about about our Tool & Testing equipment capabilities
               We can mention things about the FNTS and other projects 
@@ -75,7 +75,7 @@ export default {
   display: inline;
 }
 
-#introtool {
+#tool {
   float: right;
   margin-top: 5%;
   margin-right: 5%;

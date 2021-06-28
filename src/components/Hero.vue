@@ -74,12 +74,12 @@ export default {
             introText: "",
             navigation: [
                 {
-                    url: "/engineering-services#introeng",
+                    url: "/engineering-services#eng",
                     label: "Engineering Services",
                     subheading: "We develop your RDAs and STCs and offer full Legacy Aircraft Support. <br>Lucas ipsum dolor sit amet drall fey'lya nute klivian bren er'kit x1 mayagil antonio solo. Bib geonosis marek til whiphid. Sulorine jan mimbanite vima-da-boda whitesun."
                 },
                 {
-                    url: "/repair-capabilities#introrepair",
+                    url: "/repair-capabilities#repa",
                     label: "Repair Capabilities",
                     subheading: "These are various repairs we have developed into capabilities and executed. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develop and certify a repair you desire."
                 },
@@ -89,12 +89,12 @@ export default {
                     //subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 //},
                 {
-                    url: "/tool-and-test-equipment#introtool",
+                    url: "/tool-and-test-equipment#tool",
                     label: "Tool & Test Equipment",
                     subheading: "TEST TEST ETESTESTES SET SET SET "
                 },
                 {
-                    url: "/manufacturing-capabilites#navmanu",
+                    url: "/manufacturing-capabilites#manu",
                     label: "Manufacturing Capabilities",
                     subheading: "TEST TEST STE STE EST EST SE TSET "
                 },

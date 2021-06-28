@@ -2,7 +2,7 @@
   <div>
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <div class="toprepair">
-        <p id='introrepair'><pre style="font-family: var(--font-family)">
+        <p id='repa'><pre style="font-family: var(--font-family)">
             Introductory paragraph that explains the section to be 
             drafted by Tim. Lorem ipsum dolor sit amet, consectetur 
             adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -465,7 +465,7 @@ figure {
   display: inline;
 }
 
-#introrepair {
+#repa {
   margin-left: 5%;
   padding-top: 5%;
 }

@@ -8,7 +8,7 @@
     
     <IndexSummary
       :content="header2.content" 
-    />                            
+    />                          
   </div>
 </template>
 

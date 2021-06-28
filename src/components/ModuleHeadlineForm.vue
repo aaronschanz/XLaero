@@ -3,20 +3,21 @@
         <div v-for="(content, i) in content" :key="i" class="form-container" :style="{ backgroundImage: `url(${require('~/../static/images/background-circle.svg')})`}">
             <h1>{{ content.headline }}</h1>
             <div class="contact-form" id="contact-form">
-                <form method="post" action="contact.php">
-                    <input type="text" placeholder="First Name" class="firstName" required>
-                    <input type="text" placeholder="Last Name" class="lastName" required>
-                    <input type="email" placeholder="Email-Address" required>
-                    <input type="text" placeholder="Subject" class="subject" required>
-                    <textarea placeholder="Message"></textarea>
-                    <Button :src="content.button.url">{{ content.button.label }}</Button> <!-- Figure out way to send email form -->
-                </form>
+                <!-- <form method="post" action="contact.php"> -->
+                <input type="text" placeholder="First Name" class="firstName" name="firstName" required>
+                <input type="text" placeholder="Last Name" class="lastName" name="lastName" required>
+                <input type="email" placeholder="Email-Address" class="email" name="email" required>
+                <input type="text" placeholder="Subject" class="subject" name ="subject" required>
+                <textarea placeholder="Message" class="message" name="message"></textarea>
+                <Button :src="content.button.url">{{ content.button.label }}</Button> <!-- Figure out way to send email form --> 
+                <!-- </form> -->
             </div>
         </div>
     </section>
 </template>
 
 <script>
+
 import Button from '~/components/Button.vue'
 
 export default {
@@ -41,10 +42,10 @@ export default {
         h1 {
             width: auto;
             max-width: 600px;
-            margin-left: var(--spacing-25);
+            margin-left: var(--spacing-25);        
         }
     }
-    .contact-form {        
+    .contact-form {   
         border: var(--border-width) solid var(--secondary-color);
         padding: var(--spacing-10);
         min-width: unquote("min(700px, 100%)");

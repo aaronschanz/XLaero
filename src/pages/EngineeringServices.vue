@@ -2,7 +2,7 @@
   <div> 
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <div class="topeng">
-        <ModuleHeadlineImage id="introeng"
+        <ModuleHeadlineImage id="eng"
           :content="header.content"
         />
         <ModuleImageText 
@@ -295,7 +295,7 @@ export default {
             headline: "Repair Development & Certificates",
             text: "<p>Paragraph to be drafted by Tim regarding the engineering services we offer in regards to Repairs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, su culpa qui officia deserunt mollit anim id est laborum.</p>",
             button: {
-              url: "/repair-capabilities#introrepair",
+              url: "/repair-capabilities#repa",
               label: "Repair Capabilities"
             },
             button2: {

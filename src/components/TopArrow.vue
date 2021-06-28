@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button id="scroll-to-top" @click = handleClick();>⇧ Scroll To Top ⇧</button>
+        <button id="scroll-to-top" @click = handleClick();>Scroll To Top </button>
     </div>
 </template>
 
