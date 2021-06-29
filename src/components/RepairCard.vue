@@ -8,13 +8,14 @@
             <p id="TCCA">{{ card.TCCA }}</p>
             <p id="numbers">{{ card.Numbers}}</p>
             <div id ="description" v-html="card.text"></div>
-            <Button id ="button" :src="card.button.url">{{ card.button.label }}</Button> 
+            <Button id="button" :src="card.button.url" >{{ card.button.label }}</Button> 
         </Card>
       </div>
     </section>
 </template>
 
 <script>
+
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 
@@ -24,6 +25,9 @@ export default {
     components: {
         Button,
         Card
+    },
+    data: {
+        subject: ""
     }
 }
 </script>

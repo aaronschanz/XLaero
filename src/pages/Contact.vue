@@ -15,14 +15,14 @@
             </div>
         </Card>
         <Card>
-            <img src="http://xlaero.ca/new/images/contact.jpeg">
+            <img src="http://xlaero.ca/new/images/tim.jpg">
             <h5 class="contact-info">Contact Info</h5>
             <div class="contact-info">
                 <h1>Tim Blaskovich</h1>
                 <p>Email: tim@xlaero.ca</p>
                 <p>Tel.: 778-988-1545</p>
             </div>
-        </Card>
+        </Card> 
       </div>
       <TopArrow/>
     </section>  
@@ -33,6 +33,9 @@
 </template>
 
 <script>
+const subject= "";
+
+
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
@@ -48,12 +51,16 @@ export default {
     ModuleHeadlineForm,
     TopArrow
   },
+  //mounted() {
+    //console.log(subject.has("subject"));
+  //},
   data() {
     return {
       form: {
         content: [
           {
             headline: "Do not hesitate to get in touch with us.",
+            subject: subject,
             button: {
               url: "",
               label: "Send"
@@ -62,7 +69,7 @@ export default {
         ]
       }
     }
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>

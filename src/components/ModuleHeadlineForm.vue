@@ -4,13 +4,13 @@
             <h1>{{ content.headline }}</h1>
             <div class="contact-form" id="contact-form">
             <form action="https://formsubmit.co/aaron@xlaero.ca" method="POST">                
-                <input type="text" placeholder="First Name" class="firstName" name="firstName" required>
-                <input type="text" placeholder="Last Name" class="lastName" name="lastName" required>
-                <input type="email" placeholder="Email-Address" class="email" name="email" required>
-                <input type="hidden" name="_next" value="http://192.168.0.35:8080/thank-you#landing"> <!-- CHANGE THIS TO THANK YOU LANDING PAGE WHEN WEBSITE RELEASES-->
-                <input type="text" placeholder="Subject" class="subject" name ="subject" required>
-                <textarea placeholder="Message" class="message" name="message"></textarea>
-                <button type="submit">Send</button>
+                <!-- first name --> <input type="text" placeholder="First Name" class="firstName" name="firstName" required>
+                <!-- last name --> <input type="text" placeholder="Last Name" class="lastName" name="lastName" required>
+                <!-- their email --> <input type="email" placeholder="Email-Address" class="email" name="email" required>
+                <!-- landing page --> <input type="hidden" name="_next" value="http://192.168.0.35:8080/thank-you#landing"> <!-- CHANGE THIS TO THANK YOU LANDING PAGE WHEN WEBSITE RELEASES-->
+                <!-- subject --> <input type="text" placeholder="Subject" class="subject" name ="subject" v-model="content.subject" required>
+                <!-- message --> <textarea placeholder="Message" class="message" name="message" required></textarea>
+                <button type="submit" id="emailsend">Send</button>
             </form> 
             </div>
         </div>
@@ -113,6 +113,31 @@ export default {
             height: 200px;
             box-sizing: border-box;
             resize: none;
+        }
+
+        #emailsend {
+            border: var(--border);
+            background-color: radial-gradient(circle at bottom, var(--secondary-color-lighten-2) 0%, var(--secondary-color) 70%);
+            padding: var(--spacing-2) var(--spacing-3);
+
+            font-family: var(--font-family);
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+            text-decoration: none;
+
+            margin-top: var(--spacing-5);
+            margin-right: 0;
+            display: inherit;
+
+            cursor: pointer;
+
+            transition: var(--duration) var(--timing);
+
+            &:hover {
+                background-color: var(--secondary-color-lighten-5);
+            }
         }
     }
 </style>
