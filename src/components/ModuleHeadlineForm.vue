@@ -3,14 +3,15 @@
         <div v-for="(content, i) in content" :key="i" class="form-container" :style="{ backgroundImage: `url(${require('~/../static/images/background-circle.svg')})`}">
             <h1>{{ content.headline }}</h1>
             <div class="contact-form" id="contact-form">
-                <!-- <form method="post" action="contact.php"> -->
+            <form action="https://formsubmit.co/aaron@xlaero.ca" method="POST">                
                 <input type="text" placeholder="First Name" class="firstName" name="firstName" required>
                 <input type="text" placeholder="Last Name" class="lastName" name="lastName" required>
                 <input type="email" placeholder="Email-Address" class="email" name="email" required>
+                <input type="hidden" name="_next" value="http://192.168.0.35:8080/thank-you#landing"> <!-- CHANGE THIS TO THANK YOU LANDING PAGE WHEN WEBSITE RELEASES-->
                 <input type="text" placeholder="Subject" class="subject" name ="subject" required>
                 <textarea placeholder="Message" class="message" name="message"></textarea>
-                <Button :src="content.button.url">{{ content.button.label }}</Button> <!-- Figure out way to send email form --> 
-                <!-- </form> -->
+                <button type="submit">Send</button>
+            </form> 
             </div>
         </div>
     </section>

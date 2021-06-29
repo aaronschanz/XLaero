@@ -83,11 +83,11 @@ export default {
                     label: "Repair Capabilities",
                     subheading: "These are various repairs we have developed into capabilities and executed. If you can’t find the repair you are looking for, contact us and we will discern with you the best way moving forward to develop and certify a repair you desire."
                 },
-                //{
-                    //url: "/manufacturing-capabilities#intromanu",
-                    //label: "Spare Part Support",
-                    //subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                //},
+                {
+                    url: "/spare-part-support#part",
+                    label: "Spare Part Support",
+                    subheading: "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                },
                 {
                     url: "/tool-and-test-equipment#tool",
                     label: "Tool & Test Equipment",

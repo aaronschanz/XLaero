@@ -5,20 +5,20 @@
         <h1><a id="info">Our Vision</a></h1>
         <h1><a id="info2">Our Mission</a></h1>
         <p id='vision'><pre style="font-family: var(--font-family)">
-To be an original Equipment Manufacturer for the next generation of integrated 
-hybrid turbo-electric power and propulsion systems. 
-        
-To be a highly capable engineering company that offers affordable and effective 
-solutions for Legacy Aircraft.</pre></p>
+To offer innovative and sustainability driven engineering solutions.</pre></p>
         <p id='mission'><pre style="font-family: var(--font-family)">
-To develop engineering solutions for Legacy Aircraft and provide on
-schedule, on budget, right the first-time delivery to customers.
+To become a highly capable engineering company that offers affordable 
+and effective engineering solutions for Legacy Aircraft To deliver 
+unique engineering  solutions  for  Legacy  Aircraft  on  schedule,  on  
+budget  and right the first-time.
 
-To develop internal capabilities through experience on a variety of
-products, systems, components, specialties.
+To become an Original Equipment Manufacturer 
+for the next generation of  integrated  hybrid  turbo-electric  power  and  
+propulsion  systems  bycontinuously developinginternal  capabilities  through  
+experience  on  a variety of products, systems, components and specialties.
 
-To increase our technology and production readiness for novel solutions
-through R&D.  </pre></p>
+To augment increase our technology and production readiness for novel solutions 
+through R&D.</pre></p>
         <h1><a id="info3">Why Choose Us?</a></h1>
         <p id='why'><pre style="font-family: var(--font-family)">
 At XL Aero, we are commited to operating in a manner that prevents environmental or safety and health (ESH) accidents and incidents. We actively manage 
@@ -32,17 +32,17 @@ budget, while providing the best customer experience possible. We comply with al
         <h1><a id=team>Our Team</a></h1>
         <p id='ourteam'><pre style="font-family: var(--font-family)">
   Tim Blaskovich - President
-      tim@xlaero.ca
+
   Dane Wassell - Mechanical Design Engineer
-      dane@xlaero.ca
+
   Corbin Meier - Mechanical Design Engineer
-      corbin@xlaero.ca
+
   Ana Santos Pérez - Mechanical Design Engineer
-      ana@xlaero.ca
+
   Jonathan Schiffner - Finance & IT
-      finance@xlaero.ca
+
   Brenda Cichon - Administrative Assistant
-      brenda@xlaero.ca
+
         </pre></p>
         <img src="../../static/images/teampic.jpg" alt="The team!" id="teampic">
       </div>
@@ -109,7 +109,7 @@ export default {
       grid-template-areas: 
         "info info2"
         "vision mission"
-        "info3 ."
+        "info3 mission"
         "why why"
     }
 
