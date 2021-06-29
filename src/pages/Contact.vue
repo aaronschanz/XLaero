@@ -32,14 +32,18 @@
   </div>
 </template>
 
-<script>
-const subject= "";
+<script src="/path/to/vue.js"></script>
+<script src="/path/to/vue-router.js"></script>
 
+<script>
+const subject = new URLSearchParams(window.location.search);
+console.log(subject.values());
 
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 import TopArrow from "~/components/TopArrow.vue"
+import queryString from 'querystring'
 
 export default {
   metaInfo: {
@@ -51,9 +55,7 @@ export default {
     ModuleHeadlineForm,
     TopArrow
   },
-  //mounted() {
-    //console.log(subject.has("subject"));
-  //},
+
   data() {
     return {
       form: {
