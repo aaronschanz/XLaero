@@ -118,7 +118,7 @@ export default {
             text: "<p><em>Cold Spray repair removes corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info?subject=hithere"
+              url: "../contact#form?subject=P-RE16-016"
             } 
           },
         ],
@@ -137,7 +137,7 @@ export default {
             text: "<p><em>Cold Spray repair removes wear \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-034"
             } 
           },
         ],
@@ -156,7 +156,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-053"
             } 
           },
         ],
@@ -175,7 +175,7 @@ export default {
             text: "<p><em>Cold Spray repair removes wear \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-058"
             } 
           },
         ],
@@ -194,7 +194,7 @@ export default {
             text: "<p><em>Cold Spray repair removes wear \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-065"
             } 
           },
         ],
@@ -213,7 +213,7 @@ export default {
             text: "<p><em>Cold Spray repair removes wear \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-065"
             } 
           },
         ],
@@ -232,7 +232,7 @@ export default {
             text: "<p><em>Cold Spray repair removes wear \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-065"
             } 
           },
         ],
@@ -251,7 +251,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-071"
             } 
           },
         ],
@@ -270,7 +270,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH16-071"
             } 
           },
         ],
@@ -289,7 +289,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH18-015"
             } 
           },
         ],
@@ -308,7 +308,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH18-015"
             } 
           },
         ],
@@ -327,7 +327,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH18-015"
             } 
           },
         ],
@@ -346,7 +346,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH18-015"
             } 
           },
         ],
@@ -365,7 +365,7 @@ export default {
             text: "<p><em>Selective brush nickel plating repair \nremoves damage</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH18-038/D"
             } 
           },
         ],
@@ -384,7 +384,7 @@ export default {
             text: "<p><em>Selective brush nickel plating repair \nremoves damage</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH18-038/D"
             } 
           },
         ],
@@ -403,7 +403,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH19-001/D"
             } 
           },
         ],
@@ -422,7 +422,7 @@ export default {
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#info"
+              url: "../contact#form?subject=P-RH19-043/D"
             } 
           },
         ],

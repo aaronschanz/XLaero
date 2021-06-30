@@ -26,20 +26,13 @@
       </div>
       <TopArrow/>
     </section>  
-    <ModuleHeadlineForm
+    <ModuleHeadlineForm id="form"
       :content="form.content"
     />
   </div>
 </template>
 
 <script>
-const url = (window.location.href);
-const [hash, params] = url.split('#')[1].split('?');
-const paramsObj = Object.fromEntries(new URLSearchParams(params).entries());
-
-const thing = JSON.stringify(paramsObj);
-
-const subject = JSON.stringify(paramsObj);
 
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
@@ -56,6 +49,13 @@ export default {
     Card,
     ModuleHeadlineForm,
     TopArrow
+  }, 
+  beforeCreate() {
+    const [hash, params] = window.location.href.split('#')[1].split('?');
+    const paramsObj = Object.fromEntries(new URLSearchParams(params).entries());
+
+    const string = JSON.stringify(paramsObj);
+    this.subject = string.substr(12, string.length-14);
   },
 
   data() {
@@ -64,7 +64,7 @@ export default {
         content: [
           {
             headline: "Do not hesitate to get in touch with us.",
-            subject: subject,
+            subject: this.subject,
             button: {
               url: "",
               label: "Send"
