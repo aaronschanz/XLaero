@@ -7,7 +7,7 @@
                 <!-- first name --> <input type="text" placeholder="First Name" class="firstName" name="firstName" required>
                 <!-- last name --> <input type="text" placeholder="Last Name" class="lastName" name="lastName" required>
                 <!-- their email --> <input type="email" placeholder="Email-Address" class="email" name="email" required>
-                <!-- landing page --> <input type="hidden" name="_next" value="http://192.168.0.35:8080/thank-you#landing"> <!-- CHANGE THIS TO THANK YOU LANDING PAGE WHEN WEBSITE RELEASES-->
+                <!-- landing page --> <input type="hidden" name="_next" value="http://localhost:8080/thank-you#landing"> <!-- CHANGE THIS TO THANK YOU LANDING PAGE WHEN WEBSITE RELEASES-->
                 <!-- subject --> <input type="text" placeholder="Subject" class="subject" name ="subject" v-model="content.subject" required>
                 <!-- message --> <textarea placeholder="Message" class="message" name="message" required></textarea>
                 <button type="submit" id="emailsend">Send</button>
