@@ -32,12 +32,14 @@
   </div>
 </template>
 
-<script src="/path/to/vue.js"></script>
-<script src="/path/to/vue-router.js"></script>
-
 <script>
-const subject = new URLSearchParams(window.location.search);
-console.log(subject.values());
+const url = (window.location.href);
+const [hash, params] = url.split('#')[1].split('?');
+const paramsObj = Object.fromEntries(new URLSearchParams(params).entries());
+
+const thing = JSON.stringify(paramsObj);
+
+const subject = JSON.stringify(paramsObj);
 
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
