@@ -4,7 +4,7 @@
             <Header />
             <div class="hero__content">
                 <div class="hero-headline">
-                    <h1>XLaero - XL problem solving</h1>
+                    <h1>Engineering that fits</h1>
                     <p>20 years of bottom line improvement expertise gained from designing, certifying, supporting, and maintaining aircraft engines! **TO EDIT**</p>
                 </div>
                 <nav class="nav">
