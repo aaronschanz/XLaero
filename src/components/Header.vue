@@ -6,13 +6,13 @@
             </g-link>
             <g-link to="/" style="text-decoration:none" class="home" @click.native="$root.$emit('openHome');">Home</g-link>
             
-            <div class="news" @click="$root.$emit('openHome');">News</div> 
+            <!-- <div class="news" @click="$root.$emit('openHome');">News</div> -->
             
             <div class="aboutusnav" @click = "navAboutUs()">
                 <g-link to="/about-us#info" style="text-decoration:none" class="home" @click.native="$root.$emit('');">About Us</g-link>
             </div>
 
-            <div class="resources" @click="$root.$emit('openHome');">Resources</div>
+            <!-- <div class="resources" @click="$root.$emit('openHome');">Resources</div> -->
             
             <div class="contactusnav" @click = "navContactUs()">            
                 <g-link to="/contact#info" style="text-decoration:none" class="contactus" @click.native="$root.$emit('');">Contact Us</g-link>
