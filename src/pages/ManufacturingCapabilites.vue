@@ -4,28 +4,19 @@
       <div class="topmanu">
         <p id="manu"></p>
           <p id='intromanu'><pre style="font-family: var(--font-family)">
-            Just a paragraph to be written by Tim that 
-            highlights that we have this capability and 
-            are open for business.  We don't have a 
-            portfolio but I'll mention we have approval 
-            for Turbine Blades under license.  Lorem 
-            ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad 
-            minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo 
-            consequat. 
+            XL Aero is a Transport Canada Approved CAR 561 
+            Organization for the Manufacture and Certification of 
+            Aeronautical Products. We are licensed to manufacture 
+            both life-limited and critical parts, such as turbine 
+            blades. Regardless of the complexity of the job, our 
+            team will work with you to provide an engineering 
+            solution that fulfills your business’s needs. 
           </pre></p>
-        <img src="../../static/images/CAR.jpg" alt="Unsplash" id="intropicmanu">
-      </div>
-      <div class="middlemanu">
-        <h1><a id="h1manu">Manufacturing Gallery</a></h1>
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+          <img id="blades" src="http://xlaero.ca/new/images/20201224_194729887_iOS 1.png">
+          <img id="carcert" src="http://xlaero.ca/new/images/CAR.jpg">
+          <img id="manupic2" src="http://xlaero.ca/new/images/20190604_205053305_iOS 1.png">
+          <img id="manupic1" src="http://xlaero.ca/new/images/daniel-smyth-8lRxZRFR7ig-unsplash 1.png">
+          <div class="clear"></div>
       </div>
       <div id="scrollTop">    
         <TopArrow/>
@@ -84,29 +75,38 @@ export default {
 </script>
 
 <style>
-#h1manu {
-  margin-left: 5%;
+.clear { clear:both; }
+
+#manupic1, #manupic2 {
+  float: right;
+  width: 30%;
+  height: auto;
+  padding: 10px 0px 10px 5px;
 }
 
-#project1 {
-  margin: 2% 2% 2% 14%
+#carcert {
+  width: 35%;
+  height: auto;
+  border: 2px solid black;
+  float: left;
+  margin-top: -2%;
+  margin-bottom: 2%;
 }
 
+#blades {
+  margin-top: 2%;
+  width: 40%;
+  height: auto;
+  float: right;
+}
 .topmanu {
   width: 80vw;
   margin: 0 auto;
 }
 
 #intromanu {
-  width: 45%;
   float: left;
-}
-
-#intropicmanu {
-  border: 2px solid black;
-  width: 45%;
-  height: auto;
-  float: right;
+  font-size: 120%;
 }
 
 .home-links a {

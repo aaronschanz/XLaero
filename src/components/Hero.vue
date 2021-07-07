@@ -124,9 +124,11 @@ export default {
         filter: Alpha(opacity=50);
         margin-bottom: 20px;
         margin-top: -20px;
-        object-fit: none;  
+        object-fit: none;
+        background-image: url(http://xlaero.ca/new/images/xlaero-logo-flat.svg);
+        background-size: 45%;
         #boxtext {
-            display: block;
+            display: none; //CHANGE THIS IF YOU WANT TEXT TO APPEAR ON HOVER
             color: white;
             font-size: 90%;
         }
