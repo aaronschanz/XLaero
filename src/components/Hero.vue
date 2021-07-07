@@ -126,7 +126,7 @@ export default {
         margin-top: -20px;
         object-fit: none;
         background-image: url(http://xlaero.ca/new/images/xlaero-logo-flat.svg);
-        background-size: 45%;
+        background-size: 100%;
         #boxtext {
             display: none; //CHANGE THIS IF YOU WANT TEXT TO APPEAR ON HOVER
             color: white;

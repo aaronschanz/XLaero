@@ -4,26 +4,23 @@
       <div class="toppart">
         <p id="part"></p>
           <p id='intropart'><pre style="font-family: var(--font-family)">
-            Just a paragraph to be written by Tim that 
-            highlights that we have this capability and 
-            are open for business. Lorem 
-            ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad 
-            minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo 
-            consequat. 
+            We offer a comprehesive support program on 
+            entire CT700 engine platforms. We include 
+            servicable parts with the goal to optimize 
+            your overhaul costs. Get in touch with us 
+            for a list of available spare parts. 
           </pre></p>
-        <img src="../../static/images/thumb.jpg" alt="Unsplash" id="intropicpart">
+        <img src="http://xlaero.ca/new/images/20190327_201413527_iOS 1.png" alt="Unsplash" id="intropicpart">
+        <Button id="partbutton" src="../contact#info">Contact us</Button>
       </div>
-      <div class="middlemanu">
-        <h1><a id="h1part">Spare Part Gallery</a></h1>
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
-        <img src="../../static/images/projectplaceholder.jpg" alt="Unsplash" id="project1">
+      <div class="clear"></div>
+      <div class="middlepart">
+        <h1>Spare Part Gallery</h1>
+        <img id ="sparepart1" src="http://xlaero.ca/new/images/sparepart1.png">
+        <img id ="sparepart2" src="http://xlaero.ca/new/images/sparepart2.png">
+        <img id ="sparepart3" src="http://xlaero.ca/new/images/sparepart3.png">
+        <img id ="sparepart4" src="http://xlaero.ca/new/images/sparepart4.png">
+        <img id ="sparepart5" src="http://xlaero.ca/new/images/sparepart5.png">
       </div>
       <div id="scrollTop">    
         <TopArrow/>
@@ -82,27 +79,49 @@ export default {
 </script>
 
 <style>
-#h1part {
-  margin-left: 5%;
+.clear { clear:both; }
+
+#partbutton {
+  float: left;
+  margin-left: 25%;
 }
 
-#project1 {
-  margin: 2% 2% 2% 14%
+#h1part {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.middlepart {
+  margin-left: 5%;
+  display: inline-block;
+}
+
+#sparepart1, #sparepart2 {
+  width: 48%;
+  height: auto;
+}
+
+#sparepart5 {
+  width: 40%;
+  height: auto;
+}
+
+#sparepart1, #sparepart2, #sparepart3, #sparepart4, #sparepart5 {
+  padding: 10px;
 }
 
 .toppart {
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
 }
 
 #intropart {
-  width: 45%;
+  font-size: 120%;
   float: left;
 }
 
 #intropicpart {
-  border: 2px solid black;
-  width: 45%;
+  width: 50%;
   height: auto;
   float: right;
 }
