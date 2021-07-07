@@ -7,26 +7,38 @@
         <p id='vision'><pre style="font-family: var(--font-family)">
 To offer innovative and sustainability driven engineering solutions.</pre></p>
         <p id='mission'><pre style="font-family: var(--font-family)">
-To become a highly capable engineering company that offers affordable 
-and effective engineering solutions for Legacy Aircraft To deliver 
-unique engineering  solutions  for  Legacy  Aircraft  on  schedule,  on  
-budget  and right the first-time.
+- To become a highly capable engineering company that offers affordable 
+and effective engineering solutions for Legacy Aircraft. 
 
-To become an Original Equipment Manufacturer 
-for the next generation of  integrated  hybrid  turbo-electric  power  and  
-propulsion  systems  bycontinuously developinginternal  capabilities  through  
-experience  on  a variety of products, systems, components and specialties.
+- To deliver unique engineering  solutions  for  Legacy  Aircraft  on 
+schedule,  on  budget  and right the first-time.
 
-To augment increase our technology and production readiness for novel solutions 
-through R&D.</pre></p>
+- To become an Original Equipment Manufacturer (OEM) for the next 
+generation of  integrated  hybrid  turbo-electric  power  and  
+propulsion  systems  bycontinuously developinginternal  
+capabilities  through  experience  on  a variety of products, 
+systems, components and specialties.
+
+- To augment increase our technology and production readiness for 
+novel solutions through R&D.</pre></p>
         <h1><a id="info3">Why Choose Us?</a></h1>
         <p id='why'><pre style="font-family: var(--font-family)">
-At XL Aero, we are commited to operating in a manner that prevents environmental or safety and health (ESH) accidents and incidents. We actively manage 
-risk, conserving natural resources, protecting the environment, and ensuring the safety of our employees, contractors and the public. 
+At XL Aero, we deliver high quality  products and services 
+and pride ourselves in getting it right the first time. We have 
+successfully certified over 60 projects with TCCA and/or the FAA. 
+This includes meeting requirements on schedule and on budget, 
+while providing the best customer experience possible. We comply 
+with all regulatory standards, perform rigorous root cause
+analysis and effectively “close the loop” on all findings 
+of non-compliance. 
 
-We deliver high quality  products and services and pride ourselves in getting it right the first time. This includes meeting requirements on schedule and on 
-budget, while providing the best customer experience possible. We comply with all regulatory standards, perform rigorous root cause analysis and effectively 
-“close the loop” on all findings of non-compliance. </pre></p>      
+We are committed to operating in a manner that prevents environmental 
+or safety and health (ESH) accidents and incidents. We actively manage 
+risk, conserving natural resources, protecting the environment, and 
+ensuring the safety of our employees, contractors and the public. 
+
+
+</pre></p>      
       </div>
       <div class="middle">
         <h1><a id=team>Our Team</a></h1>
@@ -75,7 +87,7 @@ import TopArrow from "~/components/TopArrow.vue"
 
 export default {
   metaInfo: {
-    title: 'XLaero - Contact'
+    title: 'XLaero - About Us'
   },
   components: {
     Footer,
@@ -110,7 +122,8 @@ export default {
         "info info2"
         "vision mission"
         "info3 mission"
-        "why why"
+        "why mission"
+
     }
 
     .middle {
@@ -159,6 +172,7 @@ export default {
     #ourteam {
       grid-area: team;
       margin-top: -15%;
+      margin-left: 5%;
     }
     #teampic {
       grid-area: teampic;
