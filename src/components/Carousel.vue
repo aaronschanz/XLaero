@@ -2,7 +2,7 @@
     <div class="carousel">
         <slot></slot>
 
-        <button class="next">Next</button>
+        <button @click ="next" class="next"> > </button>
     </div>
 </template>
 
@@ -12,23 +12,33 @@ export default {
         return {
 
         }
+    },
+    methods: {
+        next() {
+            this.$emit('next')
+        }
     } 
 }
 </script>
 
 <style scoped>
     .carousel {
-        position: relative;
-        width: 50%;
-        height: 40%;
-        float: right;
-        overflow: hidden;
-        margin-right: 5%;
+        margin-left: 10%;
+        display: flex;
     }
+
     button {
-        height: 40px;
+        display: flex;
+        align-items: center;
+        width: 20%;
         width: 50px;
-        top: calc(50%-20px);
-        position: relative;
+        font-size: 300%;
+        background-color: rgb(168, 168, 168);
+        opacity: 50%;
+        border: none;
+    }
+
+    button:hover {
+        cursor: pointer;
     }
 </style>

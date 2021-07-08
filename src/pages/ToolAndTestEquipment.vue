@@ -25,12 +25,8 @@
         <img src="../../static/images/toolandtest.jpg" alt="Unsplash" id="intropictool">
       </div>
       <div class="middletool">
-        <h1><a id="FNTSheader">Model F1 Test Stand </a></h1>
+        <h1 id="FNTSheader">Model F1 Test Stand </h1>
         <p id ="FNTStext"><pre style="font-family: var(--font-family)">
-          
-
-         
-          
           The model F1 Fuel Nozzle test stand is a revolutionary, 
           turn key design. Integrated thermo electric cooling 
           modules achieve temperature stabilization without the 
@@ -52,18 +48,8 @@
           customize the modular design to suit your needs. 
  
         </pre></p>
-        <div class="imgcarousel1">
-          <carousel>
-            <carousel-slide v-for="(slide,index) in slides" 
-              :key="slide" 
-              :index="index"
-              :visibleSlide="visibleSlide">
-              <img :src="slide" />
-            </carousel-slide>
-          </carousel>
-        </div>
+        <img id ="bottompic" src="http://xlaero.ca/new/images/FNTS.png"/>
       </div>
-      <div class="clear"></div>
       <div class="bottomtool">
         <h1 id="toolingheader">Tooling </h1>
         <p id ="bottomtext"><pre style="font-family: var(--font-family)">
@@ -84,7 +70,16 @@
 
         </pre></p>
         <div class="imgcarousel2">
-          <img src="http://xlaero.ca/new/images/PT6T Fixture 1.png" alt="Unsplash" id="bottompic">
+          <carousel
+            @next="next"
+          >
+            <carousel-slide v-for="(slide,index) in slides" 
+              :key="slide" 
+              :index="index"
+              :visibleSlide="visibleSlide">
+              <img :src="slide" />
+            </carousel-slide>
+          </carousel>
         </div>
       </div>
       <TopArrow/>
@@ -121,18 +116,38 @@ export default {
   data() {
     return {
       slides: [
-        "http://xlaero.ca/new/images/FNTS.png",
-        "http://xlaero.ca/new/images/Nozzle Spray Pattern 1.png",
-        "http://xlaero.ca/new/images/Test Stand in Operation with Digital Protractor 1.png"
+        "http://xlaero.ca/new/images/caseofstuffyo.PNG",
+        "http://xlaero.ca/new/images/PT6C Fixture 1.png",
+        "http://xlaero.ca/new/images/testfixtures.PNG"
       ],
       visibleSlide: 0,
+    }
+  },
+  computed: {
+    slidesLen() {
+      return this.slides.length;
+    }
+  },
+  methods: {
+    next() {
+      if(this.visibleSlide >= this.slidesLen - 1) {
+        this.visibleSlide = 0;
+      } else {
+        this.visibleSlide++;
+      }
     }
   }
 }
 </script>
 
 <style>
-.clear {clear: both;}
+
+.bottomtool {
+  margin-bottom: -600px;
+}
+#FNTSheader {
+  margin-top: 10%;
+}
 
 #toolcaps {
   text-align: right;
@@ -163,23 +178,24 @@ export default {
 
 #toolingheader {
   text-align: right;
-  width: 60%;
+  width: 65%;
   margin-bottom: -3%;
 }
 
 #bottomtext {
   float: right;
-  margin-right: 17%;
+  margin-right: 12%;
 }
 
 #bottompic {
-  width: 45%;
+  width: 40%;
+  margin-top: -5%;
+  margin-left: 15%;
 }
 
 #FNTStext {
   float: left;
 }
-
 
 .home-links a {
   margin-right: 1rem;
