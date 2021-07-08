@@ -52,11 +52,33 @@
           customize the modular design to suit your needs. 
  
         </pre></p>
-        <img src="../../static/images/FNTS.png" alt="Unsplash" id="FNTSpic">
+        <div class="imgcarousel1">
+          <img src="../../static/images/FNTS.png" alt="Unsplash" id="FNTSpic">
+        </div>
       </div>
       <div class="clear"></div>
       <div class="bottomtool">
+        <h1 id="toolingheader">Tooling </h1>
+        <p id ="bottomtext"><pre style="font-family: var(--font-family)">
+          
+          XL Aero has developed a range of fixtures and tooling 
+          to support the inspection of PT6T, PT6C and PW200 nozzle 
+          configurations using the model F1 Fuel Nozzle Test Stand. 
+          The innovative design allows toolless installation of 
+          nozzles without the use of tools. This improvement saves 
+          several hours of labour for each engine overhaul.
 
+          XL Aero manufactures a range of calibration fixtures 
+          that ensure the accuracy of test equipment on a daily 
+          basis.
+
+          Fixtures may be developed to support any product line, 
+          including those developed by alternate manufacturers.
+
+        </pre></p>
+        <div class="imgcarousel2">
+          <img src="http://xlaero.ca/new/images/PT6T Fixture 1.png" alt="Unsplash" id="bottompic">
+        </div>
       </div>
       <TopArrow/>
     </section>
@@ -93,7 +115,7 @@ export default {
 #toolcaps {
   text-align: right;
   margin-bottom: -5%;
-  margin-right: 25%;
+  width: 70%;
 }
 
 .toptool {
@@ -117,6 +139,21 @@ export default {
 
 }
 
+#toolingheader {
+  text-align: right;
+  width: 60%;
+  margin-bottom: -3%;
+}
+
+#bottomtext {
+  float: right;
+  margin-right: 17%;
+}
+
+#bottompic {
+  width: 45%;
+}
+
 #FNTSpic {
   width: 45%;
   height: auto;
@@ -128,36 +165,6 @@ export default {
   float: left;
 }
 
-.bottomtool {
-  margin-top: 5%;
-  display: grid;
-  grid-template-areas:
-    "FNTSmarketing FNTS2"
-    "FNTSmarketing FNTSmarketing2"
-    ". ."
-}
-
-#FNTS2 {
-  max-width: 60%;
-  height: auto;
-  grid-area: FNTS2;
-  margin-left: 25%;
-}
-
-#FNTSmarketing {
-  grid-area: FNTSmarketing;
-  width: 100%;
-  height: auto;
-  margin-left: 10%;
-}
-
-#FNTSmarketing2 {
-  grid-area: FNTSmarketing2;
-  max-width: 60%;
-  height: auto;
-  margin-left: 25%;
-  margin-top: 5%;
-}
 
 .home-links a {
   margin-right: 1rem;
