@@ -53,7 +53,14 @@
  
         </pre></p>
         <div class="imgcarousel1">
-          <img src="../../static/images/FNTS.png" alt="Unsplash" id="FNTSpic">
+          <carousel>
+            <carousel-slide v-for="(slide,index) in slides" 
+              :key="slide" 
+              :index="index"
+              :visibleSlide="visibleSlide">
+              <img :src="slide" />
+            </carousel-slide>
+          </carousel>
         </div>
       </div>
       <div class="clear"></div>
@@ -93,6 +100,9 @@ import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 import ModuleHeadline2Cards from '~/components/ModuleHeadline2Cards.vue'
 import ModuleHeadlineForm from '~/components/ModuleHeadlineForm.vue'
 import TopArrow from '~/components/TopArrow.vue'
+import Carousel from '~/components/Carousel.vue'
+import CarouselSlide from '~/components/CarouselSlide.vue'
+
 
 export default {
   metaInfo: {
@@ -104,8 +114,20 @@ export default {
     ModuleHeadlineImage,
     ModuleHeadlineForm,
     ModuleHeadline2Cards,
-    TopArrow
+    TopArrow,
+    Carousel,
+    CarouselSlide
   },
+  data() {
+    return {
+      slides: [
+        "http://xlaero.ca/new/images/FNTS.png",
+        "http://xlaero.ca/new/images/Nozzle Spray Pattern 1.png",
+        "http://xlaero.ca/new/images/Test Stand in Operation with Digital Protractor 1.png"
+      ],
+      visibleSlide: 0,
+    }
+  }
 }
 </script>
 
@@ -152,13 +174,6 @@ export default {
 
 #bottompic {
   width: 45%;
-}
-
-#FNTSpic {
-  width: 45%;
-  height: auto;
-  float: right;
-  margin-right: 10%;
 }
 
 #FNTStext {
