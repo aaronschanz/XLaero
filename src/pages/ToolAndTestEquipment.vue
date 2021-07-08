@@ -2,43 +2,61 @@
   <div>
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <div class="toptool">
+          <h1 id="toolcaps"> Capabilities </h1>
           <p id='tool'><pre style="font-family: var(--font-family)">
-              This will be a small introductory paragraph talking 
-              about about our Tool & Testing equipment capabilities
-              We can mention things about the FNTS and other projects 
-              of this category that we’ve worked on and let customers 
-              know we’re open for business in this category. Lorem 
-              ipsum dolor sit amet, consectetur adipiscing elit, sed 
-              do eiusmod tempor incididunt ut labore et dolore magna 
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore 
-              magna aliqua. Ut enim ad
+              XL Aero offers tooling and testing equipment services based
+              on quality, delivery, cost and reliability throughout the 
+              full lifecycle of our products. We supply innovative and 
+              flexible solutions in order to expand your capabilities, 
+              reduce your process lead time, and increase the cost-effectiveness
+              of your business.
+
+              Our portfolio includes several industry-leading, customizable 
+              solutions that may be built to order. If our existing product
+              line does not fulfill your requirements, our engineering team 
+              will work with you to design and manufacture exactly what your 
+              business needs.
+
+              We are committed to supporting our equipment throughout its 
+              lifetime. We continue to provide  customers with aftermarket 
+              solutions, which include technical assistance & support, 
+              calibration, and provision of spare parts.
           </pre></p>
         <img src="../../static/images/toolandtest.jpg" alt="Unsplash" id="intropictool">
       </div>
       <div class="middletool">
-        <h1><a id="FNTSheader">Fuel Nozzle Test Stand</a></h1>
+        <h1><a id="FNTSheader">Model F1 Test Stand </a></h1>
         <p id ="FNTStext"><pre style="font-family: var(--font-family)">
-          Tim to write a paragraph detailing XL Aero’s experience
-          and ability with the development of the Fuel Nozzle
-          Test Stand. Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod temporincididunt ut labore 
-          et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitationullamco laboris nisi ut aliquip ex ea 
-          commodo consequat. Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. 
+          
+
+         
+          
+          The model F1 Fuel Nozzle test stand is a revolutionary, 
+          turn key design. Integrated thermo electric cooling 
+          modules achieve temperature stabilization without the 
+          need for a water connection. A closed system is currently 
+          under development that will allow installation in a  without 
+          external ventilation. 
+          
+          The technology is ready to be installed in a hanger or 
+          shop with a connection to power and shop air.
+
+          XL Aero offers full product support including:
+            - On-site installation
+            - Training
+            - Spare Parts
+            - Technical Support
+            - Calibration
+
+          Contact us today for a brochure or to see how we can 
+          customize the modular design to suit your needs. 
+ 
         </pre></p>
         <img src="../../static/images/FNTS.png" alt="Unsplash" id="FNTSpic">
       </div>
+      <div class="clear"></div>
       <div class="bottomtool">
-        <img src="../../static/images/FNTSmarketing.jpg" alt="Unsplash" id="FNTSmarketing">
-        <img src="../../static/images/FNTS2.jpg" alt="Unsplash" id="FNTS2">
-        <img src="../../static/images/FNTSmarketing2.jpg" alt="Unsplash" id="FNTSmarketing2">
+
       </div>
       <TopArrow/>
     </section>
@@ -70,6 +88,13 @@ export default {
 </script>
 
 <style>
+.clear {clear: both;}
+
+#toolcaps {
+  text-align: right;
+  margin-bottom: -5%;
+  margin-right: 25%;
+}
 
 .toptool {
   display: inline;
@@ -78,7 +103,7 @@ export default {
 #tool {
   float: right;
   margin-top: 5%;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 #intropictool {
@@ -89,25 +114,18 @@ export default {
 
 .middletool {
   margin-left: 5%;
-  display: grid;
-  grid-template-areas:
-    "FNTSheader . ."
-    "FNTStext . FNTSpic"
+
 }
 
 #FNTSpic {
-  width: 60%;
-  grid-area: FNTSpic;
-  margin-left: 20%;
-  margin-top: -20%;
+  width: 45%;
+  height: auto;
+  float: right;
+  margin-right: 10%;
 }
 
 #FNTStext {
-  grid-area: FNTStext;
-}
-
-#FNTSheader {
-  grid-area: FNTSheader;
+  float: left;
 }
 
 .bottomtool {
