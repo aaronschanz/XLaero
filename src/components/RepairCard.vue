@@ -34,8 +34,7 @@ export default {
 
 <style lang="scss" scoped>
     .container {
-        padding: var(--spacing-10);
-        margin-top: -var(--spacing-20);
+        padding: var(--spacing-5);
         display: grid;
         //grid-template-columns: 33% 33% 33%;
         //grid-template-rows: 25% 25% 25% 25%;
@@ -53,8 +52,11 @@ export default {
 
     #pic {
         grid-area: pic;
-        width: 30%;
+        margin-left: -20%;
+        width: 50%;
+        overflow: hidden;
     }
+
     #headline {
         grid-area: headline;
         margin-left: 40%;
@@ -68,22 +70,22 @@ export default {
     #TCCA {
         grid-area: TCCA;
         margin-left: 40%;
-        margin-top: 20%;
+        margin-top: 15%;
         font-size: 70%;
     }
     #numbers {
         grid-area: nums;
         margin-left: 70%;
-        margin-top: 5%;
+        margin-top: 0%;
     }
     #description {
         grid-area: description;
         margin-left: 40%;
-        margin-top: 12%;
+        margin-top: 8%;
     } 
     #button {
         grid-area: button;
         height: 15%;
-        margin-top: 25%;
+        margin-top: 15%;
     }
 </style>

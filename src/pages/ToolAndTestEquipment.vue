@@ -57,7 +57,7 @@
           XL Aero has developed a range of fixtures and tooling 
           to support the inspection of PT6T, PT6C and PW200 nozzle 
           configurations using the model F1 Fuel Nozzle Test Stand. 
-          The innovative design allows toolless installation of 
+          The innovative design allows installation of 
           nozzles without the use of tools. This improvement saves 
           several hours of labour for each engine overhaul.
 

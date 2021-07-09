@@ -16,68 +16,72 @@
         <img src="../../static/images/repairintro.jpg" alt="Unsplash" id="intropicrepair">
       </div>
       <div class="middlerepair">
+        <input type="text" placeholder="   🔍 Search by Part Number" class="searchBar" id="searchTxt" @keyup="searchNums()"> 
         <h1><a id="h1">XL Aero Repair Capabilities</a></h1>
-        <RepairCard 
-          :cards="repairCard1.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard2.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard3.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard4.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard5.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard6.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard7.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard8.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard9.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard10.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard11.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard12.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard13.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard14.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard15.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard16.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard17.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard18.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard19.cardsContent"
-        />
-        <RepairCard
-          :cards="repairCard20.cardsContent"
-        />
+        <div class="repairCards">
+          
+          <RepairCard 
+            :cards="repairCard1.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard2.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard3.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard4.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard5.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard6.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard7.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard8.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard9.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard10.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard11.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard12.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard13.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard14.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard15.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard16.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard17.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard18.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard19.cardsContent"
+          />
+          <RepairCard
+            :cards="repairCard20.cardsContent"
+          />
 
+        </div>
       </div>
       <TopArrow/>
     </section>
@@ -110,6 +114,43 @@ export default {
     RepairCard,
     Footer,
     TopArrow
+  },
+  methods: {
+     searchNums() {
+      const inputTxt = document.getElementById("searchTxt").value;
+      console.log(inputTxt);
+      const numsArray = [
+        this.repairCard1.cardsContent[0].Numbers, 
+        this.repairCard2.cardsContent[0].Numbers,
+        this.repairCard3.cardsContent[0].Numbers,
+        this.repairCard4.cardsContent[0].Numbers,
+        this.repairCard5.cardsContent[0].Numbers,
+        this.repairCard6.cardsContent[0].Numbers,
+        this.repairCard7.cardsContent[0].Numbers,
+        this.repairCard8.cardsContent[0].Numbers,
+        this.repairCard9.cardsContent[0].Numbers,
+        this.repairCard10.cardsContent[0].Numbers,
+        this.repairCard11.cardsContent[0].Numbers,
+        this.repairCard12.cardsContent[0].Numbers,
+        this.repairCard13.cardsContent[0].Numbers,
+        this.repairCard14.cardsContent[0].Numbers,
+        this.repairCard15.cardsContent[0].Numbers,
+        this.repairCard16.cardsContent[0].Numbers,
+        this.repairCard17.cardsContent[0].Numbers,
+        this.repairCard18.cardsContent[0].Numbers,
+        this.repairCard19.cardsContent[0].Numbers,
+        this.repairCard20.cardsContent[0].Numbers
+      ];
+
+      for (let i=0; i < numsArray.length; i++) {
+        if (!numsArray[i].contains(inputTxt)) {
+          console.log(numsArray[i]);
+          // somehow hide repair card with numbers numArray[i]
+        }
+      }
+      //if numsarray[i] doesn't contains inputtext 
+        //hide that repaircard
+    }
   },
   data() {
     return {
@@ -510,6 +551,33 @@ export default {
 </script>
 
 <style>
+.searchBar {
+  float: right;
+  margin-right: 70px;
+  width: 30%;
+  border: none;
+  background-color: rgb(194, 194, 194);
+  border-radius: 30px;
+  height: 40px;
+  margin-top: 15px;
+}
+
+::placeholder {
+  color: black;
+  font-size: 120%;
+  font-family: var(--font-family);
+}
+
+.searchBar:focus {
+  border-radius: 30px;
+  outline: solid black 0px;
+  padding-left: 30px;
+}
+
+.searchBar:focus::placeholder {
+  color: transparent;
+}
+
 .Footer {
   margin-bottom: -90%;
 }
