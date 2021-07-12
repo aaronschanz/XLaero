@@ -20,67 +20,72 @@
         <h1><a id="h1">XL Aero Repair Capabilities</a></h1>
         <div class="repairCards">
           
-          <RepairCard 
+          <RepairCard id="repairCard1" v-if="repairCard1.cardsContent[0].show == 1"
             :cards="repairCard1.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard2" v-show="repairCard2.cardsContent[0].show == 1"
             :cards="repairCard2.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard3" v-show="repairCard3.cardsContent[0].show == 1"
             :cards="repairCard3.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard4" v-show="repairCard4.cardsContent[0].show == 1"
             :cards="repairCard4.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard5" v-show="repairCard5.cardsContent[0].show == 1"
             :cards="repairCard5.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard6" v-show="repairCard6.cardsContent[0].show == 1"
             :cards="repairCard6.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard7" v-show="repairCard7.cardsContent[0].show == 1"
             :cards="repairCard7.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard8" v-show="repairCard8.cardsContent[0].show == 1"
             :cards="repairCard8.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard9" v-show="repairCard9.cardsContent[0].show == 1"
             :cards="repairCard9.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard10" v-show="repairCard10.cardsContent[0].show == 1"
             :cards="repairCard10.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard11" v-show="repairCard11.cardsContent[0].show == 1"
             :cards="repairCard11.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard12" v-show="repairCard12.cardsContent[0].show == 1"
             :cards="repairCard12.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard13" v-show="repairCard13.cardsContent[0].show == 1"
             :cards="repairCard13.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard14" v-show="repairCard14.cardsContent[0].show == 1"
             :cards="repairCard14.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard15" v-show="repairCard15.cardsContent[0].show == 1"
             :cards="repairCard15.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard16" v-show="repairCard16.cardsContent[0].show == 1"
             :cards="repairCard16.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard17" v-show="repairCard17.cardsContent[0].show == 1"
             :cards="repairCard17.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard18" v-show="repairCard18.cardsContent[0].show == 1"
             :cards="repairCard18.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard19" v-show="repairCard19.cardsContent[0].show == 1"
             :cards="repairCard19.cardsContent"
           />
-          <RepairCard
+          <RepairCard id="repairCard20" v-show="repairCard20.cardsContent[0].show == 1"
             :cards="repairCard20.cardsContent"
           />
-
+          
+          <div class="failed" v-show="this.counter.count == 0">
+            <img id ="bottomlogo" src="http://xlaero.ca/new/images/xlaero-logo-flat.svg">
+            <h1 id="bottomfailed"> Invalid or nonexistent Part Number </h1>
+            <img id ="bottomlogo" src="http://xlaero.ca/new/images/xlaero-logo-flat.svg">
+          </div>
         </div>
       </div>
       <TopArrow/>
@@ -118,45 +123,52 @@ export default {
   methods: {
      searchNums() {
       const inputTxt = document.getElementById("searchTxt").value;
-      console.log(inputTxt);
       const numsArray = [
-        this.repairCard1.cardsContent[0].Numbers, 
-        this.repairCard2.cardsContent[0].Numbers,
-        this.repairCard3.cardsContent[0].Numbers,
-        this.repairCard4.cardsContent[0].Numbers,
-        this.repairCard5.cardsContent[0].Numbers,
-        this.repairCard6.cardsContent[0].Numbers,
-        this.repairCard7.cardsContent[0].Numbers,
-        this.repairCard8.cardsContent[0].Numbers,
-        this.repairCard9.cardsContent[0].Numbers,
-        this.repairCard10.cardsContent[0].Numbers,
-        this.repairCard11.cardsContent[0].Numbers,
-        this.repairCard12.cardsContent[0].Numbers,
-        this.repairCard13.cardsContent[0].Numbers,
-        this.repairCard14.cardsContent[0].Numbers,
-        this.repairCard15.cardsContent[0].Numbers,
-        this.repairCard16.cardsContent[0].Numbers,
-        this.repairCard17.cardsContent[0].Numbers,
-        this.repairCard18.cardsContent[0].Numbers,
-        this.repairCard19.cardsContent[0].Numbers,
-        this.repairCard20.cardsContent[0].Numbers
+        this.repairCard1, 
+        this.repairCard2,
+        this.repairCard3,
+        this.repairCard4,
+        this.repairCard5,
+        this.repairCard6,
+        this.repairCard7,
+        this.repairCard8,
+        this.repairCard9,
+        this.repairCard10,
+        this.repairCard11,
+        this.repairCard12,
+        this.repairCard13,
+        this.repairCard14,
+        this.repairCard15,
+        this.repairCard16,
+        this.repairCard17,
+        this.repairCard18,
+        this.repairCard19,
+        this.repairCard20
       ];
 
+      this.counter.count = numsArray.length;
       for (let i=0; i < numsArray.length; i++) {
-        if (!numsArray[i].contains(inputTxt)) {
-          console.log(numsArray[i]);
-          // somehow hide repair card with numbers numArray[i]
+        if (!numsArray[i].cardsContent[0].Numbers.includes(inputTxt)) {
+          numsArray[i].cardsContent[0].show = 0; 
+          this.counter.count--; 
+        }
+        if (!inputTxt) {
+          for (let i=0; i < numsArray.length; i++) {
+            numsArray[i].cardsContent[0].show = 1; 
+          }
         }
       }
-      //if numsarray[i] doesn't contains inputtext 
-        //hide that repaircard
     }
   },
   data() {
     return {
+      counter: {
+        count: 0,
+      },
       repairCard1: {
         cardsContent: [
           {
+            show: 1,
             headline: "P&WC PT6T",
             name: "HOUSING, ACCESSORY GEARBOX",
             TCCA: "TCCA RDA#: P-RE16-016",
@@ -176,6 +188,7 @@ export default {
       repairCard2: {
         cardsContent: [
           {
+            show: 1,
             headline: "Sikorsky S-61L, S-61N",
             name: "HOUSING, BRAKE",
             TCCA: "TCCA RDA#: P-RH16-034",
@@ -195,6 +208,7 @@ export default {
       repairCard3: {
         cardsContent: [
           {
+            show: 1,
             headline: "P&WC PT6T",
             name: "SUPPORT ASSEMBLY, NO. 3 \n& NO. 4 BEARING HOUSING",
             TCCA: "TCCA RDA#: P-RH16-053",
@@ -214,6 +228,7 @@ export default {
       repairCard4: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 212, 412, 412CF, 412EP",
             name: "HOUSING ASSY, UPPER",
             TCCA: "TCCA RDA#: P-RH16-058",
@@ -233,6 +248,7 @@ export default {
       repairCard5: {
         cardsContent: [
           {
+            show: 1,
             headline: "Sikorksy S-61L, S-61N",
             name: "BRAKE HOUSING",
             TCCA: "TCCA RDA#: P-RH16-065",
@@ -252,6 +268,7 @@ export default {
       repairCard6: {
         cardsContent: [
           {
+            show: 1,
             headline: "Sikorksy S-61L, S-61N",
             name: "BRACKET, MOUNTING",
             TCCA: "TCCA RDA#: P-RH16-065",
@@ -271,6 +288,7 @@ export default {
       repairCard7: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 214ST",
             name: "HOUSING SET, COMBINING GEARBOX",
             TCCA: "TCCA RDA#: P-RH16-071",
@@ -290,6 +308,7 @@ export default {
       repairCard8: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 214ST",
             name: "CASE SET, COMBINING GEARBOX",
             TCCA: "TCCA RDA#: P-RH16-071",
@@ -309,6 +328,7 @@ export default {
       repairCard9: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 205A-1, 212",
             name: "CASE ASSY (Top Case)",
             TCCA: "TCCA RDA#: P-RH21-039/D",
@@ -328,6 +348,7 @@ export default {
       repairCard10: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 205A-1, 212, 412",
             name: "CASE ASSY (Main Case)",
             TCCA: "TCCA RDA#: P-RH21-039/D",
@@ -347,6 +368,7 @@ export default {
       repairCard11: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 205A-1, 212, 412",
             name: "CASE ASSY (Main Support Case)",
             TCCA: "TCCA RDA#: P-RH21-039/D",
@@ -366,6 +388,7 @@ export default {
       repairCard12: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 205A-1, 212, 412",
             name: "CASE ASSY (Sump Case)",
             TCCA: "TCCA RDA#: P-RH21-039/D",
@@ -385,6 +408,7 @@ export default {
       repairCard13: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 205A-1, 212, 412, 412CF, 412EP",
             name: "CASE ASSY (Main Case)",
             TCCA: "P-RH21-042",
@@ -404,6 +428,7 @@ export default {
       repairCard14: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 212",
             name: "CASE ASSY (Main Tail Rotor Gearbox)",
             TCCA: "TCCA RDA#: P-RH18-038/D",
@@ -423,6 +448,7 @@ export default {
       repairCard15: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 214B/B-1, 214ST",
             name: "CASE ASSY (Main Tail Rotor Gearbox)",
             TCCA: "TCCA RDA#: P-RH18-038/D",
@@ -442,6 +468,7 @@ export default {
       repairCard16: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 205A-1, 212, 412",
             name: "CASE ASSY (Main Input gear Quill Case)",
             TCCA: "TCCA RDA#: P-RH19-001/D",
@@ -461,6 +488,7 @@ export default {
       repairCard17: {
         cardsContent: [
           {
+            show: 1,
             headline: "Sikorsky S-61L, S-61N",
             name: "HOUSING ASSEMBLY, UPPER",
             TCCA: "TCCA RDA#: P-RH19-043/D",
@@ -480,6 +508,7 @@ export default {
       repairCard18: {
         cardsContent: [
           {
+            show: 1,
             headline: "Honeywell T5508D",
             name: "HOUSING ASSEMBLY, INLET",
             TCCA: "P-RE20-034/D",
@@ -499,6 +528,7 @@ export default {
       repairCard19: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 214B/B-1, 214ST",
             name: "SLEEVE ASSEMBLY, \nTAIL ROTOR GEARBOX, INPUT",
             TCCA: "P-RH20-040/D",
@@ -518,6 +548,7 @@ export default {
       repairCard20: {
         cardsContent: [
           {
+            show: 1,
             headline: "Bell 206A, 206A-1, 206B, 206B-1",
             name: "CASE ASSY, MAIN TRANSMISSION",
             TCCA: "P-RH21-35/D",
@@ -616,4 +647,14 @@ figure {
   margin-top: 10%;
   padding-left: 5%;
 }
+
+.failed {
+  display: flex;
+  justify-content: center;
+}
+
+#bottomlogo {
+  width: 10%;
+}
+
 </style>
