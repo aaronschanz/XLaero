@@ -3,17 +3,18 @@
     <section class="container" :style="{ backgroundImage: `url(${require('~/../static/images/background-heli.svg')})`}">
       <div class="toprepair">
         <p id='repa'><pre style="font-family: var(--font-family)">
-            Introductory paragraph that explains the section to be 
-            drafted by Tim. Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-            et dolore magna aliqua. Ut enim ad minim veniam, quis 
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-            commodo consequat. Duis aute irure dolor in reprehenderit 
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in 
-            culpa qui officia deserunt mollit anim id est laborum.
+            XL Aero repairs are  are certified by a TCCA Form 1 or 
+            FAA 8130-3 an with an EASA dual release where required.
+
+            Repairs are primarily carried out by XL Aero’s approved
+            vendors who are either TCCA approved under CAR 573 or 
+            FAA approved under Part 145.
+
+            Repair designs can be revised to include additional 
+            damage areas, and new repairs can be developed within
+            a reasonable leadtime.
         </pre></p>
-        <img src="../../static/images/repairintro.jpg" alt="Unsplash" id="intropicrepair">
+        <img src="http://xlaero.ca/new/images/kumpan-electric-fJebhGIP0P4-unsplash 1.png" alt="Unsplash" id="intropicrepair">
       </div>
       <div class="middlerepair">
         <input type="text" placeholder="   🔍 Search by Part Number" class="searchBar" id="searchTxt" @keyup="searchNums()"> 
@@ -80,8 +81,14 @@
           <RepairCard id="repairCard20" v-show="repairCard20.cardsContent[0].show == 1"
             :cards="repairCard20.cardsContent"
           />
+          <RepairCard id="repairCard21" v-show="repairCard21.cardsContent[0].show == 1"
+            :cards="repairCard21.cardsContent"
+          />
+          <RepairCard id="repairCard22" v-show="repairCard22.cardsContent[0].show == 1"
+            :cards="repairCard22.cardsContent"
+          />
           
-          <div class="failed" v-show="this.counter.count == 0">
+          <div class="failed" v-show="this.counter.count == 1">
             <img id ="bottomlogo" src="http://xlaero.ca/new/images/xlaero-logo-flat.svg">
             <h1 id="bottomfailed"> Invalid or nonexistent Part Number </h1>
             <img id ="bottomlogo" src="http://xlaero.ca/new/images/xlaero-logo-flat.svg">
@@ -146,7 +153,7 @@ export default {
         this.repairCard20
       ];
 
-      this.counter.count = numsArray.length;
+      this.counter.count = numsArray.length+1;
       for (let i=0; i < numsArray.length; i++) {
         if (!numsArray[i].cardsContent[0].Numbers.includes(inputTxt)) {
           numsArray[i].cardsContent[0].show = 0; 
@@ -169,18 +176,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "P&WC PT6T",
-            name: "HOUSING, ACCESSORY GEARBOX",
-            TCCA: "TCCA RDA#: P-RE16-016",
-            Numbers: "Part Numbers: \n\n3016115, \n3024437, \n3019744, \n3024431",
+            headline: "Bell 205A-1, 212, \n412, 412 CF, 412 EP",
+            name: "CASE ASSY (Top Case)",
+            TCCA: "TCCA RDA#: P-RH21-039/D",
+            Numbers: "Part Numbers: \n\n204-040-359-001",
             img: {
-              src: "http://xlaero.ca/new/images/AGBhousing.JPG",
-              caption: "S61 Housing, Accessory Gearbox"
+              src: "http://xlaero.ca/new/images/rsz_rsz_agbhousing.jpg",
+              caption: "Bell 205A-1, 212, \n412, 412 CF, 412 EP CASE ASSY (Top Case)"
             },
-            text: "<p><em>Cold Spray repair of Flange \nand External Surfaces</em></p>",
+            text: "<p><em>Cold Spray repair of Flange</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RE16-016"
+              url: "../contact#form?subject=P-RH21-039/D"
             } 
           },
         ],
@@ -189,18 +196,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Sikorsky S-61L, S-61N",
-            name: "HOUSING, BRAKE",
-            TCCA: "TCCA RDA#: P-RH16-034",
-            Numbers: "Part Numbers: \n\n9541339",
+            headline: "Bell 205A-1, 212, 412 ",
+            name: "CASE ASSY (Main Case)",
+            TCCA: "TCCA RDA#: P-RH21-039/D",
+            Numbers: "Part Numbers: \n\n204-040-353-023\n212-040-053-009",
             img: {
               src: "http://xlaero.ca/new/images/IMG_2189 1.png",
-              caption: "S61 Brake, Housing"
+              caption: "Bell 205A-1, 212, 412 CASE ASSY (Main Case)"
             },
-            text: "<p><em>Cold Spray repair of corroded surfaces \n Restoration of damaged anvil</em></p>",
+            text: "<p><em>Cold Spray of all Flanges and Bores</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH16-034"
+              url: "../contact#form?subject=P-RH21-039/D"
             } 
           },
         ],
@@ -209,18 +216,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "P&WC PT6T",
-            name: "SUPPORT ASSEMBLY, NO. 3 \n& NO. 4 BEARING HOUSING",
-            TCCA: "TCCA RDA#: P-RH16-053",
-            Numbers: "Part Numbers: \n\n3118877-01\n3016992\n3118166-01",
+            headline: "Bell 205A-1, 212, \n412, 412CF, 412EP ",
+            name: "CASE ASSY (Main Case)",
+            TCCA: "TCCA RDA#: P-RH21-042",
+            Numbers: "Part Numbers: \n\n204-040-353-023\n212-040-053-009",
             img: {
               src: "http://xlaero.ca/new/images/image 9.png",
-              caption: "Support Assembly"
+              caption: "Bell 205A-1, 212, 412, 412CF, 412EP CASE ASSY (Main Case)"
             },
-            text: "<p><em>Cold Spray repair of flanges and wear</em></p>",
+            text: "<p><em>Structural Repair of Web Crack using\nAdditive Friction Stir Welding</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH16-053"
+              url: "../contact#form?subject=P-RH21-042"
             } 
           },
         ],
@@ -229,18 +236,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Bell 212, 412, 412CF, 412EP",
-            name: "HOUSING ASSY, UPPER",
-            TCCA: "TCCA RDA#: P-RH16-058",
-            Numbers: "Part Numbers: \n\n41003203",
+            headline: "Bell 205A-1, 212, 412 ",
+            name: "CASE ASSY (Main Support Case)",
+            TCCA: "TCCA RDA#: P-RH21-039/D",
+            Numbers: "Part Numbers: \n\n212-040-054-001\n212-040-054-005\n212-040-054-007\n212-040-054-013\n212-040-054-101\n212-040-054-105",
             img: {
               src: "http://xlaero.ca/new/images/image 11.png",
-              caption: "Housing Assy, Upper"
+              caption: "Bell 205A-1, 212, 412 CASE ASSY (Main Support Case)"
             },
-            text: "<p><em>Cold Spray repair of corroded parts</em></p>",
+            text: "<p><em>Cold Spray repair removes damage \nand corrosion </em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH16-058"
+              url: "../contact#form?subject=P-RH21-039/D"
             } 
           },
         ],
@@ -249,18 +256,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Sikorksy S-61L, S-61N",
-            name: "BRAKE HOUSING",
-            TCCA: "TCCA RDA#: P-RH16-065",
-            Numbers: "Part Numbers: \n\n9440273\n9440273-01\n9440274\n9440274-01",
+            headline: "Bell 205A-1, 212, 412 ",
+            name: "CASE ASSY (Sump Case)",
+            TCCA: "TCCA RDA#: P-RH21-039/D",
+            Numbers: "Part Numbers: \n\n204-040-355-005\n204-040-355-017",
             img: {
               src: "",
-              caption: "Brake Housing"
+              caption: "Bell 205A-1, 212, 412 CASE ASSY (Sump Case)"
             },
-            text: "<p><em>Cold Spray repair of corroded surfaces \nsleeve repair of bolt holes</em></p>",
+            text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH16-065"
+              url: "../contact#form?subject= P-RH21-039/D"
             } 
           },
         ],
@@ -269,18 +276,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Sikorksy S-61L, S-61N",
-            name: "BRACKET, MOUNTING",
-            TCCA: "TCCA RDA#: P-RH16-065",
-            Numbers: "Part Numbers: \n\n9440344",
+            headline: "Bell 205A-1, 212, 412 ",
+            name: "CASE ASSY (Main Input Gear Quill Case)",
+            TCCA: "TCCA RDA#: P-RH19-001/D",
+            Numbers: "Part Numbers: \n\n204-040-386-001\n412-040-385-101",
             img: {
               src: "",
-              caption: "Mounting Bracket"
+              caption: "Bell 205A-1, 212, 412 CASE ASSY (Main Input Gear Quill Case)"
             },
-            text: "<p><em>Cold Spray repair of corroded surfaces \nsleeve repair of bolt holes</em></p>",
+            text: "<p><em>Cold Spray repair of Flange and\nO-fing Grooves</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH16-065"
+              url: "../contact#form?subject=P-RH19-001/D"
             } 
           },
         ],
@@ -289,13 +296,153 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Bell 214ST",
+            headline: "Bell 205A-1, 212, \n412, 412 CF, 412 EP ",
+            name: "RING GEAR ASSY",
+            TCCA: "TCCA RDA#: P-RH21-038/D",
+            Numbers: "Part Numbers: \n\n205-040-231-009\n205-040-231-005",
+            img: {
+              src: "",
+              caption: "Bell 205A-1, 212, \n412, 412 CF, 412 EP RING GEAR ASSY"
+            },
+            text: "<p><em>Cold Spray repair of corroded ports</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject=P-RH21-038/D"
+            } 
+          },
+        ],
+      },
+      repairCard8: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Bell 212, 412, \n412CF, 412EP",
+            name: "HOUSING ASSY, UPPER",
+            TCCA: "TCCA RDA#:  P-RH16-058",
+            Numbers: "Part Numbers: \n\n41003203",
+            img: {
+              src: "",
+              caption: "Bell 212, 412, 412CF, 412EP HOUSING ASSY, UPPER"
+            },
+            text: "<p><em>Cold Spray repair of corroded ports</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject=P-RH16-058"
+            } 
+          },
+        ],
+      },
+      repairCard9: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Bell 212 ",
+            name: "CASE ASSY (Main Tail Rotor Gearbox)",
+            TCCA: "TCCA RDA#: P-RH18-038/D",
+            Numbers: "Part Numbers: \n\n212-040-468-001",
+            img: {
+              src: "",
+              caption: "Bell 212 CASE ASSY (Main Tail Rotor Gearbox)"
+            },
+            text: "<p><em>Cold Spray repair of corroded areas\nBrush nickel plating of bearing liner</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject= P-RH18-038/D"
+            } 
+          },
+        ],
+      },
+      repairCard10: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Bell 214B/ B-1",
+            name: "CASE & COVER, ENGINE GEARBOX",
+            TCCA: "TCCA RDA#: P-RH17-049",
+            Numbers: "Part Numbers: \n\n214-040-210-101\n214-040-212-101",
+            img: {
+              src: "",
+              caption: "Bell 214B/ B-1 CASE & COVER, ENGINE GEARBOX"
+            },
+            text: "<p><em>Cold Spray repair of corroded areas\nBrush nickel plating of bearing liner</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject=P-RH17-049"
+            } 
+          },
+        ],
+      },
+      repairCard11: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Bell 214B/B-1, 214ST",
+            name: "CASE, ASSEMBLY, PYLON RESTRAINT, \nMAIN TRANSMISSION",
+            TCCA: "",
+            Numbers: "Part Numbers: \n\n214-040-063-109\n214-040-063-113",
+            img: {
+              src: "",
+              caption: "Bell 214B/B-1, 214ST CASE, ASSEMBLY, PYLON RESTRAINT, MAIN TRANSMISSION"
+            },
+            text: "<p><em>Cold Spray repair of corroded areas\nBrush nickel plating of bearing liner</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject=unknownTCCA"
+            } 
+          },
+        ],
+      },
+      repairCard12: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Bell 214B/B-1, 214ST ",
+            name: "CASE ASSY (Main Tail Rotor Gearbox)",
+            TCCA: "TCCA RDA#: P-RH18-038/D",
+            Numbers: "Part Numbers: \n\n214-040-409-109\n214-040-409-113\n214-040-409-121\n214-040-409-105\n214-040-409-001",
+            img: {
+              src: "",
+              caption: "Bell 214B/B-1, 214ST CASE ASSY (Main Tail Rotor Gearbox)"
+            },
+            text: "<p><em>Selective brush nickel plating \nrepair removes damage</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject= P-RH18-038/D"
+            } 
+          },
+        ],
+      },
+      repairCard13: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Bell 214B/B-1, 214ST ",
+            name: "SLEEVE ASSEMBLY, \nTAIL ROTOR GEARBOX, INPUT",
+            TCCA: "TCCA RDA#: P-RH20-040/D",
+            Numbers: "Part Numbers: \n\n214-040-412-001",
+            img: {
+              src: "",
+              caption: "Bell 214B/B-1, 214ST SLEEVE ASSEMBLY, TAIL ROTOR GEARBOX, INPUT"
+            },
+            text: "<p><em>Cold Spray and/or Weld repair of Snap\nRing groove</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject=P-RH20-040/D"
+            } 
+          },
+        ],
+      },
+      repairCard14: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Bell 214ST ",
             name: "HOUSING SET, COMBINING GEARBOX",
             TCCA: "TCCA RDA#: P-RH16-071",
             Numbers: "Part Numbers: \n\n214-040-991-101\n214-040-991-105\n214-040-991-107\n214-040-991-109",
             img: {
               src: "",
-              caption: "Housing Set, Combining Gearbox"
+              caption: "Bell 214ST HOUSING SET, COMBINING GEARBOX"
             },
             text: "<p><em>Cold Spray repair of mounting flanges</em></p>",
             button: {
@@ -305,162 +452,22 @@ export default {
           },
         ],
       },
-      repairCard8: {
-        cardsContent: [
-          {
-            show: 1,
-            headline: "Bell 214ST",
-            name: "CASE SET, COMBINING GEARBOX",
-            TCCA: "TCCA RDA#: P-RH16-071",
-            Numbers: "Part Numbers: \n\n214-040-991-101",
-            img: {
-              src: "",
-              caption: "Case Set, Combining Gearbox"
-            },
-            text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#form?subject=P-RH16-071"
-            } 
-          },
-        ],
-      },
-      repairCard9: {
-        cardsContent: [
-          {
-            show: 1,
-            headline: "Bell 205A-1, 212",
-            name: "CASE ASSY (Top Case)",
-            TCCA: "TCCA RDA#: P-RH21-039/D",
-            Numbers: "Part Numbers: \n\n204-040-359-001",
-            img: {
-              src: "",
-              caption: "Case Assy"
-            },
-            text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#form?subject=P-RH21-039/D"
-            } 
-          },
-        ],
-      },
-      repairCard10: {
-        cardsContent: [
-          {
-            show: 1,
-            headline: "Bell 205A-1, 212, 412",
-            name: "CASE ASSY (Main Case)",
-            TCCA: "TCCA RDA#: P-RH21-039/D",
-            Numbers: "Part Numbers: \n\n204-040-353-023\n212-040-053-009",
-            img: {
-              src: "",
-              caption: "Case Assy"
-            },
-            text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#form?subject=P-RH21-039/D"
-            } 
-          },
-        ],
-      },
-      repairCard11: {
-        cardsContent: [
-          {
-            show: 1,
-            headline: "Bell 205A-1, 212, 412",
-            name: "CASE ASSY (Main Support Case)",
-            TCCA: "TCCA RDA#: P-RH21-039/D",
-            Numbers: "Part Numbers: \n\n212-040-054-001\n212-040-054-005\n212-040-054-007\n212-040-054-013\n212-040-054-101\n212-040-054-105",
-            img: {
-              src: "",
-              caption: "Case Assy"
-            },
-            text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#form?subject=P-RH21-039/D"
-            } 
-          },
-        ],
-      },
-      repairCard12: {
-        cardsContent: [
-          {
-            show: 1,
-            headline: "Bell 205A-1, 212, 412",
-            name: "CASE ASSY (Sump Case)",
-            TCCA: "TCCA RDA#: P-RH21-039/D",
-            Numbers: "Part Numbers: \n\n204-040-355-005\n204-040-355-017",
-            img: {
-              src: "",
-              caption: "Case Assy"
-            },
-            text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#form?subject=P-RH21-039/D"
-            } 
-          },
-        ],
-      },
-      repairCard13: {
-        cardsContent: [
-          {
-            show: 1,
-            headline: "Bell 205A-1, 212, 412, 412CF, 412EP",
-            name: "CASE ASSY (Main Case)",
-            TCCA: "P-RH21-042",
-            Numbers: "Part Numbers: \n\n204-040-353-023\n212-040-053-009",
-            img: {
-              src: "",
-              caption: "Case Assy"
-            },
-            text: "<p><em></em></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#form?subject=P-RH21-042"
-            } 
-          },
-        ],
-      },
-      repairCard14: {
-        cardsContent: [
-          {
-            show: 1,
-            headline: "Bell 212",
-            name: "CASE ASSY (Main Tail Rotor Gearbox)",
-            TCCA: "TCCA RDA#: P-RH18-038/D",
-            Numbers: "Part Numbers: \n\n212-040-468-001",
-            img: {
-              src: "",
-              caption: "Case Assy"
-            },
-            text: "<p><em>Selective brush nickel plating repair \nremoves damage</em></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#form?subject=P-RH18-038/D"
-            } 
-          },
-        ],
-      },
       repairCard15: {
         cardsContent: [
           {
             show: 1,
-            headline: "Bell 214B/B-1, 214ST",
-            name: "CASE ASSY (Main Tail Rotor Gearbox)",
-            TCCA: "TCCA RDA#: P-RH18-038/D",
-            Numbers: "Part Numbers: \n\n214-040-409-109\n214-040-409-113\n214-040-409-121\n214-040-409-105\n214-040-409-001",
+            headline: "Bell 206A, 206A-1, \n206B, 206B-1 ",
+            name: "CASE ASSY, MAIN TRANSMISSION",
+            TCCA: "TCCA RDA#: P-RH21-35/D",
+            Numbers: "Part Numbers: \n\n206-040-150-001 \n206-040-150-029",
             img: {
               src: "",
-              caption: "Case Assy"
+              caption: "Bell 206A, 206A-1, 206B, 206B-1 CASE ASSY, MAIN TRANSMISSION"
             },
-            text: "<p><em>Selective brush nickel plating repair \nremoves damage</em></p>",
+            text: "<p><em>Cold Spray repair of corroded ports\nand external surface</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH18-038/D"
+              url: "../contact#form?subject=P-RH21-35/D"
             } 
           },
         ],
@@ -469,18 +476,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Bell 205A-1, 212, 412",
-            name: "CASE ASSY (Main Input gear Quill Case)",
-            TCCA: "TCCA RDA#: P-RH19-001/D",
-            Numbers: "Part Numbers: \n\n204-040-386-001\n412-040-385-101",
+            headline: "Sikorksy S-61L, S-61N ",
+            name: "HOUSING, BRAKE",
+            TCCA: "TCCA RDA#:  P-RH16-034",
+            Numbers: "Part Numbers: \n\n9541339",
             img: {
               src: "",
-              caption: "Case Assy"
+              caption: "Sikorksy S-61L, S-61N HOUSING, BRAKE"
             },
-            text: "<p><em>Cold Spray repair of Flange \nand O-fing Grooves</em></p>",
+            text: "<p><em>Cold Spray repair of corroded surfaces\nRestoration of damaged anvil</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH19-001/D"
+              url: "../contact#form?subject=P-RH16-034"
             } 
           },
         ],
@@ -489,18 +496,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Sikorsky S-61L, S-61N",
-            name: "HOUSING ASSEMBLY, UPPER",
-            TCCA: "TCCA RDA#: P-RH19-043/D",
-            Numbers: "Part Numbers: \n\nS6135-20011-007\nS6135-20011-043",
+            headline: "Sikorksy S-61L, S-61N ",
+            name: "BRAKE HOUSING, LH/RH",
+            TCCA: "TCCA RDA#: P-RH16-065",
+            Numbers: "Part Numbers: \n\n9440273\n9440273-1\n9440274\n9440274-1",
             img: {
               src: "",
-              caption: "Upper Housing Assembly"
+              caption: "Sikorksy S-61L, S-61N BRAKE HOUSING, LH/RH"
             },
-            text: "<p><em>Cold Spray repair of Flange</em></p>",
+            text: "<p><em>Cold Spray repair of corroded surfaces\nsleeve repair of bolt holes</em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH19-043/D"
+              url: "../contact#form?subject=P-RH16-065"
             } 
           },
         ],
@@ -509,18 +516,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Honeywell T5508D",
-            name: "HOUSING ASSEMBLY, INLET",
-            TCCA: "P-RE20-034/D",
-            Numbers: "Part Numbers: \n\n2-060-000-21",
+            headline: "Sikorksy S-61L, S-61N ",
+            name: "BRACKET, MOUNTING",
+            TCCA: "TCCA RDA#: P-RH16-065",
+            Numbers: "Part Numbers: \n\n9440344",
             img: {
               src: "",
-              caption: "HOUSING ASSEMBLY, INLET"
+              caption: "Sikorksy S-61L, S-61N BRACKET, MOUNTING"
             },
-            text: "<p><em></em></p>",
+            text: "<p><em>Cold Spray repair of  corroded surfaces\nsleeve repair of bolt holes </em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RE20-034/D"
+              url: "../contact#form?subject=P-RH16-065"
             } 
           },
         ],
@@ -529,18 +536,18 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Bell 214B/B-1, 214ST",
-            name: "SLEEVE ASSEMBLY, \nTAIL ROTOR GEARBOX, INPUT",
-            TCCA: "P-RH20-040/D",
-            Numbers: "Part Numbers: \n\n214-040-412-001",
+            headline: "Sikorksy S-61L, S-61N ",
+            name: "HOUSING ASSEMBLY, UPPER",
+            TCCA: "TCCA RDA#: P-RH19-043/D",
+            Numbers: "Part Numbers: \n\nS6135-20011-007\nS6135-20011-043",
             img: {
               src: "",
-              caption: "HOUSING ASSEMBLY, INLET"
+              caption: "Sikorksy S-61L, S-61N HOUSING ASSEMBLY, UPPER"
             },
-            text: "<p><em></em></p>",
+            text: "<p><em>Cold Spray repair of Flange </em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH20-040/D"
+              url: "../contact#form?subject=P-RH19-043/D"
             } 
           },
         ],
@@ -549,18 +556,58 @@ export default {
         cardsContent: [
           {
             show: 1,
-            headline: "Bell 206A, 206A-1, 206B, 206B-1",
-            name: "CASE ASSY, MAIN TRANSMISSION",
-            TCCA: "P-RH21-35/D",
-            Numbers: "Part Numbers: \n\n206-040-150-001, \n206-040-150-029",
+            headline: "P&WC PT6T ",
+            name: "SUPPORT ASSEMBLY, NO. 3 &\nNO. 4 BEARING HOUSING",
+            TCCA: "TCCA RDA#: P-RH16-053",
+            Numbers: "Part Numbers: \n\n3118877-01\n3016992\n3118166-01",
             img: {
               src: "",
-              caption: ""
+              caption: "P&WC PT6T SUPPORT ASSEMBLY, NO. 3 & NO. 4 BEARING HOUSING"
+            },
+            text: "<p><em>Cold Spray repair of flanges and wear </em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject=P-RH16-053"
+            } 
+          },
+        ],
+      },
+      repairCard21: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "P&WC PT6T ",
+            name: "HOUSING, ACCESSORY GEARBOX",
+            TCCA: "TCCA RDA#:  P-RE16-016",
+            Numbers: "Part Numbers: \n\n3016115 \n3024437\n3019744\n3024431",
+            img: {
+              src: "",
+              caption: "P&WC PT6T HOUSING, ACCESSORY GEARBOX"
+            },
+            text: "<p><em>Cold Spray repair of Flange and \nExternal Surfaces</em></p>",
+            button: {
+              label: "Request a Quote",
+              url: "../contact#form?subject=P-RE16-016"
+            } 
+          },
+        ],
+      },
+      repairCard22: {
+        cardsContent: [
+          {
+            show: 1,
+            headline: "Honeywell T5508D ",
+            name: "HOUSING ASSEMBLY, INLET",
+            TCCA: "TCCA RDA#: P-RE20-034/D",
+            Numbers: "Part Numbers: \n\n2-060-000-21",
+            img: {
+              src: "",
+              caption: "Honeywell T5508D HOUSING ASSEMBLY, INLET"
             },
             text: "<p><em></em></p>",
             button: {
               label: "Request a Quote",
-              url: "../contact#form?subject=P-RH21-35/D"
+              url: "../contact#form?subject=P-RE20-034/D"
             } 
           },
         ],

@@ -2,7 +2,7 @@
     <section class="container">
       <div class="card-container">
         <Card v-for="(card, i) in cards" :key="i" >
-            <img id="pic" :src="card.img.src" :alt="card.img.caption">
+            <p class="pic" :style="{ backgroundImage: `url(${card.img.src})`}">
             <h5 id="headline">{{ card.headline }}</h5>
             <p id="name">{{ card.name }}</p>
             <p id="TCCA">{{ card.TCCA }}</p>
@@ -36,25 +36,19 @@ export default {
     .container {
         padding: var(--spacing-5);
         display: grid;
-        //grid-template-columns: 33% 33% 33%;
-        //grid-template-rows: 25% 25% 25% 25%;
-        //grid-template-areas:
-        //    "pic headline ."
-        //    "pic name ."
-        //    "pic description numbers"
-        //    "pic TCCA button"
-        
     }
 
     .card-container {
         display: grid;
     }
 
-    #pic {
+    .pic {
         grid-area: pic;
-        margin-left: -20%;
-        width: 50%;
-        overflow: hidden;
+        background-size: cover;
+        margin-left: -15%;
+        width: 45%;
+        height: auto;
+        margin-top: -1%; margin-bottom: -1%;
     }
 
     #headline {
@@ -85,7 +79,7 @@ export default {
     } 
     #button {
         grid-area: button;
-        height: 15%;
+        height: 20%;
         margin-top: 15%;
     }
 </style>
