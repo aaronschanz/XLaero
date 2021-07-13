@@ -150,7 +150,9 @@ export default {
         this.repairCard17,
         this.repairCard18,
         this.repairCard19,
-        this.repairCard20
+        this.repairCard20,
+        this.repairCard21,
+        this.repairCard22
       ];
 
       this.counter.count = numsArray.length+1;
@@ -181,7 +183,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH21-039/D",
             Numbers: "Part Numbers: \n\n204-040-359-001",
             img: {
-              src: "http://xlaero.ca/new/images/rsz_rsz_agbhousing.jpg",
+              src: "http://xlaero.ca/new/images/firetank1.jpg",
               caption: "Bell 205A-1, 212, \n412, 412 CF, 412 EP CASE ASSY (Top Case)"
             },
             text: "<p><em>Cold Spray repair of Flange</em></p>",

@@ -1,8 +1,11 @@
 <template>
     <section class="container">
       <div class="card-container">
-        <Card v-for="(card, i) in cards" :key="i" >
-            <p class="pic" :style="{ backgroundImage: `url(${card.img.src})`}">
+        <Card v-for="(card, i) in cards" :key="i">
+            <!-- <p class="pic" :style="{ backgroundImage: `url(${images[0].src})` }" > FAILED METHOD 1, can only access index 0-->            
+            <!-- <button :style="{ backgroundImage: literal(card.img.src) }" class="pic"></button> -->          
+            <button :style="{ backgroundImage: `url(${card.img.src})`}" class="pic"></button>
+            <!-- <img class="pic" :src='card.img.src'> FAILED METHOD 3--> 
             <h5 id="headline">{{ card.headline }}</h5>
             <p id="name">{{ card.name }}</p>
             <p id="TCCA">{{ card.TCCA }}</p>
@@ -26,8 +29,20 @@ export default {
         Button,
         Card
     },
-    data: {
-        subject: ""
+    data() {
+        return {
+            images: [
+                {src: "http://xlaero.ca/new/images/firetank1.jpg"},                
+                {src: "http://xlaero.ca/new/images/rsz_rsz_agbhousing.jpg"}, 
+                {src: "http://xlaero.ca/new/images/image 9.png"},
+                {src: "http://xlaero.ca/new/images/image 11.png"},  
+            ] 
+        }
+    },
+    computed: {
+        literal: () => (link) => {
+            return `url(${link})`
+        }
     }
 }
 </script>
@@ -43,6 +58,7 @@ export default {
     }
 
     .pic {
+        border: none;
         grid-area: pic;
         background-size: cover;
         margin-left: -15%;
