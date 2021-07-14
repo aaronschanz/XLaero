@@ -35,6 +35,9 @@ import ModuleHeadlineImage from '~/components/ModuleHeadlineImage.vue'
 import EngCardPicsRight from '../components/EngCardPicsRight.vue'
 import EngCardPicsLeft from '../components/EngCardPicsLeft.vue'
 import TopArrow from '~/components/TopArrow.vue'
+import { BContainer } from 'bootstrap-vue'
+import { BCarousel } from 'bootstrap-vue'
+
 
 
 export default {
@@ -50,58 +53,10 @@ export default {
     ModuleHeadlineImage,
     EngCardPicsRight,
     EngCardPicsLeft,
-    TopArrow
+    TopArrow,
   },
   data() {
     return {
-      STCcard: {
-        cardsContent: [
-          {
-            headline: "STCs",
-            img: {
-              src: "http://xlaero.ca/new/images/CHP.JPG",
-              caption: "S61 Housing, Accessory Gearbox"
-            },
-            text: "<p>XL Aero offers full engineering services to enhance the utility of your aircraft. Using a variety of engineering analysis and design tools, we can develop a complete design package that meets all airworthiness standards. Our modification experience includes:​ <li>Composite fairings​</li><li>Bubble windows​</li><li>Engine conversions​</li><li>External Cargo (HEC/NHEC)​</li><li>Firefighting belly tanks</li>​<li>Interiors</li></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#info"
-            } 
-          },
-        ],
-      },
-      RDAcard: {
-        cardsContent: [
-          {
-            headline: "RDAs",
-            img: {
-              src: "http://xlaero.ca/new/images/CHP.JPG",
-              caption: "S61 Housing, Accessory Gearbox"
-            },
-            text: "<p>XL Aero develops repairs covering products from all the major OEMs (Bell, Airbus, Leonardo). Our focus is on increasing aircraft readiness by providing cost effective repair solutions. Our repair capabilities include:<li>Critical rotating components</li>​<li>Engines</li><li>Cold Spray of Housings​</li><li>Structures​</li><li>Rotor Blade Repairs</li><li>Hydraulic Servoactuators</li></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#info"
-            } 
-          },
-        ],
-      },
-      PDAcard: {
-        cardsContent: [
-          {
-            headline: "PDAs/PMAs",
-            img: {
-              src: "http://xlaero.ca/new/images/CHP.JPG",
-              caption: "S61 Housing, Accessory Gearbox"
-            },
-            text: "<p>XL Aero can develop and manufacture replacement parts that meet all the fit, form, and function requirements of the original design. We regularly conduct extensive reverse engineering using the latest 3D scanning, machining, and rapid prototyping technologies. We can also provide first article inspection/conformity and volume production control. Our PDA experience includes:​ <li>Turbine blades</li><li> Engine and transmission components​</li></li>Flight critical/life-limited components</li></p>",
-            button: {
-              label: "Request a Quote",
-              url: "../contact#info"
-            } 
-          },
-        ],
-      },
       repair: {
         modifiers:  "card--image--left",
         content: [

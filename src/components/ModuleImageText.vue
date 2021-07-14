@@ -3,7 +3,8 @@
         <div class="card-container">
             <Card v-for="(container, i) in cards" :key="i" :modifiers="['card--no-border', 'card--single', modifiers]">
                 <div class="card__image">
-                    <img :src="container.img.src" :alt="container.img.caption">
+                    <!-- <img :src="container.img.src" :alt="container.img.caption"> -->
+
                 </div>
                 <div class="card__content" :style="{ backgroundImage: `url(${require('~/../static/images/background-dots.svg')})` }">
                     <h3>{{ container.headline }}</h3>
@@ -18,15 +19,25 @@
 </template>
 
 <script>
+
+//import 'bootstrap/dist/css/bootstrap.css'
+//import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
+//import { BContainer } from 'bootstrap-vue'
+//import { BCarousel } from 'bootstrap-vue'
+
 
 export default {
     name: "ModuleImageText",
     props: ['cards', 'modifiers'],
     components: {
         Button,
-        Card
+        Card,
+        //BCarousel,
+        //BContainer
     },
     methods: {
         changeLocation(url) {

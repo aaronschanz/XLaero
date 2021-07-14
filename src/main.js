@@ -3,11 +3,14 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 // eslint-disable-next-line import/no-unresolved
-import DefaultLayout from '~/layouts/Default.vue';
+import DefaultLayout from '~/layouts/Default.vue'
+import BootstrapVue from 'bootstrap-vue'
+
 
 export default function (Vue, { head }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
+  //Vue.use(BootstrapVue)
 
   // Using CDN Fonts (Typekit, Google Fonts, etc). See https://gridsome.org/docs/assets-fonts/
   head.link.push({
