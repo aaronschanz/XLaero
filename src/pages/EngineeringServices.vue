@@ -111,7 +111,7 @@ export default {
               caption: "test caption"
             },
             headline: "Repair Development & Certificates (RDAs)",
-            text: "<p>Paragraph to be drafted by Tim regarding the engineering services we offer in regards to Repairs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, su culpa qui officia deserunt mollit anim id est laborum.</p>",
+            text: "<p>XL Aero develops repairs covering products from all the major OEMs (Bell, Airbus, Leonardo). Our focus is on increasing aircraft readiness by providing cost effective repair solutions. Our repair capabilities include:<li>​Critical rotating components <li>​Engines <li>Cold Spray of Housings <li>Structures <li>Rotor Blade Repairs <li>Hydraulic Servoactuators</p>",
             button: {
               url: "/repair-capabilities#repa",
               label: "Repair Capabilities"
@@ -132,7 +132,7 @@ export default {
               caption: "test caption"
             },
             headline: "Modifications (STCs)",
-            text: "<p>We offer full engineering support for completing  supplemental type certificate (STC) projects. Using a variety of engineering analysis tools, we develop the data and reports to ensure that your project meets all airworthiness standards. Previously completed STC projects include an Airbus AS332 sponson and  MAKILA 1A1 engine replacements. More examples of STC projects can be see in our gallery.</p>",
+            text: "<p>XL Aero offers full engineering services to enhance the utility of your aircraft. Using a variety of engineering analysis and design tools, we can develop a complete design package that meets all airworthiness standards. Our modification experience include: <li>Composite fairings <li>Bubble windows <li>Engine conversions <li>External Cargo (HEC/NHEC) <li>Firefighting belly tanks <li>Interiors</p>",
             button: {
               url: "/contact#contact-form",
               label: "Contact Us"
@@ -153,7 +153,7 @@ export default {
               caption: "test caption"
             },
             headline: "Replacement Parts (PDA/PMA)",
-            text: "<p>Paragraph to be drafted by Tim regarding the engineering services we offer in regards to STCs and general engineering. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            text: "<p>XL Aero can develop and manufacture replacement parts that meet all the fit, form, and function requirements of the original design. We regularly conduct extensive reverse engineering using the latest 3D scanning, machining, and rapid prototyping technologies. We can also provide first article inspection/conformity and volume production control. Our PDA experience includes: <li>Turbine blades <li>Engine and transmission components <li>Flight critical/life-limited components</p>",
             button: {
               url: "/contact#contact-form",
               label: "Contact Us"

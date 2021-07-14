@@ -11,9 +11,6 @@
                     <div class="button1">
                         <Button :src="container.button.url">{{ container.button.label }}</Button>
                     </div>
-                    <div class="button2" @click = changeLocation(container.button2.url);>
-                        <Button :src="container.button2.url" >{{ container.button2.label }}</Button>
-                    </div>
                 </div>
             </Card>
         </div>
@@ -43,6 +40,10 @@ export default {
 <style lang="scss" scoped>
     .card-container {
         width: 100%;
+    }
+
+    .button1 {
+        margin-top: 200px;
     }
 
 </style>

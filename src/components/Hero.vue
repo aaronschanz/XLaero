@@ -122,11 +122,11 @@ export default {
         opacity: 0.2;
         background-clip: content-box;
         filter: Alpha(opacity=50);
-        margin-bottom: 20px;
-        margin-top: -20px;
+        margin-bottom: 10px;
+        margin-top: -10px;
         object-fit: none;
-        background-image: url(http://xlaero.ca/new/images/xlaero-logo-flat.svg);
-        background-size: 100%;
+        background-image: url(http://xlaero.ca/new/images/background-dots.svg);
+        background-size: 120%;
         #boxtext {
             display: none; //CHANGE THIS IF YOU WANT TEXT TO APPEAR ON HOVER
             color: white;
