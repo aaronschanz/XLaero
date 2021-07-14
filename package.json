@@ -10,7 +10,8 @@
     "@gridsome/source-strapi": "^0.1.0",
     "bootstrap-vue": "^2.21.2",
     "gridsome": "^0.7.0",
-    "vue-router": "^4.0.10"
+    "vue-router": "^4.0.10",
+    "vueperslides": "^3.3.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

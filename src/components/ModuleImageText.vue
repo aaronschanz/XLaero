@@ -26,8 +26,6 @@
 
 import Button from '~/components/Button.vue'
 import Card from '~/components/Card.vue'
-//import { BContainer } from 'bootstrap-vue'
-//import { BCarousel } from 'bootstrap-vue'
 
 
 export default {
@@ -36,8 +34,8 @@ export default {
     components: {
         Button,
         Card,
-        //BCarousel,
-        //BContainer
+        VueperSlides,
+        VueperSlide
     },
     methods: {
         changeLocation(url) {
