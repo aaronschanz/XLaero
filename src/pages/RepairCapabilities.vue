@@ -183,7 +183,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH21-039/D",
             Numbers: "Part Numbers: \n\n204-040-359-001",
             img: {
-              src: "http://xlaero.ca/new/images/firetank1.jpg",
+              src: "http://xlaero.ca/new/images/RepairPics/repair1.png",
               caption: "Bell 205A-1, 212, \n412, 412 CF, 412 EP CASE ASSY (Top Case)"
             },
             text: "<p><em>Cold Spray repair of Flange</em></p>",
@@ -203,7 +203,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH21-039/D",
             Numbers: "Part Numbers: \n\n204-040-353-023\n212-040-053-009",
             img: {
-              src: "http://xlaero.ca/new/images/IMG_2189 1.png",
+              src: "http://xlaero.ca/new/images/RepairPics/repair2.png",
               caption: "Bell 205A-1, 212, 412 CASE ASSY (Main Case)"
             },
             text: "<p><em>Cold Spray of all Flanges and Bores</em></p>",
@@ -223,7 +223,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH21-042",
             Numbers: "Part Numbers: \n\n204-040-353-023\n212-040-053-009",
             img: {
-              src: "http://xlaero.ca/new/images/image 9.png",
+              src: "http://xlaero.ca/new/images/RepairPics/repair3.png",
               caption: "Bell 205A-1, 212, 412, 412CF, 412EP CASE ASSY (Main Case)"
             },
             text: "<p><em>Structural Repair of Web Crack using\nAdditive Friction Stir Welding</em></p>",
@@ -243,7 +243,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH21-039/D",
             Numbers: "Part Numbers: \n\n212-040-054-001\n212-040-054-005\n212-040-054-007\n212-040-054-013\n212-040-054-101\n212-040-054-105",
             img: {
-              src: "http://xlaero.ca/new/images/image 11.png",
+              src: "http://xlaero.ca/new/images/RepairPics/repair4.png",
               caption: "Bell 205A-1, 212, 412 CASE ASSY (Main Support Case)"
             },
             text: "<p><em>Cold Spray repair removes damage \nand corrosion </em></p>",
@@ -263,7 +263,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH21-039/D",
             Numbers: "Part Numbers: \n\n204-040-355-005\n204-040-355-017",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair5.png",
               caption: "Bell 205A-1, 212, 412 CASE ASSY (Sump Case)"
             },
             text: "<p><em>Cold Spray repair removes damage \nand corrosion</em></p>",
@@ -283,7 +283,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH19-001/D",
             Numbers: "Part Numbers: \n\n204-040-386-001\n412-040-385-101",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair6.png",
               caption: "Bell 205A-1, 212, 412 CASE ASSY (Main Input Gear Quill Case)"
             },
             text: "<p><em>Cold Spray repair of Flange and\nO-fing Grooves</em></p>",
@@ -323,7 +323,7 @@ export default {
             TCCA: "TCCA RDA#:  P-RH16-058",
             Numbers: "Part Numbers: \n\n41003203",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair8.png",
               caption: "Bell 212, 412, 412CF, 412EP HOUSING ASSY, UPPER"
             },
             text: "<p><em>Cold Spray repair of corroded ports</em></p>",
@@ -343,7 +343,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH18-038/D",
             Numbers: "Part Numbers: \n\n212-040-468-001",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair9.png",
               caption: "Bell 212 CASE ASSY (Main Tail Rotor Gearbox)"
             },
             text: "<p><em>Cold Spray repair of corroded areas\nBrush nickel plating of bearing liner</em></p>",
@@ -363,7 +363,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH17-049",
             Numbers: "Part Numbers: \n\n214-040-210-101\n214-040-212-101",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair10.png",
               caption: "Bell 214B/ B-1 CASE & COVER, ENGINE GEARBOX"
             },
             text: "<p><em>Cold Spray repair of corroded areas\nBrush nickel plating of bearing liner</em></p>",
@@ -383,7 +383,7 @@ export default {
             TCCA: "",
             Numbers: "Part Numbers: \n\n214-040-063-109\n214-040-063-113",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair11.png",
               caption: "Bell 214B/B-1, 214ST CASE, ASSEMBLY, PYLON RESTRAINT, MAIN TRANSMISSION"
             },
             text: "<p><em>Cold Spray repair of corroded areas\nBrush nickel plating of bearing liner</em></p>",
@@ -403,7 +403,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH18-038/D",
             Numbers: "Part Numbers: \n\n214-040-409-109\n214-040-409-113\n214-040-409-121\n214-040-409-105\n214-040-409-001",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair12.png",
               caption: "Bell 214B/B-1, 214ST CASE ASSY (Main Tail Rotor Gearbox)"
             },
             text: "<p><em>Selective brush nickel plating \nrepair removes damage</em></p>",
@@ -423,7 +423,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH20-040/D",
             Numbers: "Part Numbers: \n\n214-040-412-001",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair13.png",
               caption: "Bell 214B/B-1, 214ST SLEEVE ASSEMBLY, TAIL ROTOR GEARBOX, INPUT"
             },
             text: "<p><em>Cold Spray and/or Weld repair of Snap\nRing groove</em></p>",
@@ -443,7 +443,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH16-071",
             Numbers: "Part Numbers: \n\n214-040-991-101\n214-040-991-105\n214-040-991-107\n214-040-991-109",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair14.png",
               caption: "Bell 214ST HOUSING SET, COMBINING GEARBOX"
             },
             text: "<p><em>Cold Spray repair of mounting flanges</em></p>",
@@ -463,7 +463,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH21-35/D",
             Numbers: "Part Numbers: \n\n206-040-150-001 \n206-040-150-029",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair15.png",
               caption: "Bell 206A, 206A-1, 206B, 206B-1 CASE ASSY, MAIN TRANSMISSION"
             },
             text: "<p><em>Cold Spray repair of corroded ports\nand external surface</em></p>",
@@ -483,7 +483,7 @@ export default {
             TCCA: "TCCA RDA#:  P-RH16-034",
             Numbers: "Part Numbers: \n\n9541339",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair16.png",
               caption: "Sikorksy S-61L, S-61N HOUSING, BRAKE"
             },
             text: "<p><em>Cold Spray repair of corroded surfaces\nRestoration of damaged anvil</em></p>",
@@ -503,7 +503,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH16-065",
             Numbers: "Part Numbers: \n\n9440273\n9440273-1\n9440274\n9440274-1",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair17.png",
               caption: "Sikorksy S-61L, S-61N BRAKE HOUSING, LH/RH"
             },
             text: "<p><em>Cold Spray repair of corroded surfaces\nsleeve repair of bolt holes</em></p>",
@@ -523,7 +523,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH16-065",
             Numbers: "Part Numbers: \n\n9440344",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair18.png",
               caption: "Sikorksy S-61L, S-61N BRACKET, MOUNTING"
             },
             text: "<p><em>Cold Spray repair of  corroded surfaces\nsleeve repair of bolt holes </em></p>",
@@ -543,7 +543,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH19-043/D",
             Numbers: "Part Numbers: \n\nS6135-20011-007\nS6135-20011-043",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair19.png",
               caption: "Sikorksy S-61L, S-61N HOUSING ASSEMBLY, UPPER"
             },
             text: "<p><em>Cold Spray repair of Flange </em></p>",
@@ -563,7 +563,7 @@ export default {
             TCCA: "TCCA RDA#: P-RH16-053",
             Numbers: "Part Numbers: \n\n3118877-01\n3016992\n3118166-01",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair20.png",
               caption: "P&WC PT6T SUPPORT ASSEMBLY, NO. 3 & NO. 4 BEARING HOUSING"
             },
             text: "<p><em>Cold Spray repair of flanges and wear </em></p>",
@@ -583,7 +583,7 @@ export default {
             TCCA: "TCCA RDA#:  P-RE16-016",
             Numbers: "Part Numbers: \n\n3016115 \n3024437\n3019744\n3024431",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair21.png",
               caption: "P&WC PT6T HOUSING, ACCESSORY GEARBOX"
             },
             text: "<p><em>Cold Spray repair of Flange and \nExternal Surfaces</em></p>",
@@ -603,7 +603,7 @@ export default {
             TCCA: "TCCA RDA#: P-RE20-034/D",
             Numbers: "Part Numbers: \n\n2-060-000-21",
             img: {
-              src: "",
+              src: "http://xlaero.ca/new/images/RepairPics/repair22.png",
               caption: "Honeywell T5508D HOUSING ASSEMBLY, INLET"
             },
             text: "<p><em></em></p>",
