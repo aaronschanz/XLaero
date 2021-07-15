@@ -4,11 +4,14 @@
 
 // eslint-disable-next-line import/no-unresolved
 import DefaultLayout from '~/layouts/Default.vue'
+import Vue from 'vue'
+import EasySlider from 'vue-easy-slider'
 
 
 export default function (Vue, { head }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
+  Vue.use(EasySlider)
 
 
   // Using CDN Fonts (Typekit, Google Fonts, etc). See https://gridsome.org/docs/assets-fonts/
