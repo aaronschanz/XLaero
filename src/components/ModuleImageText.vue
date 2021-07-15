@@ -87,5 +87,8 @@ export default {
         margin-top: 200px;
     }
 
+    img {
+        width: 100%;
+    }
 
 </style>
