@@ -19,7 +19,7 @@
         <img id ="sparepart1" src="http://xlaero.ca/new/images/sparepart1.png">
         <img id ="sparepart2" src="http://xlaero.ca/new/images/sparepart2.png">
         <img id ="sparepart3" src="http://xlaero.ca/new/images/sparepart3.png">
-        <img id ="sparepart4" src="http://xlaero.ca/new/images/sparepart4.png">
+        <img id ="sparepart4" src="http://xlaero.ca/new/images/spareparts3.png">
         <img id ="sparepart5" src="http://xlaero.ca/new/images/sparepart5.png">
       </div>
       <div id="scrollTop">    

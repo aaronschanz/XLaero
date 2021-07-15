@@ -87,7 +87,7 @@ export default {
     } 
     #button {
         grid-area: button;
-        height: 20%;
+        height: 50px;
         margin-top: 15%;
     }
 </style>

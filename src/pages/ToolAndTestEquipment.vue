@@ -4,21 +4,21 @@
       <div class="toptool">
           <h1 id="toolcaps"> Capabilities </h1>
           <p id='tool'><pre style="font-family: var(--font-family)">
-              XL Aero offers tooling and testing equipment services based
-              on quality, delivery, cost and reliability throughout the 
-              full lifecycle of our products. We supply innovative and 
-              flexible solutions in order to expand your capabilities, 
-              reduce your process lead time, and increase the cost-effectiveness
-              of your business.
+              XL Aero offers tooling and testing equipment services 
+              based on quality, delivery, cost and reliability throughout 
+              the full lifecycle of our products. We supply innovative 
+              and flexible solutions in order to expand your capabilities, 
+              reduce your process lead time, and increase the cost-
+              effectiveness of your business.
 
               Our portfolio includes several industry-leading, customizable 
               solutions that may be built to order. If our existing product
               line does not fulfill your requirements, our engineering team 
-              will work with you to design and manufacture exactly what your 
-              business needs.
+              will work with you to design and manufacture exactly what 
+              your business needs.
 
-              We are committed to supporting our equipment throughout its 
-              lifetime. We continue to provide  customers with aftermarket 
+              We are committed to supporting our equipment throughout 
+              its lifetime. We continue to provide  customers with aftermarket 
               solutions, which include technical assistance & support, 
               calibration, and provision of spare parts.
           </pre></p>

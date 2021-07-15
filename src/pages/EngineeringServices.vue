@@ -164,7 +164,7 @@ export default {
 .container {
   width: 100%;
   position: relative;
-  text-align: center;
+  text-align: left;
 }
 
 .home-links a {
